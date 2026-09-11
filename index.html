@@ -32,7 +32,12 @@
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--navy);color:#fff;padding:14px 23px;font-weight:700;font-size:14px;border:1px solid var(--navy);text-transform:uppercase;letter-spacing:.02em}.btn:hover{background:var(--blue)}.btn.light{background:#fff;color:var(--navy);border-color:#fff}.btn.outline{background:transparent;color:#fff;border-color:#fff}.btn.outline:hover{background:#fff;color:var(--navy)}
 .utility{background:var(--navy2);color:#d9e4ef;font-size:13px}.utility .container{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:20px}.utility-right{display:flex;gap:20px}.utility a{color:#fff}
 .navbar{background:#fff;border-bottom:1px solid var(--line);position:relative;z-index:100}.nav-row{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:30px}.logo{width:205px}.nav-links{display:flex;align-items:center;gap:28px;font-weight:700;font-size:14px;color:var(--navy)}.nav-links a{padding:34px 0 30px;border-bottom:3px solid transparent}.nav-links a:hover{border-bottom-color:var(--navy)}.nav-links .quote{padding:13px 17px;border:0;background:var(--navy);color:#fff}.nav-toggle{display:none;border:0;background:none;font-size:28px;color:var(--navy);cursor:pointer}
-.cert-strip{background:#fff;border-bottom:1px solid var(--line)}.cert-inner{display:grid;grid-template-columns:1.05fr 1fr 1fr 1fr;align-items:center;min-height:122px}.cert-title{font:800 17px Archivo;color:var(--navy);text-transform:uppercase;padding-right:28px}.cert{display:flex;align-items:center;gap:15px;padding:18px 25px;border-left:1px solid var(--line)}.cert-mark{width:82px;height:68px;border:2px solid var(--navy);border-radius:50%;display:grid;place-items:center;text-align:center;font:800 10px/1 Archivo;color:var(--navy);flex:none}.cert.mib .cert-mark{border-radius:0;border-color:#d92738;color:#d92738}.cert-mark-img{width:108px;height:92px;object-fit:contain;flex:none}.cert strong{display:block;font:700 15px Archivo;color:var(--navy);margin-bottom:3px}.cert span{font-size:13px;color:var(--muted)}
+.cert-strip{background:#fff;border-bottom:1px solid var(--line)}.cert-inner{display:grid;grid-template-columns:1.05fr 1fr 1fr 1fr;align-items:center;min-height:122px}.cert-title{font:800 17px Archivo;color:var(--navy);text-transform:uppercase;padding-right:28px}.cert{display:flex;align-items:center;gap:15px;padding:18px 25px;border-left:1px solid var(--line)}.cert-mark{width:82px;height:68px;border:2px solid var(--navy);border-radius:50%;display:grid;place-items:center;text-align:center;font:800 10px/1 Archivo;color:var(--navy);flex:none}.cert.mib .cert-mark{border-radius:0;border-color:#d92738;color:#d92738}
+
+/* CERTIFICATION BADGES UPDATED STYLES */
+.cert-mark-img{width:108px;height:92px;object-fit:contain;flex:none;mix-blend-mode:multiply;}
+
+.cert strong{display:block;font:700 15px Archivo;color:var(--navy);margin-bottom:3px}.cert span{font-size:13px;color:var(--muted)}
 
 /* HERO CAROUSEL STYLES */
 .hero-slider{position:relative;overflow:hidden;background:#061b35;color:#fff;min-height:560px}
@@ -53,7 +58,7 @@
 .dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s}
 .dot.active{background:#fff;width:28px;border-radius:6px}
 
-/* PRODUCT CARDS FIXES */
+/* PRODUCT CARDS STYLES */
 .products{display:grid;grid-template-columns:repeat(3,1fr)}.product-card{min-height:460px;padding:32px 30px 0;position:relative;overflow:hidden;display:flex;flex-direction:column}.product-card.dark{background:var(--navy);color:#fff}.product-card.mid{background:#edf1f5}.product-card.light{background:#dfe4ec}.product-card h3{font-size:23px;text-transform:uppercase;margin-bottom:8px}.product-card.dark h3,.product-card.dark p,.product-card.dark .product-link{color:#fff}.product-card p{max-width:320px;font-size:15px;margin-bottom:14px;color:#25374b}.product-link{font-weight:800;text-transform:uppercase;font-size:13px;color:var(--navy)}
 .product-card img{mix-blend-mode:multiply}
 .product-card.dark img{mix-blend-mode:lighten}
@@ -107,7 +112,23 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 <div class="utility"><div class="container"><div>UK-based supplier of industrial &amp; dental consumables and precision tools.</div><div class="utility-right"><a href="mailto:info@londoco.com">✉ info@londoco.com</a><a href="tel:+447746609977">☎ +44 (0) 7746 609977</a><span>🌐 English</span></div></div></div>
 <header class="navbar"><div class="container nav-row"><a href="#"><img class="logo" src="assets/londoco-logo.png" alt="Londoco Ltd"></a><button class="nav-toggle" aria-label="Open navigation" onclick="event.stopPropagation(); document.querySelector('.nav-links').classList.toggle('open')">☰</button><nav class="nav-links"><a href="#">HOME</a><a href="#products">PRODUCTS</a><a href="#industries">SECTORS</a><a href="#about">ABOUT US</a><a href="#contact">CONTACT</a><a class="quote" href="#quote">REQUEST A QUOTE ↗</a></nav></div></header>
 
-<div class="cert-strip"><div class="container cert-inner"><div class="cert-title">Certified quality.<br>Trusted performance.</div><div class="cert"><img class="cert-mark-img" src="assets/as9100d-icon.png" alt="AS9100 Rev D certification"><div><strong>AS9100 Rev D</strong><span>Aerospace Quality Management System</span></div></div><div class="cert"><img class="cert-mark-img" src="assets/iso9001-icon.png" alt="ISO 9001:2015 certification"><div><strong>ISO 9001:2015</strong><span>Quality Management System</span></div></div><div class="cert"><img class="cert-mark-img" src="assets/madeinbritain-icon.png" alt="Made in Britain"><div><strong>Made in Britain</strong><span>Registered member supporting UK manufacturing</span></div></div></div></div>
+<div class="cert-strip">
+  <div class="container cert-inner">
+    <div class="cert-title">Certified quality.<br>Trusted performance.</div>
+    <div class="cert">
+      <img class="cert-mark-img" src="assets/trust-badge-set.jpg" alt="AS9100 Rev D certification">
+      <div><strong>AS9100 Rev D</strong><span>Aerospace Quality Management System</span></div>
+    </div>
+    <div class="cert">
+      <img class="cert-mark-img" src="assets/trust-badge-set.jpg" alt="ISO 9001:2015 certification">
+      <div><strong>ISO 9001:2015</strong><span>Quality Management System</span></div>
+    </div>
+    <div class="cert">
+      <img class="cert-mark-img" src="assets/trust-badge-set.jpg" alt="Made in Britain">
+      <div><strong>Made in Britain</strong><span>Registered member supporting UK manufacturing</span></div>
+    </div>
+  </div>
+</div>
 
 <main>
 <!-- HERO CAROUSEL / SLIDER SECTION -->
@@ -485,7 +506,6 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
     startAutoSlide();
   }
 
-  // Initialize Slider
   startAutoSlide();
 </script>
 </body>

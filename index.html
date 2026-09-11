@@ -37,7 +37,7 @@
 .products{display:grid;grid-template-columns:repeat(3,1fr)}.product-card{min-height:460px;padding:32px 30px 0;position:relative;overflow:hidden;display:flex;flex-direction:column}.product-card.dark{background:var(--navy);color:#fff}.product-card.mid{background:#edf1f5}.product-card.light{background:#dfe4ec}.product-card h3{font-size:23px;text-transform:uppercase;margin-bottom:8px}.product-card.dark h3,.product-card.dark p,.product-card.dark .product-link{color:#fff}.product-card p{max-width:320px;font-size:15px;margin-bottom:14px;color:#25374b}.product-link{font-weight:800;text-transform:uppercase;font-size:13px;color:var(--navy)}.strength-icon svg{width:28px;height:28px;display:block}.product-image{position:absolute;bottom:0;right:10px;width:64%;height:230px;object-fit:cover;object-position:bottom}.product-image.center-img{left:0;right:0;margin:0 auto;width:88%;height:230px;object-fit:contain;object-position:bottom}
 .strengths{background:#fff;border-bottom:1px solid var(--line)}.strength-grid{display:grid;grid-template-columns:repeat(4,1fr)}.strength{padding:30px 25px;display:flex;gap:15px;border-right:1px solid var(--line)}.strength:last-child{border-right:0}.strength-icon{font-size:28px;color:var(--navy)}.strength h4{font-size:15px;text-transform:uppercase;margin-bottom:7px}.strength p{font-size:13.5px;color:var(--muted)}
 section{padding:72px 0}.section-heading{text-align:center;margin-bottom:38px}.section-heading h2{font-size:34px;text-transform:uppercase}.section-heading p{max-width:700px;margin:12px auto 0;color:var(--muted);font-size:16px}
-.industries{background:#fff}.industry-hero{margin:0 auto 32px;max-width:1184px;border:1px solid var(--line);background:#f7f9fb;overflow:hidden}.industry-hero img{width:100%;height:auto;max-height:430px;object-fit:cover}.industry-grid{display:grid;grid-template-columns:repeat(6,minmax(0,168px));gap:16px;justify-content:center}.industry{border:1px solid var(--line);background:#fff;text-align:center;overflow:hidden}.industry-visual{height:120px;overflow:hidden;background:#eef1f4}.industry-visual img{width:100%;height:100%;object-fit:cover;display:block}.industry strong{display:block;padding:11px 7px 13px;font:700 12px/1.25 Archivo;color:var(--navy);text-transform:uppercase}.center-btn{text-align:center;margin-top:27px}
+.industries{background:#fff}.industry-hero{margin:0 auto 32px;max-width:1184px;border:1px solid var(--line);background:#f7f9fb;overflow:hidden}.industry-hero img{width:100%;height:auto;max-height:430px;object-fit:cover}.industry-grid{display:grid;grid-template-columns:repeat(6,minmax(0,168px));gap:16px;justify-content:center}.industry{border:1px solid var(--line);background:#fff;text-align:center;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}.industry:hover{transform:translateY(-3px);box-shadow:0 6px 16px rgba(0,0,0,.08)}.industry-visual{height:120px;overflow:hidden;background:#eef1f4}.industry-visual img{width:100%;height:100%;object-fit:cover;display:block}.industry strong{display:block;padding:11px 7px 13px;font:700 12px/1.25 Archivo;color:var(--navy);text-transform:uppercase}.center-btn{text-align:center;margin-top:27px}
 .about{background:var(--bg)}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}.about h2{font-size:34px;text-transform:uppercase;margin-bottom:18px}.about p{color:var(--muted);font-size:17px;margin-bottom:14px}.about-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 25px;margin-top:22px}.about-list div{font-weight:700;color:var(--navy)}.about-image{overflow:hidden;border:1px solid var(--line);background:#fff;height:320px}
 .about-image img{width:100%;height:100%;object-fit:cover;object-position:bottom}
 .about-image-plain{overflow:hidden;border:1px solid var(--line);background:#fff;height:320px}
@@ -47,7 +47,12 @@ section{padding:72px 0}.section-heading{text-align:center;margin-bottom:38px}.se
 .quote-banner{background:linear-gradient(100deg,var(--navy2),var(--navy));color:#fff}.quote-inner{min-height:175px;display:flex;align-items:center;justify-content:space-between;gap:30px}.quote-banner h2{color:#fff;font-size:30px;text-transform:uppercase;max-width:650px}.quote-banner p{color:#c9d7e5;margin-top:7px}
 footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:45px}.footer-logo-wrap{display:inline-block;background:#fff;padding:12px 16px;margin-bottom:17px}.footer-logo{width:150px;display:block}footer h4{color:#fff;font-size:14px;text-transform:uppercase;margin-bottom:14px}footer p,footer li,footer a{font-size:14px}footer ul{list-style:none;padding:0;margin:0}footer li{margin-bottom:8px}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:18px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;color:#7f94a8}
 .product-intro{padding:72px 0;background:var(--bg)}.product-intro .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}.product-intro h2{font-size:34px;text-transform:uppercase;margin-bottom:18px}.product-intro p{color:var(--muted);font-size:17px;margin-bottom:14px}.product-intro .about-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 25px;margin-top:22px}.product-intro .about-list div{font-weight:700;color:var(--navy)}.wipes-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px;align-items:center}.wipes-image img{width:100%;max-height:360px;object-fit:contain}#wipes .about-list{gap:12px 20px}#wipes .about-list div{white-space:nowrap;font-size:15px}
-.datacentre{background:var(--navy);color:#fff}.datacentre .section-heading h2{color:#fff}.datacentre .section-heading p{color:#c9d7e5}.datacentre-eyebrow{text-align:center;font:700 13px Archivo;letter-spacing:.06em;color:#7fa6cf;text-transform:uppercase;margin-bottom:10px}.datacentre-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:start;margin-bottom:46px}.datacentre-grid h3,.datacentre-sub h3{color:#fff;font-size:19px;text-transform:uppercase;margin-bottom:16px}.datacentre-grid p{color:#c9d7e5;font-size:15.5px;margin-bottom:14px}.datacentre-note{border-left:3px solid #4f86bd;background:rgba(255,255,255,.06);padding:14px 20px;font-size:14px;color:#dbe6f0;margin-top:10px}.datacentre-image img{width:100%;border:1px solid rgba(255,255,255,.15)}.uses-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:46px}.uses-grid .use{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);padding:22px}.uses-grid .use h4{color:#fff;font:700 14.5px Archivo;text-transform:uppercase;margin-bottom:8px}.uses-grid .use p{color:#c1cfdd;font-size:13.5px;margin:0}.datacentre .about-list div{color:#fff}
+
+/* Sector Blocks Styling */
+.sector-block{padding:72px 0;border-bottom:1px solid var(--line)}.sector-block.dark-theme{background:var(--navy);color:#fff}.sector-block.dark-theme h2,.sector-block.dark-theme h3,.sector-block.dark-theme h4{color:#fff}.sector-block.dark-theme p{color:#c9d7e5}.sector-block.dark-theme .use{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}.sector-block.light-theme{background:#fff;color:var(--ink)}.sector-block.alt-theme{background:var(--bg);color:var(--ink)}
+.datacentre-eyebrow{text-align:center;font:700 13px Archivo;letter-spacing:.06em;color:var(--blue);text-transform:uppercase;margin-bottom:10px}.dark-theme .datacentre-eyebrow{color:#7fa6cf}
+.datacentre-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:start;margin-bottom:46px}.datacentre-grid h3,.datacentre-sub h3{font-size:19px;text-transform:uppercase;margin-bottom:16px}.datacentre-grid p{font-size:15.5px;margin-bottom:14px}.datacentre-note{border-left:3px solid var(--blue);background:rgba(8,38,74,.04);padding:14px 20px;font-size:14px;margin-top:10px}.dark-theme .datacentre-note{border-left-color:#4f86bd;background:rgba(255,255,255,.06);color:#dbe6f0}
+.uses-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:46px}.uses-grid .use{background:#f6f8fa;border:1px solid var(--line);padding:22px}.uses-grid .use h4{font:700 14.5px Archivo;text-transform:uppercase;margin-bottom:8px}.uses-grid .use p{font-size:13.5px;margin:0;color:var(--muted)}
 
 /* SEO Section Styles */
 .seo-capabilities{background:#fff;border-bottom:1px solid var(--line)}.seo-capabilities h3{font-size:18px;text-transform:uppercase;margin-bottom:12px;color:var(--navy)}.seo-capabilities h4{font-size:15px;text-transform:uppercase;margin:16px 0 8px;color:var(--blue)}.seo-capabilities ul{margin:0 0 16px 20px;padding:0;color:var(--muted);font-size:15px}.seo-capabilities li{margin-bottom:4px}.seo-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:28px}
@@ -76,16 +81,16 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 </head>
 <body>
 <div class="utility"><div class="container"><div>UK-based supplier of industrial &amp; dental consumables and precision tools.</div><div class="utility-right"><a href="mailto:info@londoco.com">✉ info@londoco.com</a><a href="tel:+447746609977">☎ +44 (0) 7746 609977</a><span>🌐 English</span></div></div></div>
-<header class="navbar"><div class="container nav-row"><a href="#"><img class="logo" src="assets/londoco-logo.png" alt="Londoco Ltd"></a><button class="nav-toggle" aria-label="Open navigation" onclick="event.stopPropagation(); document.querySelector('.nav-links').classList.toggle('open')">☰</button><nav class="nav-links"><a href="#">HOME</a><a href="#products">PRODUCTS</a><a href="#datacentres">DATA CENTRES</a><a href="#industries">INDUSTRIES</a><a href="#about">ABOUT US</a><a href="#contact">CONTACT</a><a class="quote" href="#quote">REQUEST A QUOTE ↗</a></nav></div></header>
+<header class="navbar"><div class="container nav-row"><a href="#"><img class="logo" src="assets/londoco-logo.png" alt="Londoco Ltd"></a><button class="nav-toggle" aria-label="Open navigation" onclick="event.stopPropagation(); document.querySelector('.nav-links').classList.toggle('open')">☰</button><nav class="nav-links"><a href="#">HOME</a><a href="#products">PRODUCTS</a><a href="#industries">SECTORS</a><a href="#about">ABOUT US</a><a href="#contact">CONTACT</a><a class="quote" href="#quote">REQUEST A QUOTE ↗</a></nav></div></header>
 
 <div class="cert-strip"><div class="container cert-inner"><div class="cert-title">Certified quality.<br>Trusted performance.</div><div class="cert"><img class="cert-mark-img" src="assets/as9100d-icon.png" alt="AS9100 Rev D certification"><div><strong>AS9100 Rev D</strong><span>Aerospace Quality Management System</span></div></div><div class="cert"><img class="cert-mark-img" src="assets/iso9001-icon.png" alt="ISO 9001:2015 certification"><div><strong>ISO 9001:2015</strong><span>Quality Management System</span></div></div><div class="cert"><img class="cert-mark-img" src="assets/madeinbritain-icon.png" alt="Made in Britain"><div><strong>Made in Britain</strong><span>Registered member supporting UK manufacturing</span></div></div></div></div>
 
 <main>
-<section class="hero"><div class="container hero-inner"><div class="hero-copy"><h1>Precision tools.<br>Performance you can trust.</h1><p>UK-manufactured pre-saturated wipes and technical consumables, alongside precision tools for industrial and dental applications.</p><div class="hero-actions"><a class="btn" href="#products">Explore our products →</a><a class="btn" href="#quote">Request a quote</a></div></div><div class="hero-image"><div class="hero-frame"><img src="assets/landingpage-image.png" alt="Londoco precision tools and industrial products"></div></div></div></section>
+<section class="hero"><div class="container hero-inner"><div class="hero-copy"><h1>Precision tools.<br>Performance you can trust.</h1><p>UK-manufactured pre-saturated wipes and technical consumables, alongside precision tools for industrial and dental applications.</p><div class="hero-actions"><a class="btn" href="#products">Explore our products →</a><a class="btn" href="#quote">Request a quote</a></div></div><div class="hero-image"><div class="hero-frame"><img src="assets/hero-industrial-wipes.png" alt="Londoco precision tools and industrial products"></div></div></div></section>
 <section id="products" style="padding:0"><div class="products">
 <article class="product-card dark"><h3>Industrial Wipes</h3><p>High-performance pre-saturated wipes for cleaning, degreasing and surface preparation.</p><a class="product-link" href="#wipes">View products →</a><img class="product-image center-img" src="assets/industrial-wipes.png" alt="Londoco industrial wipes"></article>
-<article class="product-card mid"><h3>Industrial Tools</h3><p>Precision-engineered rotary burs and technical consumables for demanding applications.</p><a class="product-link" href="#quote">Enquire about products →</a><img class="product-image" src="assets/industrialtools-photo.png" alt="Londoco industrial tools"></article>
-<article class="product-card light"><h3>Dental</h3><p>Dental consumables and precision instruments for professional applications.</p><a class="product-link" href="#quote">Enquire about products →</a><img class="product-image center-img" src="assets/dentaltool-photo.png" alt="Londoco dental tools"></article>
+<article class="product-card mid"><h3>Industrial Tools</h3><p>Precision-engineered rotary burs and technical consumables for demanding applications.</p><a class="product-link" href="#quote">Enquire about products →</a><img class="product-image" src="assets/hero-industrial-tools.png" alt="Londoco industrial tools"></article>
+<article class="product-card light"><h3>Dental</h3><p>Dental consumables and precision instruments for professional applications.</p><a class="product-link" href="#quote">Enquire about products →</a><img class="product-image center-img" src="assets/hero-dental-tools.png" alt="Londoco dental tools"></article>
 </div></section>
 
 <!-- SEO & Technical Specifications Section -->
@@ -139,52 +144,169 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 <section class="product-intro"><div class="container about-grid"><div><h2>Built for demanding applications</h2><p>Londoco Ltd supplies pre-saturated, solvent-impregnated wipes and precision-engineered rotary burs to industrial, technical and critical-environment customers.</p><p>Our core wipe range is manufactured in the UK by an AS9100 Rev D and ISO 9001:2015 certified manufacturing partner, with Made in Britain registration and product traceability.</p><div class="about-list"><div>✓ UK-manufactured wipe range</div><div>✓ Ultra-low lint nonwovens</div><div>✓ IPA, acetone, MEK &amp; more</div><div>✓ Flexible packaging formats</div></div></div><div class="about-image"><img src="assets/industrial-wipes.png" alt="Londoco pre-saturated industrial wipes"></div></div></section>
 <section id="wipes"><div class="container"><div class="section-heading"><h2>Industrial Wipes</h2><p>High-performance pre-saturated wipes for technical and industrial applications, with fabric, fluid and packaging options matched to the task.</p></div><div class="wipes-grid"><div class="wipes-image"><img src="assets/industrial-wipes.png" alt="Londoco industrial wipes"></div><div class="about-list"><div>✓ IPA — 30–100%, including 70% and 99.9%</div><div>✓ Acetone</div><div>✓ MEK</div><div>✓ Ethanol</div><div>✓ Heptane</div><div>✓ Ethyl acetate</div><div>✓ Tubs, buckets &amp; pouches</div><div>✓ Low-lint nonwoven fabrics</div></div></div></div></section>
 
-<section id="datacentres" class="datacentre">
+<!-- SECTORS INDEX GRID -->
+<section id="industries" class="industries"><div class="container"><div class="section-heading"><h2>Sectors We Serve</h2><p>Tailored technical cleaning and precision tooling solutions engineered for demanding environments.</p></div><div class="industry-grid">
+<a href="#sector-datacentres" class="industry"><div class="industry-visual"><img src="assets/datacentre.png" alt="Data centres"></div><strong>Data Centres</strong></a>
+<a href="#sector-automotive" class="industry"><div class="industry-visual"><img src="assets/automotive.png" alt="Automotive"></div><strong>Automotive</strong></a>
+<a href="#sector-marine" class="industry"><div class="industry-visual"><img src="assets/marineshipbuilding.png" alt="Marine and shipbuilding"></div><strong>Marine &amp; Shipbuilding</strong></a>
+<a href="#sector-engineering" class="industry"><div class="industry-visual"><img src="assets/engineeringmanufacturing.png" alt="Engineering and manufacturing"></div><strong>Engineering &amp; Manufacturing</strong></a>
+<a href="#sector-aerospace" class="industry"><div class="industry-visual"><img src="assets/aerospace.png" alt="Aerospace"></div><strong>Aerospace</strong></a>
+<a href="#sector-dental" class="industry"><div class="industry-visual"><img src="assets/dental.png" alt="Dental"></div><strong>Dental</strong></a>
+</div></div></section>
+
+<!-- SECTOR SPECIFIC DETAILS SECTIONS -->
+
+<!-- Data Centres -->
+<section id="sector-datacentres" class="sector-block dark-theme">
 <div class="container">
-<div class="datacentre-eyebrow">Featured application · Industrial Wipes</div>
-<div class="section-heading"><h2>Data Centres</h2><p>IPA wipes supplied by Londoco for precision cleaning around live, sensitive electronic equipment.</p></div>
+<div class="datacentre-eyebrow">Sector Solution · Industrial Wipes</div>
+<div class="section-heading"><h2>Data Centres</h2><p>IPA wipes supplied by Londoco for precision cleaning around sensitive electronic equipment.</p></div>
 <div class="datacentre-grid">
 <div>
 <h3>Why IPA for data centres?</h3>
-<p>Data centres contain live, sensitive electronic equipment, making the choice of cleaning fluid particularly important. IPA wipes are widely used for technical cleaning because they evaporate quickly and leave minimal residue.</p>
-<p>Different IPA concentrations can also be selected according to the application, with 99.9% IPA suited to precision electrical-contact and component cleaning, while 70% IPA can be used for more general cleaning and degreasing applications.</p>
+<p>Data centres contain sensitive electronic, optical and electrical equipment, making cleaning-fluid selection particularly important. IPA is widely selected for technical cleaning because it evaporates quickly and leaves minimal residue when correctly formulated and applied.</p>
+<p>Different concentrations can be selected according to the task: 99.9% IPA is suited to precision electrical-contact and component cleaning, while 70% IPA can be used for general cleaning and degreasing applications.</p>
 <div class="datacentre-note">IPA is commonly selected for data-centre cleaning because it offers rapid evaporation and low residue, while more aggressive solvents may be unsuitable for certain plastics, coatings and sensitive components.</div>
 </div>
 <div class="datacentre-image"><img src="assets/londocowipesset.png" alt="Londoco IPA wipe product range – tubs and pouches"></div>
 </div>
-
-<div class="datacentre-sub"><h3>Where are IPA wipes used?</h3></div>
+<div class="datacentre-sub"><h3>Where are industrial wipes used?</h3></div>
 <div class="uses-grid">
-<div class="use"><h4>Server rack doors &amp; frames</h4><p>Removing fingerprints, dust residue and skin oils left during installation and maintenance.</p></div>
-<div class="use"><h4>Connectors, ports &amp; fibre optic ends</h4><p>Precision cleaning where contamination can affect connections and signal performance.</p></div>
-<div class="use"><h4>Keyboards, KVM switches &amp; touchscreens</h4><p>For regularly handled equipment and operator interfaces.</p></div>
-<div class="use"><h4>Raised floors &amp; hard surfaces</h4><p>For cleaning after deeper maintenance activities.</p></div>
-<div class="use"><h4>Equipment relocation &amp; decommissioning</h4><p>Cleaning equipment before relocation, resale or return to service.</p></div>
+<div class="use"><h4>Server rack doors &amp; frames</h4><p>Removing fingerprints, skin oils and light contamination left during installation and maintenance.</p></div>
+<div class="use"><h4>Connectors &amp; interfaces</h4><p>Precision cleaning where contamination can affect connection quality and signal performance.</p></div>
+<div class="use"><h4>Keyboards &amp; Touchscreens</h4><p>Cleaning frequently handled operator interfaces and external control surfaces.</p></div>
+<div class="use"><h4>Raised floors &amp; hard surfaces</h4><p>Targeted cleaning after deep maintenance and hardware installation work.</p></div>
+<div class="use"><h4>Relocation &amp; Decommissioning</h4><p>Cleaning external surfaces before relocation, resale, return to service or storage.</p></div>
 </div>
-
-<div class="datacentre-sub"><h3>Why Londoco for data centres?</h3></div>
 <div class="about-list" style="max-width:920px">
 <div>✓ 99.9% IPA wipes for precision technical cleaning</div>
-<div>✓ 70% IPA wipes for general cleaning applications</div>
-<div>✓ Ultra-low-lint substrates</div>
+<div>✓ 70% IPA wipes for broader cleaning applications</div>
+<div>✓ Ultra-low-lint substrate options</div>
 <div>✓ Controlled, consistent saturation</div>
 <div>✓ Self-closing tubs and pouches to help minimise evaporation</div>
 <div>✓ Reduced solvent waste compared with bulk dispensing</div>
-<div>✓ UK-manufactured wipe options</div>
-<div>✓ Custom packaging available</div>
+</div>
+</div>
+</section>
+
+<!-- Automotive -->
+<section id="sector-automotive" class="sector-block light-theme">
+<div class="container">
+<div class="datacentre-eyebrow">Sector Solution · Industrial Wipes</div>
+<div class="section-heading"><h2>Automotive</h2><p>Pre-saturated wipes for vehicle production, component assembly, repair, detailing and workshop maintenance.</p></div>
+<div class="datacentre-grid">
+<div>
+<h3>Why industrial wipes for automotive?</h3>
+<p>Automotive production and maintenance involve repeated cleaning of components, tooling and finished surfaces. Pre-saturated wipes provide a consistent amount of cleaning fluid at the point of use and reduce open solvent containers.</p>
+<p>IPA is useful for general technical cleaning and surface preparation. Acetone, MEK and heptane provide stronger solvent action for specific residues on compatible substrates.</p>
+<div class="datacentre-note">Consistent solvent delivery prevents overwetting and ensures repeatable surface preparation before adhesive, sealant, or coating applications.</div>
+</div>
+<div class="wipes-image"><img src="assets/industrial-wipes.png" alt="Londoco Automotive pre-saturated wipes"></div>
+</div>
+<div class="datacentre-sub"><h3>Typical Wipe Applications</h3></div>
+<div class="uses-grid">
+<div class="use"><h4>Component &amp; part cleaning</h4><p>Removing light oils, fingerprints, dust and process residues from components before assembly.</p></div>
+<div class="use"><h4>Bonding &amp; sealing prep</h4><p>Cleaning selected surfaces before adhesive, sealant, tape or coating operations.</p></div>
+<div class="use"><h4>Paint &amp; finishing prep</h4><p>Targeted removal of contamination prior to selected finishing processes.</p></div>
+<div class="use"><h4>Workshop maintenance</h4><p>Cleaning tools, fixtures, work surfaces and selected mechanical components.</p></div>
+<div class="use"><h4>Interior &amp; technical surfaces</h4><p>Cleaning hard, non-porous surfaces and operator interfaces with compatible formulations.</p></div>
+</div>
+</div>
+</section>
+
+<!-- Marine & Shipbuilding -->
+<section id="sector-marine" class="sector-block alt-theme">
+<div class="container">
+<div class="datacentre-eyebrow">Sector Solution · Industrial Wipes</div>
+<div class="section-heading"><h2>Marine &amp; Shipbuilding</h2><p>Industrial pre-saturated wipes for shipyards, marine maintenance, vessel construction and repair.</p></div>
+<div class="datacentre-grid">
+<div>
+<h3>Why industrial wipes for marine applications?</h3>
+<p>Marine construction combines large-scale fabrication with precision work around engines, hydraulics, electrical systems, coatings and composite materials. Pre-saturated wipes deliver controlled cleaning without dispensing solvent from bulk containers.</p>
+<p>IPA is suited to light technical cleaning. Acetone, MEK, heptane and ethyl acetate address heavy residue or preparation tasks, subject to substrate compatibility.</p>
+<div class="datacentre-note">Marine coatings and composites are solvent-sensitive; compatibility testing and manufacturer guidelines should govern solvent selection.</div>
+</div>
+<div class="wipes-image"><img src="assets/industrial-wipes.png" alt="Londoco Marine Pre-saturated wipes"></div>
+</div>
+<div class="datacentre-sub"><h3>Shipyard &amp; Marine Applications</h3></div>
+<div class="uses-grid">
+<div class="use"><h4>Surface Preparation</h4><p>Removing grease, oil, fingerprints and residues before bonding, sealing or coating.</p></div>
+<div class="use"><h4>Engine &amp; Machinery MRO</h4><p>Cleaning components, tooling and accessible hard surfaces during routine maintenance.</p></div>
+<div class="use"><h4>Hydraulic &amp; Mechanical Work</h4><p>Cleaning fittings, components and work areas prior to inspection or replacement.</p></div>
+<div class="use"><h4>Electrical &amp; Instrumentation</h4><p>Using low-residue formulations on compatible external surfaces and components.</p></div>
+<div class="use"><h4>Shipyard Fabrication</h4><p>Cleaning parts and work surfaces between fabrication, installation and finishing stages.</p></div>
+</div>
+</div>
+</section>
+
+<!-- Engineering & Manufacturing -->
+<section id="sector-engineering" class="sector-block light-theme">
+<div class="container">
+<div class="datacentre-eyebrow">Sector Solution · Technical Consumables</div>
+<div class="section-heading"><h2>Engineering &amp; Manufacturing</h2><p>High-performance wipes and precision diamond tooling for machinery, precision components, assembly and MRO.</p></div>
+<div class="datacentre-grid">
+<div>
+<h3>Engineering-Grade Precision &amp; Cleaning</h3>
+<p>Manufacturing environments demand repeatable cleaning during production, assembly, inspection and maintenance. Pre-saturated wipes control contamination and eliminate loose rags and open solvent bottles.</p>
+<p>Alongside pre-saturated solvent wipes (IPA, MEK, Acetone, Heptane), Londoco supplies technical diamond files, CBN grinding pins, and precision burs for metal finishing and high-tolerance machining.</p>
+<div class="datacentre-note">Ultra-low-lint nonwovens ensure no particle residue remains on high-precision machined components during quality control.</div>
+</div>
+<div class="wipes-image"><img src="assets/hero-industrial-tools.png" alt="Londoco Engineering Tools & Wipes"></div>
+</div>
+<div class="datacentre-sub"><h3>Manufacturing &amp; Metalworking Applications</h3></div>
+<div class="uses-grid">
+<div class="use"><h4>Precision Component Cleaning</h4><p>Removing oils, fingerprints, and dust prior to dimensional inspection or assembly.</p></div>
+<div class="use"><h4>Deburring &amp; Surface Finishing</h4><p>Using diamond needle files, rifflers, and CBN grinding pins for high-tolerance metalwork.</p></div>
+<div class="use"><h4>Tooling &amp; Machinery MRO</h4><p>Cleaning machine surfaces, jigs, fixtures, and cutting tools during routine service.</p></div>
+<div class="use"><h4>Assembly Preparation</h4><p>Preparing metal and plastic substrates prior to adhesive bonding or structural sealing.</p></div>
+<div class="use"><h4>Quality Control &amp; Inspection</h4><p>Removing surface films that could interfere with optical gauge measurement.</p></div>
+</div>
+</div>
+</section>
+
+<!-- Aerospace -->
+<section id="sector-aerospace" class="sector-block dark-theme">
+<div class="container">
+<div class="datacentre-eyebrow">Sector Solution · Industrial Wipes &amp; Tools</div>
+<div class="section-heading"><h2>Aerospace</h2><p>Precision pre-saturated wipes for aerospace manufacturing, MRO, component preparation and controlled technical cleaning.</p></div>
+<div class="datacentre-grid">
+<div>
+<h3>Why precision wipes for aerospace?</h3>
+<p>Aerospace manufacturing and maintenance demand strict control of contamination, materials compatibility and process consistency. Pre-saturated wipes support controlled cleaning while reducing uncontrolled solvent dispensing.</p>
+<p>Manufactured under quality management standards (AS9100 Rev D certified production partner), ensuring full batch traceability and compliance.</p>
+<div class="datacentre-note">Application note: Product selection must be controlled by applicable OEM, customer, process and material specifications. Always verify approval prior to substitution.</div>
+</div>
+<div class="wipes-image"><img src="assets/industrial-wipes.png" alt="Londoco Aerospace Grade Pre-saturated Wipes"></div>
+</div>
+<div class="datacentre-sub"><h3>Aerospace &amp; MRO Applications</h3></div>
+<div class="uses-grid">
+<div class="use"><h4>Component &amp; Part Prep</h4><p>Removing fingerprints, oils and process residues prior to assembly or inspection.</p></div>
+<div class="use"><h4>Bonding &amp; Sealing Prep</h4><p>Cleaning composite and alloy surfaces before adhesive or sealant application.</p></div>
+<div class="use"><h4>Precision MRO Cleaning</h4><p>Cleaning selected airframe components, tools and work surfaces during MRO activities.</p></div>
+<div class="use"><h4>Electrical &amp; Avionics</h4><p>Utilising low-residue IPA formulations on approved components and exterior enclosures.</p></div>
+<div class="use"><h4>Controlled Environments</h4><p>Targeted contamination control between manufacturing process steps.</p></div>
+</div>
+</div>
+</section>
+
+<!-- Dental -->
+<section id="sector-dental" class="sector-block light-theme">
+<div class="container">
+<div class="datacentre-eyebrow">Sector Solution · Precision Instruments</div>
+<div class="section-heading"><h2>Dental &amp; Medical Consumables</h2><p>High-precision dental burs, diamond instruments, and clinical surface cleaning solutions.</p></div>
+<div class="datacentre-grid">
+<div>
+<h3>Professional Dental Consumables</h3>
+<p>Londoco supplies high-grade dental consumables and precision rotary instruments tailored for clinical practice and dental laboratory technicians.</p>
+<p>Our range includes diamond burs, carbide cutters, and specialized surface preparation wipes suited to professional clinical settings.</p>
+<div class="datacentre-note">Engineered to deliver high precision, long operational life, and smooth performance under high-speed operation.</div>
+</div>
+<div class="wipes-image"><img src="assets/hero-dental-tools.png" alt="Londoco Dental Instruments and Burs"></div>
 </div>
 </div>
 </section>
 
 <section class="strengths"><div class="container strength-grid"><div class="strength"><div class="strength-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 20 6.5V12c0 4.6-3.2 8-8 9-4.8-1-8-4.4-8-9V6.5L12 3Z"/><path d="m8.5 12 2.4 2.4L16 9.5"/></svg></div><div><h4>Quality Assured</h4><p>Quality-led products supported by certified manufacturing and traceability.</p></div></div><div class="strength"><div class="strength-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.7 12h16.6M12 3.5c2.4 2.3 3.6 5.3 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.3-3.6-8.5S9.6 5.8 12 3.5Z"/></svg></div><div><h4>UK &amp; International Supply</h4><p>Supplying customers across the UK with capability to serve international markets.</p></div></div><div class="strength"><div class="strength-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c0-3.6 3.1-6.5 7-6.5s7 2.9 7 6.5"/></svg></div><div><h4>Industry Experts</h4><p>Technical product knowledge for demanding industrial and professional applications.</p></div></div><div class="strength"><div class="strength-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3.5v2.3M12 18.2v2.3M20.5 12h-2.3M5.8 12H3.5M18 6l-1.6 1.6M7.6 16.4 6 18M18 18l-1.6-1.6M7.6 7.6 6 6"/></svg></div><div><h4>Custom Solutions</h4><p>Flexible fabrics, fluids and packaging formats matched to specific requirements.</p></div></div></div></section>
-<section id="industries" class="industries"><div class="container"><div class="section-heading"><h2>Industries We Serve</h2><p>Product solutions for technical, industrial and professional environments.</p></div><div class="industry-grid">
-<div class="industry"><div class="industry-visual"><img src="assets/datacentre.png" alt="Data centres"></div><strong>Data Centres</strong></div>
-<div class="industry"><div class="industry-visual"><img src="assets/automotive.png" alt="Automotive"></div><strong>Automotive</strong></div>
-<div class="industry"><div class="industry-visual"><img src="assets/marineshipbuilding.png" alt="Marine and shipbuilding"></div><strong>Marine &amp; Shipbuilding</strong></div>
-<div class="industry"><div class="industry-visual"><img src="assets/engineeringmanufacturing.png" alt="Engineering and manufacturing"></div><strong>Engineering &amp; Manufacturing</strong></div>
-<div class="industry"><div class="industry-visual"><img src="assets/aerospace.png" alt="Aerospace"></div><strong>Aerospace</strong></div>
-<div class="industry"><div class="industry-visual"><img src="assets/dental.png" alt="Dental"></div><strong>Dental</strong></div>
-</div><div class="center-btn"><a class="btn" href="#quote">Enquire about your industry →</a></div></div></section>
 
 <section id="about" class="about"><div class="container about-grid">
 <div>
@@ -218,36 +340,12 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 <section class="quote-banner"><div class="container quote-inner"><div><h2>Ready to talk to us?</h2><p>Call +44 (0) 7746 609977 or email info@londoco.com — we're happy to help with technical questions or a formal quote.</p></div><a class="btn light" href="mailto:info@londoco.com">Email us →</a></div></section>
 </main>
 <footer><div class="container footer-grid">
-<div><div class="footer-logo-wrap"><img class="footer-logo" src="assets/londoco-logo-trimmed.png" alt="Londoco Ltd"></div><p>UK-based supplier of industrial &amp; dental consumables and precision tools, with capability to serve international markets.</p></div>
-<div><h4>Quick Links</h4><ul><li><a href="#products">Products</a></li><li><a href="#datacentres">Data Centres</a></li><li><a href="#industries">Industries</a></li><li><a href="#about">About Us</a></li></ul></div>
-<div><h4>Industries</h4><ul><li>Data Centres</li><li>Automotive</li><li>Marine &amp; Shipbuilding</li><li>Aerospace</li><li>Dental</li></ul></div>
-<div><h4>Contact</h4><ul><li><a href="mailto:info@londoco.com">info@londoco.com</a></li><li><a href="tel:+447746609977">+44 (0) 7746 609977</a></li></ul></div>
-</div><div class="container footer-bottom"><span>© <span id="year"></span> Londoco Ltd. All rights reserved.</span><span>AS9100 Rev D · ISO 9001:2015 · Made in Britain</span></div></footer>
-
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// Email quote handler
-document.getElementById('quoteForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  var f = e.target;
-  var subject = encodeURIComponent('Quote request from ' + f.name.value);
-  var body = encodeURIComponent('Name: ' + f.name.value + '\nCompany: ' + (f.company.value || '-') + '\nEmail: ' + f.email.value + '\n\n' + f.message.value);
-  window.location.href = 'mailto:info@londoco.com?subject=' + subject + '&body=' + body;
-});
-
-// Mobile menu handler: auto-close on tap outside or click on link
-document.addEventListener('click', function(e) {
-  var navLinks = document.querySelector('.nav-links');
-  var navToggle = document.querySelector('.nav-toggle');
-  
-  if (navLinks && navLinks.classList.contains('open')) {
-    // If tap is outside menu or if clicking a link inside menu
-    if (!navLinks.contains(e.target) || e.target.tagName === 'A') {
-      navLinks.classList.remove('open');
-    }
-  }
-});
-</script>
+<div><div class="footer-logo-wrap"><img class="footer-logo" src="assets/londoco-logo-trimmed.png" alt="Londoco Ltd"></div><p>UK-based supplier of industrial &amp; dental consumables and precision tools.</p></div>
+<div><h4>Quick Links</h4><ul><li><a href="#">Home</a></li><li><a href="#products">Products</a></li><li><a href="#industries">Sectors</a></li><li><a href="#about">About Us</a></li><li><a href="#quote">Contact</a></li></ul></div>
+<div><h4>Sectors</h4><ul><li><a href="#sector-datacentres">Data Centres</a></li><li><a href="#sector-automotive">Automotive</a></li><li><a href="#sector-marine">Marine &amp; Shipbuilding</a></li><li><a href="#sector-engineering">Engineering</a></li><li><a href="#sector-aerospace">Aerospace</a></li><li><a href="#sector-dental">Dental</a></li></ul></div>
+<div><h4>Contact Us</h4><p>Londoco Ltd<br>United Kingdom</p><p style="margin-top:8px">✉ <a href="mailto:info@londoco.com">info@londoco.com</a><br>☎ <a href="tel:+447746609977">+44 (0) 7746 609977</a></p></div>
+</div>
+<div class="container footer-bottom"><div>&copy; Londoco Ltd. All rights reserved.</div><div>Made in Britain registered member · AS9100 Rev D &amp; ISO 9001:2015 supply partner capability</div></div>
+</footer>
 </body>
 </html>

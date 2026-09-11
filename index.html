@@ -47,14 +47,13 @@ section, [id] {
 .nav-links .quote{padding:13px 20px;border:0;background:var(--navy);color:#fff;font-size:14px}
 .nav-toggle{display:none;border:0;background:none;font-size:28px;color:var(--navy);cursor:pointer}
 
-/* CERTIFICATION STRIP (Top Positioned with Image Badges) */
-.cert-strip{background:var(--bg);border-bottom:1px solid var(--line);padding:20px 0}
-.cert-inner{display:grid;grid-template-columns:1fr 1.2fr 1.2fr 1.2fr;align-items:center;min-height:65px}
+/* CERTIFICATION STRIP (Moved above footer) */
+.cert-strip{background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}
+.cert-inner{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;align-items:center;min-height:65px}
 .cert-title{font:800 16px Archivo;color:var(--navy);text-transform:uppercase;padding-right:20px}
-.cert{display:flex;align-items:center;gap:15px;padding:10px 22px;border-left:1px solid var(--line)}
-.cert img.badge-img{height:45px;width:auto;object-fit:contain;flex-shrink:0}
-.cert-text strong{display:block;font:800 15px Archivo;color:var(--navy);margin-bottom:2px;letter-spacing:0.02em}
-.cert-text span{font-size:12.5px;color:var(--muted);line-height:1.2;display:block}
+.cert{display:flex;flex-direction:column;justify-content:center;padding:10px 22px;border-left:1px solid var(--line)}
+.cert strong{display:block;font:800 15px Archivo;color:var(--navy);margin-bottom:3px;letter-spacing:0.02em}
+.cert span{font-size:13px;color:var(--muted);line-height:1.25;display:block}
 
 /* FULL VIEWPORT SECTION SIZING */
 .hero-slider{position:relative;overflow:hidden;background:#061b35;color:#fff;min-height:calc(100vh - 92px);display:flex;align-items:center}
@@ -95,17 +94,17 @@ section, [id] {
 .about-image img{width:100%;height:100%;object-fit:cover;object-position:bottom}
 .about-image-plain{overflow:hidden;border:1px solid var(--line);background:#fff;height:360px}
 .about-image-plain img{width:100%;height:100%;object-fit:contain}
-.about-grid>*,.datacentre-grid>*{min-width:0}
+.about-grid>*,.wipes-grid>*,.datacentre-grid>*{min-width:0}
 .wipes-image img,.datacentre-image img{width:100%;height:auto;max-height:380px;object-fit:contain;background:#fff}
 .quote-banner{background:linear-gradient(100deg,var(--navy2),var(--navy));color:#fff}.quote-inner{min-height:175px;display:flex;align-items:center;justify-content:space-between;gap:30px}.quote-banner h2{color:#fff;font-size:30px;text-transform:uppercase;max-width:650px}.quote-banner p{color:#c9d7e5;margin-top:7px}
 footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:45px}.footer-logo-wrap{display:inline-block;background:#fff;padding:12px 16px;margin-bottom:17px}.footer-logo{width:150px;display:block}footer h4{color:#fff;font-size:14px;text-transform:uppercase;margin-bottom:14px}footer p,footer li,footer a{font-size:14px}footer ul{list-style:none;padding:0;margin:0}footer li{margin-bottom:8px}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:18px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;color:#7f94a8}
-.product-intro{background:var(--bg)}.product-intro .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}.product-intro h2{font-size:36px;text-transform:uppercase;margin-bottom:18px}.product-intro p{color:var(--muted);font-size:17.5px;margin-bottom:14px}.product-intro .about-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 25px;margin-top:22px}.product-intro .about-list div{font-weight:700;color:var(--navy)}
+.product-intro{background:var(--bg)}.product-intro .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}.product-intro h2{font-size:36px;text-transform:uppercase;margin-bottom:18px}.product-intro p{color:var(--muted);font-size:17.5px;margin-bottom:14px}.product-intro .about-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 25px;margin-top:22px}.product-intro .about-list div{font-weight:700;color:var(--navy)}.wipes-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px;align-items:center}.wipes-image img{width:100%;max-height:380px;object-fit:contain}#wipes .about-list{gap:12px 20px}#wipes .about-list div{white-space:nowrap;font-size:15.5px}
 
 .sector-block{border-bottom:1px solid var(--line)}
 .sector-block.light-theme{background:#fff;color:var(--ink)}
 .sector-block.alt-theme{background:var(--bg);color:var(--ink)}
 
-/* UNIFIED LIGHT SECTOR TYPOGRAPHY */
+/* UNIFIED LIGHT SECTOR TYPOGRAPHY (Data Centres & Aerospace updated to match Wipes layout) */
 .datacentre-eyebrow{text-align:center;font:700 13px Archivo;letter-spacing:.06em;color:var(--blue);text-transform:uppercase;margin-bottom:10px}
 .datacentre-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:start;margin-bottom:46px}.datacentre-grid h3,.datacentre-sub h3{font-size:19px;text-transform:uppercase;margin-bottom:16px;color:var(--navy)}.datacentre-grid p{font-size:15.5px;margin-bottom:14px;color:var(--muted)}
 .datacentre-note{border-left:3px solid var(--blue);background:rgba(8,38,74,.04);padding:14px 20px;font-size:14px;margin-top:10px;color:var(--ink)}
@@ -116,7 +115,7 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 @media(max-width:1050px){
   .full-screen-section, .product-card, .hero-slider, .slide { min-height: auto; padding: 60px 0; }
   .product-card { min-height: 480px; }
-  .nav-links{gap:18px; font-size:14px}.industry-grid{grid-template-columns:repeat(3,minmax(0,168px))}.cert-inner{grid-template-columns:1fr 1fr; gap:15px}.cert-title{padding:10px 15px}.product-intro .about-grid,.datacentre-grid,.seo-grid{grid-template-columns:1fr}.uses-grid{grid-template-columns:1fr 1fr}
+  .nav-links{gap:18px; font-size:14px}.industry-grid{grid-template-columns:repeat(3,minmax(0,168px))}.cert-inner{grid-template-columns:1fr 1fr}.cert-title{padding:10px 15px}.product-intro .about-grid,.wipes-grid,.datacentre-grid,.seo-grid{grid-template-columns:1fr}.uses-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:760px){
   .nav-row{min-height:76px;padding:0 18px}.logo{width:190px}.nav-toggle{display:block}
@@ -125,11 +124,11 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
   .nav-links a{padding:12px 0;border:0;width:100%}
   .nav-links .quote{padding:12px 15px;width:auto;margin-top:7px}
   
-  .cert-inner{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;padding:8px 10px;min-height:auto}
+  .cert-inner{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:8px 10px;min-height:auto}
   .cert-title{width:100%;text-align:center;padding:0 0 4px 0;font-size:13px}
-  .cert{border:1px solid var(--line);padding:10px;flex:1 1 45%;min-width:140px;background:#fff;border-radius:4px}
-  .cert-text strong{font-size:12px}
-  .cert-text span{font-size:10px}
+  .cert{border:1px solid var(--line);padding:10px;flex:1 1 45%;min-width:130px;background:#fff;border-radius:4px}
+  .cert strong{font-size:12px}
+  .cert span{font-size:10px}
   
   .slide{min-height:480px}
   .slide-content{padding:40px 0}
@@ -142,34 +141,6 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 <body>
 
 <header class="navbar"><div class="container nav-row"><a href="#"><img class="logo" src="assets/londoco-logo.png" alt="Londoco Ltd"></a><button class="nav-toggle" aria-label="Open navigation" onclick="event.stopPropagation(); document.querySelector('.nav-links').classList.toggle('open')">☰</button><nav class="nav-links"><a href="#">HOME</a><a href="#products">PRODUCTS</a><a href="#industries">SECTORS</a><a href="#about">ABOUT US</a><a href="#quote">CONTACT</a><a class="quote" href="#quote">REQUEST A QUOTE ↗</a></nav></div></header>
-
-<!-- CERTIFICATION & TRUST BAR (Moved near top, with rendered image badges) -->
-<div class="cert-strip">
-  <div class="container cert-inner">
-    <div class="cert-title">Certified quality.<br>Trusted performance.</div>
-    <div class="cert">
-      <img class="badge-img" src="assets/as9100.png" alt="AS9100 Rev D Certified">
-      <div class="cert-text">
-        <strong>AS9100 Rev D</strong>
-        <span>Aerospace Quality System</span>
-      </div>
-    </div>
-    <div class="cert">
-      <img class="badge-img" src="assets/iso9001.png" alt="ISO 9001:2015 Certified">
-      <div class="cert-text">
-        <strong>ISO 9001:2015</strong>
-        <span>Quality Management System</span>
-      </div>
-    </div>
-    <div class="cert">
-      <img class="badge-img" src="assets/madeinbritain.png" alt="Made in Britain Registered">
-      <div class="cert-text">
-        <strong>Made in Britain</strong>
-        <span>Registered Member</span>
-      </div>
-    </div>
-  </div>
-</div>
 
 <main>
 <!-- HERO CAROUSEL / SLIDER SECTION -->
@@ -255,44 +226,25 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
   </div>
 </section>
 
-<!-- 1. BUILT FOR DEMANDING APPLICATIONS (Swapped section) -->
-<section class="product-intro full-screen-section">
-  <div class="container about-grid">
-    <div>
-      <h2>Built for demanding applications</h2>
-      <p>Londoco Ltd supplies pre-saturated, solvent-impregnated wipes and precision-engineered rotary burs to industrial, technical and critical-environment customers.</p>
-      <p>Our core wipe range is manufactured in the UK by an AS9100 Rev D and ISO 9001:2015 certified manufacturing partner, with Made in Britain registration and product traceability.</p>
-      <div class="about-list">
-        <div>✓ UK-manufactured wipe range</div>
-        <div>✓ Ultra-low lint nonwovens</div>
-        <div>✓ IPA, acetone, MEK &amp; more</div>
-        <div>✓ Flexible packaging formats</div>
-      </div>
-    </div>
-    <div class="about-image"><img src="assets/industrial-wipes.png" alt="Londoco pre-saturated industrial wipes"></div>
-  </div>
-</section>
-
-<!-- 2. ADVANCED MANUFACTURING & TECHNICAL CAPABILITIES + MERGED INDUSTRIAL WIPES (Swapped section) -->
-<section id="wipes" class="seo-capabilities full-screen-section">
+<!-- SEO & Technical Specifications Section -->
+<section class="seo-capabilities full-screen-section">
   <div class="container">
     <div class="section-heading">
       <h2>Advanced Manufacturing &amp; Technical Capabilities</h2>
-      <p>Delivering high-performance pre-saturated technical wipes, superabrasives, diamond tools, and precision manufacturing solutions across Aerospace, Electronics, Automotive, Defence, and Precision Engineering sectors.</p>
+      <p>Delivering high-end superabrasives, diamond tools, precision manufacturing solutions, and low-lint nonwoven technical wipes across Aerospace, Electronics, Automotive, Defence, and Precision Manufacturing sectors.</p>
     </div>
     
     <div class="seo-grid">
       <div>
-        <h3>Pre-Saturated Technical &amp; Industrial Wipes</h3>
-        <p style="color:var(--muted); font-size:15px; margin-bottom:12px;">High-performance, engineered low-lint nonwoven wipes pre-saturated with technical solvent formulations for surface preparation, degreasing, and critical cleaning in tubs, buckets, and pouches:</p>
+        <h3>Pre-Saturated Technical Wipes</h3>
+        <p style="color:var(--muted); font-size:15px; margin-bottom:12px;">Engineered low-lint nonwoven wipes pre-saturated with technical solvent formulations for surface preparation, degreasing, and critical cleaning:</p>
         <ul>
-          <li><strong>IPA Wipes:</strong> 30% to 100% purity (including 70% and 99.9% grades)</li>
+          <li><strong>IPA Wipes:</strong> Isopropanol formulations (30% to 99.9% purity)</li>
           <li><strong>Acetone Wipes:</strong> Fast-evaporating solvent wipes for surface prep</li>
           <li><strong>MEK Wipes:</strong> Methyl Ethyl Ketone wipes for heavy degreasing</li>
           <li><strong>Ethanol &amp; Heptane:</strong> Technical cleaning &amp; degreasing solvents</li>
+          <li><strong>NOVOC Degreasing Wipes:</strong> Zero-VOC environmentally compliant wipes</li>
           <li><strong>Ethyl Acetate:</strong> High-purity solvent wipes for specialized applications</li>
-          <li><strong>NOVOC Degreasing Wipes:</strong> Environmentally compliant zero-VOC options</li>
-          <li><strong>Substrates &amp; Formats:</strong> Ultra-low-lint nonwovens in self-closing tubs, buckets, and pouches</li>
         </ul>
       </div>
 
@@ -322,6 +274,45 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
   </div>
 </section>
 
+<section class="product-intro full-screen-section">
+  <div class="container about-grid">
+    <div>
+      <h2>Built for demanding applications</h2>
+      <p>Londoco Ltd supplies pre-saturated, solvent-impregnated wipes and precision-engineered rotary burs to industrial, technical and critical-environment customers.</p>
+      <p>Our core wipe range is manufactured in the UK by an AS9100 Rev D and ISO 9001:2015 certified manufacturing partner, with Made in Britain registration and product traceability.</p>
+      <div class="about-list">
+        <div>✓ UK-manufactured wipe range</div>
+        <div>✓ Ultra-low lint nonwovens</div>
+        <div>✓ IPA, acetone, MEK &amp; more</div>
+        <div>✓ Flexible packaging formats</div>
+      </div>
+    </div>
+    <div class="about-image"><img src="assets/industrial-wipes.png" alt="Londoco pre-saturated industrial wipes"></div>
+  </div>
+</section>
+
+<section id="wipes" class="full-screen-section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Industrial Wipes</h2>
+      <p>High-performance pre-saturated wipes for technical and industrial applications, with fabric, fluid and packaging options matched to the task.</p>
+    </div>
+    <div class="wipes-grid">
+      <div class="wipes-image"><img src="assets/industrial-wipes.png" alt="Londoco industrial wipes"></div>
+      <div class="about-list">
+        <div>✓ IPA — 30–100%, including 70% and 99.9%</div>
+        <div>✓ Acetone</div>
+        <div>✓ MEK</div>
+        <div>✓ Ethanol</div>
+        <div>✓ Heptane</div>
+        <div>✓ Ethyl acetate</div>
+        <div>✓ Tubs, buckets &amp; pouches</div>
+        <div>✓ Low-lint nonwoven fabrics</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SECTORS INDEX GRID -->
 <section id="industries" class="industries full-screen-section">
   <div class="container">
@@ -342,7 +333,7 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 
 <!-- SECTOR SPECIFIC DETAILS SECTIONS -->
 
-<!-- Data Centres -->
+<!-- Data Centres (Updated Font & Light Styling) -->
 <section id="sector-datacentres" class="sector-block light-theme full-screen-section">
 <div class="container">
 <div class="datacentre-eyebrow">Sector Solution · Industrial Wipes</div>
@@ -450,7 +441,7 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 </div>
 </section>
 
-<!-- Aerospace -->
+<!-- Aerospace (Updated Font & Light Styling) -->
 <section id="sector-aerospace" class="sector-block light-theme full-screen-section">
 <div class="container">
 <div class="datacentre-eyebrow">Sector Solution · Industrial Wipes &amp; Tools</div>
@@ -521,6 +512,25 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 </form>
 </div>
 </div></section>
+
+<!-- RELOCATED CERTIFICATION & TRUST BAR (Image Badges Removed) -->
+<div class="cert-strip">
+  <div class="container cert-inner">
+    <div class="cert-title">Certified quality.<br>Trusted performance.</div>
+    <div class="cert">
+      <strong>AS9100 Rev D</strong>
+      <span>Aerospace Quality Management System</span>
+    </div>
+    <div class="cert">
+      <strong>ISO 9001:2015</strong>
+      <span>Quality Management System</span>
+    </div>
+    <div class="cert">
+      <strong>Made in Britain</strong>
+      <span>Registered member supporting UK manufacturing</span>
+    </div>
+  </div>
+</div>
 
 <section class="quote-banner"><div class="container quote-inner"><div><h2>Ready to talk to us?</h2><p>Call +44 (0) 7746 609977 or email info@londoco.com — we're happy to help with technical questions or a formal quote.</p></div><a class="btn light" href="mailto:info@londoco.com">Email us →</a></div></section>
 </main>

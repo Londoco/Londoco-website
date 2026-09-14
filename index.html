@@ -35,7 +35,7 @@ section, [id] {
   scroll-margin-top: 92px;
 }
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--navy);color:#fff;padding:14px 23px;font-weight:700;font-size:14px;border:1px solid var(--navy);text-transform:uppercase;letter-spacing:.02em}.btn:hover{background:var(--blue)}.btn.light{background:#fff;color:var(--navy);border-color:#fff}.btn.outline{background:transparent;color:#fff;border-color:#fff}.btn.outline:hover{background:#fff;color:var(--navy)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--navy);color:#fff;padding:14px 23px;font-weight:700;font-size:14px;border:1px solid var(--navy);text-transform:uppercase;letter-spacing:.02em;cursor:pointer;transition:background 0.2s}.btn:hover{background:var(--blue)}.btn.light{background:#fff;color:var(--navy);border-color:#fff}.btn.outline{background:transparent;color:#fff;border-color:#fff}.btn.outline:hover{background:#fff;color:var(--navy)}
 
 /* NAVBAR */
 .navbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:100}
@@ -78,26 +78,37 @@ section, [id] {
 .dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s}
 .dot.active{background:#fff;width:28px;border-radius:6px}
 
-/* PRODUCT CARDS STYLES */
+/* PRODUCT CARDS STYLES (DESKTOP GAP OPTIMIZATION) */
 .products{display:grid;grid-template-columns:repeat(3,1fr);height:100%}
-.product-card-top{min-height:calc(100vh - 92px);padding:48px 30px 0;position:relative;overflow:hidden;display:flex;flex-direction:column;background:#edf1f5}
+.product-card-top{min-height:calc(100vh - 92px);padding:48px 30px 20px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-start;background:#edf1f5}
 .product-card-top.mid{background:#edf1f5}
 .product-card-top.light{background:#dfe4ec}
-.product-card-top h3{font-size:26px;text-transform:uppercase;margin-bottom:12px;color:var(--navy)}
-.product-card-top p{max-width:320px;font-size:16px;margin-bottom:14px;color:#25374b}
-.product-link{font-weight:800;text-transform:uppercase;font-size:14px;color:var(--navy);position:relative;z-index:2;margin-bottom:20px}
-.product-image.center-img{position:absolute;bottom:40px;left:0;right:0;margin:0 auto;width:85%;height:48%;object-fit:contain;object-position:center;mix-blend-mode:multiply}
+.product-card-top h3{font-size:28px;text-transform:uppercase;margin-bottom:12px;color:var(--navy)}
+.product-card-top p{max-width:340px;font-size:16px;margin-bottom:16px;color:#25374b}
+.product-link{font-weight:800;text-transform:uppercase;font-size:14px;color:var(--navy);position:relative;z-index:2;margin-bottom:20px;display:inline-block}
+
+/* Desktop Fix: Expanded height and bottom placement to eliminate white-space gap */
+.product-image.center-img{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:90%;height:62%;object-fit:contain;object-position:bottom center;mix-blend-mode:multiply}
 
 .strengths{background:#fff;border-bottom:1px solid var(--line)}.strength-grid{display:grid;grid-template-columns:repeat(4,1fr)}.strength{padding:30px 25px;display:flex;gap:15px;border-right:1px solid var(--line)}.strength:last-child{border-right:0}.strength-icon{font-size:28px;color:var(--navy)}.strength h4{font-size:15px;text-transform:uppercase;margin-bottom:7px}.strength p{font-size:13.5px;color:var(--muted)}
 .section-heading{text-align:center;margin-bottom:38px}.section-heading h2{font-size:36px;text-transform:uppercase}.section-heading p{max-width:700px;margin:12px auto 0;color:var(--muted);font-size:16.5px}
-.industries{background:#fff}.industry-hero{margin:0 auto 32px;max-width:1184px;border:1px solid var(--line);background:#f7f9fb;overflow:hidden}.industry-hero img{width:100%;height:auto;max-height:430px;object-fit:cover}.industry-grid{display:grid;grid-template-columns:repeat(6,minmax(0,168px));gap:16px;justify-content:center}.industry{border:1px solid var(--line);background:#fff;text-align:center;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}.industry:hover{transform:translateY(-3px);box-shadow:0 6px 16px rgba(0,0,0,.08)}.industry-visual{height:120px;overflow:hidden;background:#eef1f4}.industry-visual img{width:100%;height:100%;object-fit:cover;display:block}.industry strong{display:block;padding:11px 7px 13px;font:700 12px/1.25 Archivo;color:var(--navy);text-transform:uppercase}.center-btn{text-align:center;margin-top:27px}
+
+/* RE-ALIGNED SECTORS GRID (4x2 DESKTOP LAYOUT) */
+.industries{background:#fff}
+.industry-grid{display:grid;grid-template-columns:repeat(4, 1fr);gap:20px;justify-content:center;max-width:1100px;margin:0 auto}
+.industry{border:1px solid var(--line);background:#fff;text-align:center;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease;border-radius:6px;display:flex;flex-direction:column}
+.industry:hover{transform:translateY(-3px);box-shadow:0 6px 16px rgba(0,0,0,.08)}
+.industry-visual{height:140px;overflow:hidden;background:#eef1f4;display:flex;align-items:center;justify-content:center}
+.industry-visual img{width:100%;height:100%;object-fit:cover;display:block}
+.industry strong{display:block;padding:14px 8px;font:700 13px/1.2 Archivo;color:var(--navy);text-transform:uppercase;margin-top:auto}
+
 .about{background:var(--bg)}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}.about h2{font-size:36px;text-transform:uppercase;margin-bottom:18px}.about p{color:var(--muted);font-size:17.5px;margin-bottom:14px}.about-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 25px;margin-top:22px}.about-list div{font-weight:700;color:var(--navy);font-size:15.5px}.about-image{overflow:hidden;border:1px solid var(--line);background:#fff;height:380px}
 .about-image img{width:100%;height:100%;object-fit:cover;object-position:bottom}
 .about-image-plain{overflow:hidden;border:1px solid var(--line);background:#fff;height:360px}
 .about-image-plain img{width:100%;height:100%;object-fit:contain}
 .about-grid>*,.datacentre-grid>*{min-width:0}
 .wipes-image img,.datacentre-image img{width:100%;height:auto;max-height:380px;object-fit:contain;background:#fff}
-.quote-banner{background:linear-gradient(100deg,var(--navy2),var(--navy));color:#fff}.quote-inner{min-height:175px;display:flex;align-items:center;justify-content:space-between;gap:30px}.quote-banner h2{color:#fff;font-size:30px;text-transform:uppercase;max-width:650px}.quote-banner p{color:#c9d7e5;margin-top:7px}
+
 footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:45px}.footer-logo-wrap{display:inline-block;background:#fff;padding:12px 16px;margin-bottom:17px}.footer-logo{width:150px;display:block}footer h4{color:#fff;font-size:14px;text-transform:uppercase;margin-bottom:14px}footer p,footer li,footer a{font-size:14px}footer ul{list-style:none;padding:0;margin:0}footer li{margin-bottom:8px}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:18px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;color:#7f94a8}
 .product-intro{background:var(--bg)}.product-intro .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}.product-intro h2{font-size:36px;text-transform:uppercase;margin-bottom:18px}.product-intro p{color:var(--muted);font-size:17.5px;margin-bottom:14px}.product-intro .about-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 25px;margin-top:22px}.product-intro .about-list div{font-weight:700;color:var(--navy)}
 
@@ -178,6 +189,99 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 .action-btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; }
 .divider { width: 1px; height: 20px; background: var(--line); }
 
+/* REQUEST A QUOTE SECTION STYLING */
+.quote-section {
+  background: #ffffff;
+  padding: 80px 0;
+  border-top: 1px solid var(--line);
+}
+.quote-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.quote-header h2 {
+  font-family: Archivo, sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: #0c2340;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.quote-header p {
+  font-size: 18px;
+  color: #55687d;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.quote-header p strong {
+  color: #0c2340;
+}
+.quote-form-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+.form-group label {
+  font-family: Archivo, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #0c2340;
+  margin-bottom: 8px;
+}
+.form-control {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d0d7de;
+  border-radius: 2px;
+  font-size: 15px;
+  font-family: "Source Sans 3", Arial, sans-serif;
+  color: var(--ink);
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-control:focus {
+  border-color: #0c2340;
+}
+textarea.form-control {
+  resize: vertical;
+  min-height: 140px;
+}
+.form-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #0c2340;
+  color: #ffffff;
+  font-family: Archivo, sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+.form-submit-btn:hover {
+  background: #174f87;
+}
+
+/* MODAL STYLES */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -263,9 +367,12 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 }
 
 @media(max-width:1050px){
-  .full-screen-section, .product-card-top, .hero-slider, .slide { min-height: auto; padding: 60px 0; }
+  .full-screen-section, .hero-slider, .slide { min-height: auto; padding: 60px 0; }
   .product-card-top { min-height: 480px; }
-  .nav-links{gap:18px; font-size:14px}.industry-grid{grid-template-columns:repeat(3,minmax(0,168px))}.cert-inner{grid-template-columns:1fr 1fr; gap:12px}.cert-title{padding:5px 10px}.product-intro .about-grid,.datacentre-grid{grid-template-columns:1fr}.uses-grid{grid-template-columns:1fr 1fr}
+  .product-image.center-img { position: absolute; bottom: 30px; height: 48%; }
+  .nav-links{gap:18px; font-size:14px}
+  .industry-grid{grid-template-columns:repeat(3, 1fr)}
+  .cert-inner{grid-template-columns:1fr 1fr; gap:12px}.cert-title{padding:5px 10px}.product-intro .about-grid,.datacentre-grid{grid-template-columns:1fr}.uses-grid{grid-template-columns:1fr 1fr}
   .product-grid { grid-template-columns: repeat(2, 1fr); }
   .detail-grid { grid-template-columns: 1fr; }
 }
@@ -285,12 +392,22 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
   .slide{min-height:480px}
   .slide-content{padding:40px 0}
   .slider-arrow{width:38px;height:38px;font-size:16px}
-  .products{grid-template-columns:1fr}.product-card-top{min-height:420px}.strength-grid{grid-template-columns:1fr 1fr}.strength{border-bottom:1px solid var(--line)}.industry-grid{grid-template-columns:repeat(2,minmax(0,168px))}.about-grid{grid-template-columns:1fr}.about-list{grid-template-columns:1fr}.quote-inner{padding:45px 0;align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr 1fr}
+  .products{grid-template-columns:1fr}.product-card-top{min-height:420px}
+  .product-image.center-img { position: relative; bottom: 0; left: 0; transform: none; width: 100%; height: 220px; margin-top: 20px; }
+  .strength-grid{grid-template-columns:1fr 1fr}.strength{border-bottom:1px solid var(--line)}
+  .industry-grid{grid-template-columns:repeat(2, 1fr)}
+  .about-grid{grid-template-columns:1fr}.about-list{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}
+  .form-grid{grid-template-columns:1fr}
 }
 @media(max-width:600px){
   .product-grid { grid-template-columns: 1fr; }
 }
-@media(max-width:480px){.strength-grid,.footer-grid,.uses-grid{grid-template-columns:1fr}.industry-grid{grid-template-columns:repeat(2,minmax(0,140px))}.section-heading h2,.about h2{font-size:28px}form[id=quoteForm]{grid-template-columns:1fr!important}.cert{flex:1 1 100%}}
+@media(max-width:480px){
+  .strength-grid,.footer-grid,.uses-grid{grid-template-columns:1fr}
+  .industry-grid{grid-template-columns:repeat(2, 1fr)}
+  .section-heading h2,.about h2,.quote-header h2{font-size:28px}
+  .cert{flex:1 1 100%}
+}
 </style>
 </head>
 <body>
@@ -410,7 +527,7 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 </section>
 
 <!-- BUILT FOR DEMANDING APPLICATIONS -->
-<section class="product-intro full-screen-section">
+<section id="about" class="product-intro full-screen-section">
   <div class="container about-grid">
     <div>
       <h2>Built for demanding applications</h2>
@@ -427,14 +544,14 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
   </div>
 </section>
 
-<!-- ADVANCED MANUFACTURING & TECHNICAL CAPABILITIES (EXCLUSIVELY 5 WIPES CATALOGUE) -->
+<!-- ADVANCED MANUFACTURING & TECHNICAL CAPABILITIES -->
 <section id="wipes" class="seo-capabilities full-screen-section">
   <div class="container">
     <div class="section-heading">
       <h2>Industrial Solvent Wipes Catalogue</h2>
       <p>Select a product category to view detailed specifications, packaging formats, and technical data.</p>
       
-      <!-- CATEGORY FILTER NAV (5 EXCLUSIVE WIPES) -->
+      <!-- CATEGORY FILTER NAV -->
       <nav class="category-nav">
         <button class="category-btn active" onclick="filterCategory('all', event)">All Wipes</button>
         <button class="category-btn" onclick="filterCategory('ipa', event)">IPA Wipes</button>
@@ -557,7 +674,7 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
   </div>
 </section>
 
-<!-- SECTORS INDEX GRID -->
+<!-- SECTORS INDEX GRID (ALPHABETICAL & ALIGNED) -->
 <section id="industries" class="industries full-screen-section">
   <div class="container">
     <div class="section-heading">
@@ -565,12 +682,14 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
       <p>Tailored technical cleaning and precision tooling solutions engineered for demanding environments.</p>
     </div>
     <div class="industry-grid">
-      <a href="#sector-datacentres" class="industry"><div class="industry-visual"><img src="assets/datacentre.png" alt="Data centres"></div><strong>Data Centres</strong></a>
-      <a href="#sector-automotive" class="industry"><div class="industry-visual"><img src="assets/automotive.png" alt="Automotive"></div><strong>Automotive</strong></a>
-      <a href="#sector-marine" class="industry"><div class="industry-visual"><img src="assets/marineshipbuilding.png" alt="Marine and shipbuilding"></div><strong>Marine &amp; Shipbuilding</strong></a>
-      <a href="#sector-engineering" class="industry"><div class="industry-visual"><img src="assets/engineeringmanufacturing.png" alt="Engineering and manufacturing"></div><strong>Engineering &amp; Manufacturing</strong></a>
       <a href="#sector-aerospace" class="industry"><div class="industry-visual"><img src="assets/aerospace.png" alt="Aerospace"></div><strong>Aerospace</strong></a>
+      <a href="#sector-automotive" class="industry"><div class="industry-visual"><img src="assets/automotive.png" alt="Automotive"></div><strong>Automotive</strong></a>
+      <a href="#sector-datacentres" class="industry"><div class="industry-visual"><img src="assets/datacentre.png" alt="Data Centres"></div><strong>Data Centres</strong></a>
       <a href="#sector-dental" class="industry"><div class="industry-visual"><img src="assets/dental.png" alt="Dental"></div><strong>Dental</strong></a>
+      <a href="#sector-engineering" class="industry"><div class="industry-visual"><img src="assets/engineeringmanufacturing.png" alt="Engineering and manufacturing"></div><strong>Engineering &amp; Manufacturing</strong></a>
+      <a href="#sector-marine" class="industry"><div class="industry-visual"><img src="assets/marineshipbuilding.png" alt="Marine and shipbuilding"></div><strong>Marine &amp; Shipbuilding</strong></a>
+      <a href="#sector-mining" class="industry"><div class="industry-visual"><img src="assets/mining-sector.png" alt="Mining & Extraction"></div><strong>Mining &amp; Extraction</strong></a>
+      <a href="#sector-rail" class="industry"><div class="industry-visual"><img src="assets/rail-sector.png" alt="Rail"></div><strong>Rail</strong></a>
     </div>
   </div>
 </section>
@@ -658,7 +777,84 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 </div>
 </section>
 
+<!-- REQUEST A QUOTE SECTION -->
+<section id="quote" class="quote-section">
+  <div class="container">
+    <div class="quote-header">
+      <h2>REQUEST A QUOTE</h2>
+      <p>Submit your technical specifications below or email our engineering team directly at <strong>info@londoco.com</strong></p>
+    </div>
+    
+    <div class="quote-form-container">
+      <form id="quoteForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group full-width" style="margin-bottom: 24px;">
+          <label for="fullName">Name *</label>
+          <input type="text" id="fullName" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="emailAddr">Email *</label>
+            <input type="email" id="emailAddr" class="form-control" placeholder="name@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="companyName">Company</label>
+            <input type="text" id="companyName" class="form-control" placeholder="e.g. Londoco Ltd">
+          </div>
+        </div>
+
+        <div class="form-group full-width" style="margin-bottom: 32px;">
+          <label for="specifications">Project Scope &amp; Product Specifications *</label>
+          <textarea id="specifications" class="form-control" placeholder="Please detail required products (e.g. 99.9% IPA Wipes, Rotary Burs), fluid/fabric specifications, quantities, or delivery lead times..." required></textarea>
+        </div>
+
+        <div>
+          <button type="submit" class="form-submit-btn">SEND ENQUIRY &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
 </main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-wrap"><img class="footer-logo" src="assets/londoco-logo.png" alt="Londoco Ltd"></div>
+        <p>UK supplier of pre-saturated wipes, precision engineering burs and technical consumables.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#wipes">Industrial Wipes</a></li>
+          <li><a href="#products">Rotary Burs &amp; Tools</a></li>
+          <li><a href="#products">Dental Consumables</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sectors</h4>
+        <ul>
+          <li><a href="#sector-aerospace">Aerospace</a></li>
+          <li><a href="#sector-automotive">Automotive</a></li>
+          <li><a href="#sector-datacentres">Data Centres</a></li>
+          <li><a href="#sector-marine">Marine &amp; Shipbuilding</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: info@londoco.com</p>
+        <p>Phone: +44 7746 609977</p>
+        <p>United Kingdom</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; Londoco Ltd. All rights reserved.</div>
+      <div>AS9100 Rev D &amp; ISO 9001:2015 Accredited Supply Chain</div>
+    </div>
+  </div>
+</footer>
 
 <!-- PRODUCT DETAIL MODAL -->
 <div class="modal-overlay" id="productModal">
@@ -701,6 +897,7 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
           </tbody>
         </table>
 
+        <!-- Navigates directly to #quote and closes modal -->
         <a href="#quote" class="quote-cta-btn" onclick="closeProductModal()">Request Product Quote &rarr;</a>
       </div>
     </div>
@@ -740,7 +937,7 @@ setInterval(() => {
   moveSlide(1);
 }, 6000);
 
-// PRODUCT DATA STORE FOR THE 5 SPECIFIC WIPES
+// PRODUCT DATA STORE FOR 5 WIPES
 const productData = {
   ipa: {
     title: "LONDOCO IPA Wipes",
@@ -870,6 +1067,13 @@ function showToast() {
   const toast = document.getElementById('toast');
   toast.style.display = 'block';
   setTimeout(() => { toast.style.display = 'none'; }, 3000);
+}
+
+// FORM SUBMISSION HANDLER
+function handleFormSubmit(event) {
+  event.preventDefault();
+  alert("Thank you for your enquiry. Our technical team will get back to you shortly.");
+  document.getElementById('quoteForm').reset();
 }
 </script>
 

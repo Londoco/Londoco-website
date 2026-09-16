@@ -69,17 +69,19 @@ section, [id] {
 .dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s}
 .dot.active{background:#fff;width:28px;border-radius:6px}
 
-/* PRODUCT CARDS STYLES - DESKTOP VERTICAL CENTERING FIX */
-.products{display:grid;grid-template-columns:repeat(3,1fr);height:100%}
-.product-card-top{min-height:calc(100vh - 92px);padding:48px 30px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;background:#edf1f5}
+/* PRODUCT CARDS STYLES - STRICT ALIGNMENT & LARGER IMAGE FIX */
+.products{display:grid;grid-template-columns:repeat(3,1fr);min-height:calc(100vh - 92px);align-items:stretch}
+.product-card-top{padding:48px 36px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#edf1f5}
 .product-card-top.mid{background:#edf1f5}
 .product-card-top.light{background:#dfe4ec}
-.product-card-top h3{font-size:28px;text-transform:uppercase;margin-bottom:12px;color:var(--navy)}
-.product-card-top p{max-width:340px;font-size:16px;margin-bottom:16px;color:#25374b}
-.product-link{font-weight:800;text-transform:uppercase;font-size:14px;color:var(--navy);position:relative;z-index:2;margin-bottom:20px;display:inline-block}
+.card-header-area { flex: 0 0 170px; display: flex; flex-direction: column; }
+.product-card-top h3{font-size:32px;text-transform:uppercase;margin-bottom:12px;color:var(--navy);letter-spacing:-0.01em;}
+.product-card-top p{max-width:340px;font-size:16px;margin-bottom:16px;color:#25374b;line-height:1.45;}
+.product-link{font-weight:800;text-transform:uppercase;font-size:14px;color:var(--navy);position:relative;z-index:2;margin-top:auto;display:inline-block}
 
-/* Image centered vertically relative to card layout with no large bottom gaps */
-.product-image.center-img{position:relative;margin:20px auto 0;width:90%;max-height:48vh;object-fit:contain;object-position:center;mix-blend-mode:multiply}
+/* Hero Images Scaled Larger & Perfectly Aligned at Bottom */
+.hero-image-wrap { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; width: 100%; margin-top: 20px; }
+.product-image.center-img{width:95%;max-height:58vh;object-fit:contain;object-position:center;mix-blend-mode:multiply}
 
 .section-heading{text-align:center;margin-bottom:38px}.section-heading h2{font-size:36px;text-transform:uppercase}.section-heading p{max-width:700px;margin:12px auto 0;color:var(--muted);font-size:16.5px}
 
@@ -358,8 +360,9 @@ textarea.form-control {
 
 @media(max-width:1050px){
   .full-screen-section, .hero-slider, .slide { min-height: auto; padding: 60px 0; }
+  .card-header-area { flex: auto; }
   .product-card-top { min-height: 480px; }
-  .product-image.center-img { width: 100%; max-height: 220px; }
+  .product-image.center-img { width: 100%; max-height: 320px; }
   .nav-links{gap:18px; font-size:14px}
   .industry-grid{grid-template-columns:repeat(3, 1fr)}
   .product-intro .about-grid,.datacentre-grid{grid-template-columns:1fr}.uses-grid{grid-template-columns:1fr 1fr}
@@ -377,7 +380,7 @@ textarea.form-control {
   .slide-content{padding:40px 0}
   .slider-arrow{width:38px;height:38px;font-size:16px}
   .products{grid-template-columns:1fr}.product-card-top{min-height:420px}
-  .product-image.center-img { width: 100%; max-height: 220px; }
+  .product-image.center-img { width: 100%; max-height: 280px; }
   .industry-grid{grid-template-columns:repeat(2, 1fr)}
   .about-grid{grid-template-columns:1fr}.about-list{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}
   .form-grid{grid-template-columns:1fr}
@@ -456,33 +459,43 @@ textarea.form-control {
   </div>
 </section>
 
-<!-- PRODUCTS SECTION -->
+<!-- PRODUCTS SECTION - ALIGNED IN ONE HORIZONTAL ROW WITH LARGER IMAGES -->
 <section id="products" style="padding:0">
   <div class="products">
+    
     <article class="product-card-top mid">
-      <div>
+      <div class="card-header-area">
         <h3>Industrial Wipes</h3>
         <p>High-performance pre-saturated wipes for cleaning, degreasing and surface preparation.</p>
         <a class="product-link" href="#wipes">View products →</a>
       </div>
-      <img class="product-image center-img" src="assets/industrial-wipes.png" alt="Londoco industrial wipes">
+      <div class="hero-image-wrap">
+        <img class="product-image center-img" src="assets/industrial-wipes.png" alt="Londoco industrial wipes">
+      </div>
     </article>
+
     <article class="product-card-top mid">
-      <div>
+      <div class="card-header-area">
         <h3>Industrial Tools</h3>
         <p>Precision-engineered rotary burs and technical consumables for demanding applications.</p>
         <a class="product-link" href="#quote">Enquire about products →</a>
       </div>
-      <img class="product-image center-img" src="assets/hero-industrial-tools.png" alt="Londoco industrial tools">
+      <div class="hero-image-wrap">
+        <img class="product-image center-img" src="assets/hero-industrial-tools.png" alt="Londoco industrial tools">
+      </div>
     </article>
+
     <article class="product-card-top light">
-      <div>
+      <div class="card-header-area">
         <h3>Dental</h3>
         <p>Dental consumables and precision instruments for professional applications.</p>
         <a class="product-link" href="#quote">Enquire about products →</a>
       </div>
-      <img class="product-image center-img" src="assets/hero-dental-tools.png" alt="Londoco dental tools">
+      <div class="hero-image-wrap">
+        <img class="product-image center-img" src="assets/hero-dental-tools.png" alt="Londoco dental tools">
+      </div>
     </article>
+
   </div>
 </section>
 
@@ -511,86 +524,23 @@ textarea.form-control {
       <h2>Industrial Solvent Wipes Catalogue</h2>
       <p>Select a product category to view detailed specifications, packaging formats, and technical data.</p>
       
-      <!-- CATEGORY FILTER NAV -->
+      <!-- CATEGORY FILTER NAV (ALPHABETICAL ORDER) -->
       <nav class="category-nav">
         <button class="category-btn active" onclick="filterCategory('all', event)">All Wipes</button>
-        <button class="category-btn" onclick="filterCategory('datacentre', event)">Data Centre Wipes</button>
-        <button class="category-btn" onclick="filterCategory('hydraulic', event)">Hydraulic Wipes</button>
-        <button class="category-btn" onclick="filterCategory('ipa', event)">IPA Wipes</button>
         <button class="category-btn" onclick="filterCategory('acetone', event)">Acetone Wipes</button>
-        <button class="category-btn" onclick="filterCategory('mek', event)">MEK Wipes</button>
+        <button class="category-btn" onclick="filterCategory('datacentre', event)">Data Centre Wipes</button>
         <button class="category-btn" onclick="filterCategory('ethanol', event)">Ethanol Wipes</button>
         <button class="category-btn" onclick="filterCategory('heptane', event)">Heptane Wipes</button>
+        <button class="category-btn" onclick="filterCategory('hydraulic', event)">Hydraulic Wipes</button>
+        <button class="category-btn" onclick="filterCategory('ipa', event)">IPA Wipes</button>
+        <button class="category-btn" onclick="filterCategory('mek', event)">MEK Wipes</button>
       </nav>
     </div>
     
-    <!-- PRODUCT GRID -->
+    <!-- PRODUCT GRID (ALPHABETICAL ORDER) -->
     <div class="product-grid">
 
-      <!-- 1. DATA CENTRE WIPES -->
-      <article class="product-card" data-category="datacentre">
-        <div class="title">LONDOCO Data Centre Wipes</div>
-        <div class="subtitle">Ultra-Low VOC Critical IT Environment Wipes.</div>
-        <div class="category-tag">Data Centre Wipes</div>
-        <div class="image-wrap">
-          <img src="assets/londocowipesset.png" alt="Londoco Data Centre Wipes">
-        </div>
-        <div class="card-actions">
-          <button class="action-btn" onclick="openProductModal('datacentre')">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
-            Information
-          </button>
-          <span class="divider"></span>
-          <button class="action-btn" onclick="shareProduct('LONDOCO Data Centre Wipes')">
-            <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
-            Share
-          </button>
-        </div>
-      </article>
-
-      <!-- 2. HYDRAULIC CLEANING WIPES (ADDED PRODUCT) -->
-      <article class="product-card" data-category="hydraulic">
-        <div class="title">LONDOCO Hydraulic Wipes</div>
-        <div class="subtitle">Heavy-Duty Fluid &amp; System Maintenance Wipes.</div>
-        <div class="category-tag">Hydraulic Wipes</div>
-        <div class="image-wrap">
-          <img src="assets/industrial-wipes.png" alt="Londoco Hydraulic Cleaning Wipes">
-        </div>
-        <div class="card-actions">
-          <button class="action-btn" onclick="openProductModal('hydraulic')">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
-            Information
-          </button>
-          <span class="divider"></span>
-          <button class="action-btn" onclick="shareProduct('LONDOCO Hydraulic Cleaning Wipes')">
-            <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
-            Share
-          </button>
-        </div>
-      </article>
-
-      <!-- 3. IPA WIPES -->
-      <article class="product-card" data-category="ipa">
-        <div class="title">LONDOCO IPA Wipes</div>
-        <div class="subtitle">Isopropanol Pre-Saturated Surface Wipes.</div>
-        <div class="category-tag">IPA Wipes</div>
-        <div class="image-wrap">
-          <img src="assets/industrial-wipes.png" alt="Londoco IPA Wipes">
-        </div>
-        <div class="card-actions">
-          <button class="action-btn" onclick="openProductModal('ipa')">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
-            Information
-          </button>
-          <span class="divider"></span>
-          <button class="action-btn" onclick="shareProduct('LONDOCO IPA Wipes')">
-            <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
-            Share
-          </button>
-        </div>
-      </article>
-
-      <!-- 4. ACETONE WIPES -->
+      <!-- 1. ACETONE WIPES -->
       <article class="product-card" data-category="acetone">
         <div class="title">LONDOCO Acetone Wipes</div>
         <div class="subtitle">Fast-Evaporating Technical Resin Solvent.</div>
@@ -611,28 +561,28 @@ textarea.form-control {
         </div>
       </article>
 
-      <!-- 5. MEK WIPES -->
-      <article class="product-card" data-category="mek">
-        <div class="title">LONDOCO MEK Wipes</div>
-        <div class="subtitle">Heavy-Duty Methyl Ethyl Ketone Wipes.</div>
-        <div class="category-tag">MEK Wipes</div>
+      <!-- 2. DATA CENTRE WIPES -->
+      <article class="product-card" data-category="datacentre">
+        <div class="title">LONDOCO Data Centre Wipes</div>
+        <div class="subtitle">Ultra-Low VOC Critical IT Environment Wipes.</div>
+        <div class="category-tag">Data Centre Wipes</div>
         <div class="image-wrap">
-          <img src="assets/industrial-wipes.png" alt="Londoco MEK Wipes">
+          <img src="assets/londocowipesset.png" alt="Londoco Data Centre Wipes">
         </div>
         <div class="card-actions">
-          <button class="action-btn" onclick="openProductModal('mek')">
+          <button class="action-btn" onclick="openProductModal('datacentre')">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
             Information
           </button>
           <span class="divider"></span>
-          <button class="action-btn" onclick="shareProduct('LONDOCO MEK Wipes')">
+          <button class="action-btn" onclick="shareProduct('LONDOCO Data Centre Wipes')">
             <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
             Share
           </button>
         </div>
       </article>
 
-      <!-- 6. ETHANOL WIPES -->
+      <!-- 3. ETHANOL WIPES -->
       <article class="product-card" data-category="ethanol">
         <div class="title">LONDOCO Ethanol Wipes</div>
         <div class="subtitle">High-Purity Ethyl Alcohol Sanitising Wipes.</div>
@@ -653,7 +603,7 @@ textarea.form-control {
         </div>
       </article>
 
-      <!-- 7. HEPTANE WIPES -->
+      <!-- 4. HEPTANE WIPES -->
       <article class="product-card" data-category="heptane">
         <div class="title">LONDOCO Heptane Wipes</div>
         <div class="subtitle">Non-Polar Grease &amp; Adhesive Solvent Wipes.</div>
@@ -668,6 +618,69 @@ textarea.form-control {
           </button>
           <span class="divider"></span>
           <button class="action-btn" onclick="shareProduct('LONDOCO Heptane Wipes')">
+            <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
+            Share
+          </button>
+        </div>
+      </article>
+
+      <!-- 5. HYDRAULIC CLEANING WIPES (UPDATED IMAGE FILE TO hydraulic-wipe.png) -->
+      <article class="product-card" data-category="hydraulic">
+        <div class="title">LONDOCO Hydraulic Wipes</div>
+        <div class="subtitle">Heavy-Duty Fluid &amp; System Maintenance Wipes.</div>
+        <div class="category-tag">Hydraulic Wipes</div>
+        <div class="image-wrap">
+          <img src="assets/hydraulic-wipe.png" alt="Londoco Hydraulic Cleaning Wipes">
+        </div>
+        <div class="card-actions">
+          <button class="action-btn" onclick="openProductModal('hydraulic')">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+            Information
+          </button>
+          <span class="divider"></span>
+          <button class="action-btn" onclick="shareProduct('LONDOCO Hydraulic Cleaning Wipes')">
+            <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
+            Share
+          </button>
+        </div>
+      </article>
+
+      <!-- 6. IPA WIPES -->
+      <article class="product-card" data-category="ipa">
+        <div class="title">LONDOCO IPA Wipes</div>
+        <div class="subtitle">Isopropanol Pre-Saturated Surface Wipes.</div>
+        <div class="category-tag">IPA Wipes</div>
+        <div class="image-wrap">
+          <img src="assets/industrial-wipes.png" alt="Londoco IPA Wipes">
+        </div>
+        <div class="card-actions">
+          <button class="action-btn" onclick="openProductModal('ipa')">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+            Information
+          </button>
+          <span class="divider"></span>
+          <button class="action-btn" onclick="shareProduct('LONDOCO IPA Wipes')">
+            <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
+            Share
+          </button>
+        </div>
+      </article>
+
+      <!-- 7. MEK WIPES -->
+      <article class="product-card" data-category="mek">
+        <div class="title">LONDOCO MEK Wipes</div>
+        <div class="subtitle">Heavy-Duty Methyl Ethyl Ketone Wipes.</div>
+        <div class="category-tag">MEK Wipes</div>
+        <div class="image-wrap">
+          <img src="assets/industrial-wipes.png" alt="Londoco MEK Wipes">
+        </div>
+        <div class="card-actions">
+          <button class="action-btn" onclick="openProductModal('mek')">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+            Information
+          </button>
+          <span class="divider"></span>
+          <button class="action-btn" onclick="shareProduct('LONDOCO MEK Wipes')">
             <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
             Share
           </button>
@@ -700,7 +713,7 @@ textarea.form-control {
 
 <!-- SECTOR SPECIFIC DETAILS SECTIONS -->
 
-<!-- Data Centres (UPDATED WITH DATA CENTRE WIPES SPECIFICATIONS) -->
+<!-- Data Centres -->
 <section id="sector-datacentres" class="sector-block light-theme">
 <div class="container">
   <div class="datacentre-eyebrow">Sector Solution · Data Centre Wipes</div>
@@ -995,8 +1008,20 @@ setInterval(() => {
   moveSlide(1);
 }, 6000);
 
-// PRODUCT DATA STORE FOR ALL WIPES (INCLUDING DATA CENTRE & HYDRAULIC WIPES)
+// PRODUCT DATA STORE FOR ALL WIPES (MODAL MAPPING)
 const productData = {
+  acetone: {
+    title: "LONDOCO Acetone Wipes",
+    subtitle: "Fast-Evaporating Technical Resin & Sealant Solvent.",
+    category: "Acetone Wipes",
+    image: "assets/industrial-wipes.png",
+    description: "Designed to rapidly dissolve tough resins, uncured adhesives, polyesters, and inks from industrial tooling and metallic substrates.",
+    applications: "Fiberglass/composite tooling cleanup, resin removal, high-strength metal surface prep.",
+    table: [
+      { code: "LND-ACT-T100", format: "100 Wipes / Tub" },
+      { code: "LND-ACT-P50", format: "50 Wipes / Pouch" }
+    ]
+  },
   datacentre: {
     title: "LONDOCO Data Centre Wipes",
     subtitle: "Ultra-Low VOC Critical IT Environment Wipes.",
@@ -1010,57 +1035,6 @@ const productData = {
       { code: "VOC Content", format: "Ultra-Low VOC" },
       { code: "Anti-Static / Linting", format: "Yes / Lint-Free" },
       { code: "Sheet / Pack Size", format: "40cm x 30cm (30 sheets/pack)" }
-    ]
-  },
-  hydraulic: {
-    title: "LONDOCO Hydraulic Cleaning Wipes",
-    subtitle: "Heavy-Duty Fluid & System Maintenance Pre-Saturated Wipes.",
-    category: "Hydraulic Wipes",
-    image: "assets/industrial-wipes.png",
-    description: "Engineered specifically for heavy mechanical, aerospace, marine, and industrial hydraulic system maintenance. Easily removes heavy synthetic and mineral hydraulic fluids, greases, and tars while leaving a clean, lint-free surface prior to fitting re-assembly.",
-    applications: "Hydraulic hose fittings, fluid couplings, valves, cylinders, mechanical gearboxes, and heavy machinery maintenance.",
-    table: [
-      { code: "Wipe Material", format: "Ultra-Duty Cross-Lapped Polypropylene" },
-      { code: "Solvent Type", format: "High-Purity Hydrocarbon Solvent Degreaser" },
-      { code: "Evaporation Rate", format: "Controlled / Medium Fast" },
-      { code: "Linting Level", format: "Zero Lint Shedding" },
-      { code: "Packaging Format", format: "100 Wipes / Heavy-Duty Tub or Refill Pouch" }
-    ]
-  },
-  ipa: {
-    title: "LONDOCO IPA Wipes",
-    subtitle: "Isopropanol Pre-Saturated Surface Wipes. Rapid Evaporation.",
-    category: "IPA Wipes",
-    image: "assets/industrial-wipes.png",
-    description: "LONDOCO IPA wipes offer effective surface preparation and residue-free degreasing. Standardised for electronics maintenance, optical prep, and cleanroom wipe-downs.",
-    applications: "Precision contact cleaning, optical component prep, surface degreasing prior to painting.",
-    table: [
-      { code: "LND-IPA-T100", format: "100 Wipes / Tub" },
-      { code: "LND-IPA-P50", format: "50 Wipes / Pouch" }
-    ]
-  },
-  acetone: {
-    title: "LONDOCO Acetone Wipes",
-    subtitle: "Fast-Evaporating Technical Resin & Sealant Solvent.",
-    category: "Acetone Wipes",
-    image: "assets/industrial-wipes.png",
-    description: "Designed to rapidly dissolve tough resins, uncured adhesives, polyesters, and inks from industrial tooling and metallic substrates.",
-    applications: "Fiberglass/composite tooling cleanup, resin removal, high-strength metal surface prep.",
-    table: [
-      { code: "LND-ACT-T100", format: "100 Wipes / Tub" },
-      { code: "LND-ACT-P50", format: "50 Wipes / Pouch" }
-    ]
-  },
-  mek: {
-    title: "LONDOCO MEK Wipes",
-    subtitle: "Heavy-Duty Methyl Ethyl Ketone Solvent Wipes.",
-    category: "MEK Wipes",
-    image: "assets/industrial-wipes.png",
-    description: "Formulated with pure MEK for dissolving heavy greases, sealants, adhesives, and paints from metal and composite surfaces in severe industrial environments.",
-    applications: "Aerospace sealant removal, heavy equipment maintenance, composite surface preparation.",
-    table: [
-      { code: "LND-MEK-T100", format: "100 Wipes / Tub" },
-      { code: "LND-MEK-P50", format: "50 Wipes / Pouch" }
     ]
   },
   ethanol: {
@@ -1085,6 +1059,45 @@ const productData = {
     table: [
       { code: "LND-HEP-T100", format: "100 Wipes / Tub" },
       { code: "LND-HEP-P50", format: "50 Wipes / Pouch" }
+    ]
+  },
+  hydraulic: {
+    title: "LONDOCO Hydraulic Cleaning Wipes",
+    subtitle: "Heavy-Duty Fluid & System Maintenance Pre-Saturated Wipes.",
+    category: "Hydraulic Wipes",
+    image: "assets/hydraulic-wipe.png",
+    description: "Engineered specifically for heavy mechanical, aerospace, marine, and industrial hydraulic system maintenance. Easily removes heavy synthetic and mineral hydraulic fluids, greases, and tars while leaving a clean, lint-free surface prior to fitting re-assembly.",
+    applications: "Hydraulic hose fittings, fluid couplings, valves, cylinders, mechanical gearboxes, and heavy machinery maintenance.",
+    table: [
+      { code: "Wipe Material", format: "Ultra-Duty Cross-Lapped Polypropylene" },
+      { code: "Solvent Type", format: "High-Purity Hydrocarbon Solvent Degreaser" },
+      { code: "Evaporation Rate", format: "Controlled / Medium Fast" },
+      { code: "Linting Level", format: "Zero Lint Shedding" },
+      { code: "Packaging Format", format: "100 Wipes / Heavy-Duty Tub or Refill Pouch" }
+    ]
+  },
+  ipa: {
+    title: "LONDOCO IPA Wipes",
+    subtitle: "Isopropanol Pre-Saturated Surface Wipes. Rapid Evaporation.",
+    category: "IPA Wipes",
+    image: "assets/industrial-wipes.png",
+    description: "LONDOCO IPA wipes offer effective surface preparation and residue-free degreasing. Standardised for electronics maintenance, optical prep, and cleanroom wipe-downs.",
+    applications: "Precision contact cleaning, optical component prep, surface degreasing prior to painting.",
+    table: [
+      { code: "LND-IPA-T100", format: "100 Wipes / Tub" },
+      { code: "LND-IPA-P50", format: "50 Wipes / Pouch" }
+    ]
+  },
+  mek: {
+    title: "LONDOCO MEK Wipes",
+    subtitle: "Heavy-Duty Methyl Ethyl Ketone Solvent Wipes.",
+    category: "MEK Wipes",
+    image: "assets/industrial-wipes.png",
+    description: "Formulated with pure MEK for dissolving heavy greases, sealants, adhesives, and paints from metal and composite surfaces in severe industrial environments.",
+    applications: "Aerospace sealant removal, heavy equipment maintenance, composite surface preparation.",
+    table: [
+      { code: "LND-MEK-T100", format: "100 Wipes / Tub" },
+      { code: "LND-MEK-P50", format: "50 Wipes / Pouch" }
     ]
   }
 };

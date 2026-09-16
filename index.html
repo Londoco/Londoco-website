@@ -69,36 +69,19 @@ section, [id] {
 .dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s}
 .dot.active{background:#fff;width:28px;border-radius:6px}
 
-/* PRODUCT CARDS STYLES (DESKTOP MID-ALIGNMENT FIX) */
-.product-card-top {
-  padding: 48px 30px 40px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  background: #edf1f5;
-}
+/* PRODUCT CARDS STYLES */
+.products{display:grid;grid-template-columns:repeat(3,1fr);height:100%}
+.product-card-top{min-height:calc(100vh - 92px);padding:48px 30px 20px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-start;background:#edf1f5}
+.product-card-top.mid{background:#edf1f5}
+.product-card-top.light{background:#dfe4ec}
+.product-card-top h3{font-size:28px;text-transform:uppercase;margin-bottom:12px;color:var(--navy)}
+.product-card-top p{max-width:340px;font-size:16px;margin-bottom:16px;color:#25374b}
+.product-link{font-weight:800;text-transform:uppercase;font-size:14px;color:var(--navy);position:relative;z-index:2;margin-bottom:20px;display:inline-block}
 
-/* DESKTOP ONLY: Vertically centers the image between text and card bottom */
-@media (min-width: 1051px) {
-  .product-card-top {
-    min-height: 540px;          /* Restricts card height to remove giant bottom gap */
-    justify-content: flex-start;
-  }
-  
-  .product-image.center-img {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    transform: none;
-    width: 100%;
-    height: 220px;
-    object-fit: contain;
-    object-position: center;
-    mix-blend-mode: multiply;
-    margin-top: auto;          /* Pushes image to center area */
-    margin-bottom: auto;       /* Creates equal spacing top & bottom */
-  }
+.product-image.center-img{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:90%;height:62%;object-fit:contain;object-position:bottom center;mix-blend-mode:multiply}
+
+.section-heading{text-align:center;margin-bottom:38px}.section-heading h2{font-size:36px;text-transform:uppercase}.section-heading p{max-width:700px;margin:12px auto 0;color:var(--muted);font-size:16.5px}
+
 /* RE-ALIGNED SECTORS GRID */
 .industries{background:#fff}
 .industry-grid{display:grid;grid-template-columns:repeat(4, 1fr);gap:20px;justify-content:center;max-width:1100px;margin:0 auto}

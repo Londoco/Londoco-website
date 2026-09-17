@@ -8,17 +8,17 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
-<meta name="description" content="UK-based supplier of industrial and dental consumables and precision tools, with capability to serve international markets. UK-manufactured pre-saturated wipes and technical consumables.">
+<meta name="description" content="Londoco Ltd is a UK manufacturer and supplier of pre-saturated wipes, precision rotary burs, and dental &amp; milling burs — serving aerospace, automotive, data centres, dental, engineering, marine, mining and rail sectors across the UK and international markets.">
 <link rel="canonical" href="https://londoco.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Londoco Ltd">
 <meta property="og:title" content="Londoco Ltd | Industrial & Dental Consumables | Precision Tools">
-<meta property="og:description" content="UK-manufactured pre-saturated wipes, technical consumables and precision tools for industrial and dental applications.">
+<meta property="og:description" content="UK supplier of pre-saturated wipes, technical consumables and precision tools for industrial and dental applications.">
 <meta property="og:url" content="https://londoco.com/">
 <meta property="og:image" content="https://londoco.com/assets/landingpage-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Londoco Ltd | Industrial & Dental Consumables | Precision Tools">
-<meta name="twitter:description" content="UK-manufactured pre-saturated wipes, technical consumables and precision tools for industrial and dental applications.">
+<meta name="twitter:description" content="UK supplier of pre-saturated wipes, technical consumables and precision tools for industrial and dental applications.">
 <meta name="twitter:image" content="https://londoco.com/assets/landingpage-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Londoco Ltd","url":"https://londoco.com/","logo":"https://londoco.com/assets/londoco-logo.png","description":"UK-based supplier of pre-saturated wipes, technical consumables and precision tools for industrial and dental applications.","email":"info@londoco.com","telephone":"+44-7746-609977","address":{"@type":"PostalAddress","addressCountry":"GB"},"sameAs":[]}
@@ -30,7 +30,7 @@
 :root{--navy:#08264a;--navy2:#061b35;--blue:#174f87;--accent:#d9381e;--ink:#142234;--muted:#647386;--line:#dce3ea;--bg:#f6f8fa;--card-bg:#ffffff;--white:#fff;--max:1240px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Source Sans 3",Arial,sans-serif;color:var(--ink);line-height:1.55}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.container{max-width:var(--max);margin:auto;padding:0 28px;width:100%}h1,h2,h3,h4{font-family:Archivo,Arial,sans-serif;line-height:1.12;margin:0;color:var(--navy)}p{margin:0}
 
-/* Anchor offset for proper navigation scrolling */
+/* Anchor offset for navigation scrolling */
 section, [id] {
   scroll-margin-top: 92px;
 }
@@ -69,18 +69,26 @@ section, [id] {
 .dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s}
 .dot.active{background:#fff;width:28px;border-radius:6px}
 
-/* PRODUCT CARDS STYLES */
+/* SUPPLIER TRUST BADGES BAR */
+.trust-bar { background: #071e3a; color: #fff; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+.trust-item { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 13.5px; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; color: #e2e8f0; }
+.trust-item span.icon { font-size: 18px; color: #38bdf8; }
+
+/* TOP HERO PRODUCT CARDS - VISUAL BALANCE & MATCHED ASPECT RATIO */
 .products{display:grid;grid-template-columns:repeat(3,1fr);min-height:calc(100vh - 92px);align-items:stretch}
-.product-card-top{padding:48px 36px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#edf1f5}
+.product-card-top{padding:48px 32px 32px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#edf1f5;border-right:1px solid var(--line)}
+.product-card-top:last-child{border-right:none}
 .product-card-top.mid{background:#edf1f5}
 .product-card-top.light{background:#dfe4ec}
-.card-header-area { flex: 0 0 170px; display: flex; flex-direction: column; }
+.card-header-area { flex: 0 0 auto; display: flex; flex-direction: column; min-height: 160px; }
 .product-card-top h3{font-size:32px;text-transform:uppercase;margin-bottom:12px;color:var(--navy);letter-spacing:-0.01em;}
 .product-card-top p{max-width:340px;font-size:16px;margin-bottom:16px;color:#25374b;line-height:1.45;}
 .product-link{font-weight:800;text-transform:uppercase;font-size:14px;color:var(--navy);position:relative;z-index:2;margin-top:auto;display:inline-block}
 
-.hero-image-wrap { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; width: 100%; margin-top: 20px; }
-.product-image.center-img{width:95%;max-height:58vh;object-fit:contain;object-position:center;mix-blend-mode:multiply}
+/* Standardized Image Wrapper Frame for Equal Aspect Ratio */
+.hero-image-wrap { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; width: 100%; height: 220px; margin-top: 20px; background: #ffffff; border: 1px solid var(--line); border-radius: 6px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+.product-image.center-img{width:100%;height:100%;object-fit:contain;object-position:center;mix-blend-mode:multiply}
 
 .section-heading{text-align:center;margin-bottom:38px}.section-heading h2{font-size:36px;text-transform:uppercase}.section-heading p{max-width:700px;margin:12px auto 0;color:var(--muted);font-size:16.5px}
 
@@ -93,11 +101,11 @@ section, [id] {
 .industry-visual img{width:100%;height:100%;object-fit:cover;display:block}
 .industry strong{display:block;padding:14px 8px;font:700 13px/1.2 Archivo;color:var(--navy);text-transform:uppercase;margin-top:auto}
 
-.about{background:var(--bg)}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}.about h2{font-size:36px;text-transform:uppercase;margin-bottom:18px}.about p{color:var(--muted);font-size:17.5px;margin-bottom:14px}.about-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 25px;margin-top:22px}.about-list div{font-weight:700;color:var(--navy);font-size:15.5px}.about-image{overflow:hidden;border:1px solid var(--line);background:#fff;height:380px}
-.about-image img{width:100%;height:100%;object-fit:cover;object-position:bottom}
+.about{background:var(--bg)}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}.about h2{font-size:36px;text-transform:uppercase;margin-bottom:18px}.about p{color:var(--muted);font-size:16.5px;margin-bottom:14px;line-height:1.6}.about-list{display:grid;grid-template-columns:1fr;gap:10px;margin-top:22px}.about-list div{font-weight:700;color:var(--navy);font-size:15px}.about-image{overflow:hidden;border:1px solid var(--line);background:#fff;height:420px}
+.about-image img{width:100%;height:100%;object-fit:cover;object-position:center}
 
 footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:45px}.footer-logo-wrap{display:inline-block;background:#fff;padding:12px 16px;margin-bottom:17px}.footer-logo{width:150px;display:block}footer h4{color:#fff;font-size:14px;text-transform:uppercase;margin-bottom:14px}footer p,footer li,footer a{font-size:14px}footer ul{list-style:none;padding:0;margin:0}footer li{margin-bottom:8px}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:18px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;color:#7f94a8}
-.product-intro{background:var(--bg)}.product-intro .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}.product-intro h2{font-size:36px;text-transform:uppercase;margin-bottom:18px}.product-intro p{color:var(--muted);font-size:17.5px;margin-bottom:14px}.product-intro .about-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 25px;margin-top:22px}.product-intro .about-list div{font-weight:700;color:var(--navy)}
+.product-intro{background:var(--bg)}
 
 .sector-block{border-bottom:1px solid var(--line);padding:80px 0}
 .sector-block.light-theme{background:#fff;color:var(--ink)}
@@ -107,7 +115,6 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 .datacentre-eyebrow{text-align:center;font:700 13px Archivo;letter-spacing:.06em;color:var(--blue);text-transform:uppercase;margin-bottom:10px}
 .datacentre-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:start;margin-bottom:46px}.datacentre-grid h3,.datacentre-sub h3{font-size:20px;text-transform:uppercase;margin-bottom:16px;color:var(--navy)}.datacentre-grid p{font-size:16px;margin-bottom:14px;color:var(--muted);line-height:1.6}
 .datacentre-note{border-left:3px solid var(--blue);background:rgba(8,38,74,.04);padding:14px 20px;font-size:14.5px;margin-top:16px;color:var(--ink)}
-.uses-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:46px}.uses-grid .use{background:#f6f8fa;border:1px solid var(--line);padding:22px}.uses-grid .use h4{font:700 14.5px Archivo;text-transform:uppercase;margin-bottom:8px;color:var(--navy)}.uses-grid .use p{font-size:13.5px;margin:0;color:var(--muted)}
 
 /* SECTOR RECOMMENDED PRODUCTS MODULE */
 .recommended-products-block { margin-top: 50px; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
@@ -122,10 +129,6 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 .rec-card h4 { font-size: 16px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
 .rec-card p { font-size: 12.5px; color: var(--muted); margin-bottom: 12px; line-height: 1.4; }
 .rec-card .rec-btn { font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; margin-top: auto; display: inline-flex; align-items: center; gap: 4px; }
-
-.list-styled { list-style: none; padding: 0; margin: 0 0 20px; }
-.list-styled li { position: relative; padding-left: 22px; margin-bottom: 8px; font-size: 15px; color: var(--ink); }
-.list-styled li::before { content: "✓"; position: absolute; left: 0; color: var(--blue); font-weight: 800; }
 
 .seo-capabilities{background:#fff;border-bottom:1px solid var(--line)}
 
@@ -145,7 +148,7 @@ footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display
 .contaminant-table td { padding: 10px 14px; border-bottom: 1px solid var(--line); color: var(--ink); }
 .contaminant-table tr:hover { background: #f8fafc; }
 
-/* INDUSTRIAL WIPES CATALOGUE & MODAL STYLES */
+/* INDUSTRIAL WIPES CATALOGUE STYLES */
 .category-nav { display: flex; justify-content: center; gap: 12px; border-bottom: 2px solid var(--line); margin-top: 10px; padding-bottom: 12px; flex-wrap: wrap; }
 .category-btn { background: none; border: none; font-family: Archivo, sans-serif; font-size: 13.5px; font-weight: 700; color: var(--navy); text-transform: uppercase; cursor: pointer; position: relative; padding: 5px 10px; }
 .category-btn.active, .category-btn:hover { color: var(--accent); }
@@ -375,6 +378,8 @@ textarea.form-control {
   font-size: 14px;
   border-radius: 4px;
   text-transform: uppercase;
+  cursor: pointer;
+  border: none;
 }
 .quote-cta-btn:hover { background: var(--blue); }
 
@@ -394,9 +399,10 @@ textarea.form-control {
 
 @media(max-width:1050px){
   .full-screen-section, .hero-slider, .slide { min-height: auto; padding: 60px 0; }
-  .card-header-area { flex: auto; }
-  .product-card-top { min-height: 480px; }
-  .product-image.center-img { width: 100%; max-height: 320px; }
+  .card-header-area { flex: auto; min-height: auto; }
+  .product-card-top { min-height: auto; border-right: none; border-bottom: 1px solid var(--line); }
+  .products{ grid-template-columns: 1fr; }
+  .trust-grid{ grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .nav-links{gap:18px; font-size:14px}
   .industry-grid{grid-template-columns:repeat(3, 1fr)}
   .product-intro .about-grid,.datacentre-grid{grid-template-columns:1fr}.uses-grid{grid-template-columns:1fr 1fr}
@@ -413,8 +419,7 @@ textarea.form-control {
   .slide{min-height:480px}
   .slide-content{padding:40px 0}
   .slider-arrow{width:38px;height:38px;font-size:16px}
-  .products{grid-template-columns:1fr}.product-card-top{min-height:420px}
-  .product-image.center-img { width: 100%; max-height: 280px; }
+  .trust-grid{ grid-template-columns: 1fr; }
   .industry-grid{grid-template-columns:repeat(2, 1fr)}
   .about-grid{grid-template-columns:1fr}.about-list{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}
   .form-grid{grid-template-columns:1fr}
@@ -493,6 +498,18 @@ textarea.form-control {
   </div>
 </section>
 
+<!-- SUPPLIER TRUST BADGES BAR -->
+<section class="trust-bar">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item"><span class="icon">🇬🇧</span> UK-Manufactured Wipe Range</div>
+      <div class="trust-item"><span class="icon">🛡️</span> Sourced from ISO Certified Facilities</div>
+      <div class="trust-item"><span class="icon">📦</span> Full Batch &amp; Lot Traceability</div>
+      <div class="trust-item"><span class="icon">🌍</span> Supplying UK, Netherlands &amp; Turkey</div>
+    </div>
+  </div>
+</section>
+
 <!-- PRODUCTS SECTION -->
 <section id="products" style="padding:0">
   <div class="products">
@@ -512,7 +529,7 @@ textarea.form-control {
       <div class="card-header-area">
         <h3>Industrial Tools</h3>
         <p>Precision-engineered rotary burs and technical consumables for demanding applications.</p>
-        <a class="product-link" href="#quote">Enquire about products →</a>
+        <a class="product-link" href="#quote" onclick="requestQuoteFor('Precision Rotary Burs & Industrial Tools')">Enquire about products →</a>
       </div>
       <div class="hero-image-wrap">
         <img class="product-image center-img" src="assets/hero-industrial-tools.png" alt="Londoco industrial tools">
@@ -523,7 +540,7 @@ textarea.form-control {
       <div class="card-header-area">
         <h3>Dental</h3>
         <p>Dental consumables and precision instruments for professional applications.</p>
-        <a class="product-link" href="#quote">Enquire about products →</a>
+        <a class="product-link" href="#quote" onclick="requestQuoteFor('Dental Consumables & Burs')">Enquire about products →</a>
       </div>
       <div class="hero-image-wrap">
         <img class="product-image center-img" src="assets/hero-dental-tools.png" alt="Londoco dental tools">
@@ -533,25 +550,29 @@ textarea.form-control {
   </div>
 </section>
 
-<!-- BUILT FOR DEMANDING APPLICATIONS -->
+<!-- ABOUT US SECTION -->
 <section id="about" class="product-intro full-screen-section">
   <div class="container about-grid">
     <div>
-      <h2>Built for demanding applications</h2>
-      <p>Londoco Ltd supplies pre-saturated, solvent-impregnated wipes and precision-engineered rotary burs to industrial, technical and critical-environment customers.</p>
-      <p>Our core wipe range is manufactured in the UK with full product traceability, engineered specifically for high-spec environments.</p>
+      <h2>Precision Consumables for Demanding Industries</h2>
+      <p>Londoco Ltd is a UK-based supplier of precision-engineered technical consumables, serving industrial, engineering and dental customers across the UK and international markets.</p>
+      <p>We supply pre-saturated solvent wipes, precision rotary burs, and milling and dental burs, with a bonding kit range for the mining sector currently in development. Every product is built to the same standard: consistent performance, tight tolerances, and full traceability from batch to delivery.</p>
+      <p>Our customers span aerospace, automotive, data centres, dental, engineering &amp; manufacturing, marine &amp; shipbuilding, mining &amp; extraction, and rail — sectors where surface preparation, cleanliness and component precision are not optional. Our core wipe range is manufactured in the UK to high-spec formulations (IPA, acetone, MEK and more), while our burs and dental consumables are engineered for the tolerances demanding technical and clinical work require.</p>
+      <p>As we grow beyond our current markets, our focus stays the same: reliable UK-manufactured quality, technical support customers can rely on, and a product range built for environments where failure isn't an option.</p>
+      
       <div class="about-list">
-        <div>✓ UK-manufactured wipe range</div>
-        <div>✓ Ultra-low lint nonwovens</div>
-        <div>✓ IPA, acetone, MEK &amp; more</div>
-        <div>✓ Flexible packaging formats</div>
+        <div>✓ UK-manufactured wipe range with full product traceability</div>
+        <div>✓ Precision rotary, milling &amp; dental burs</div>
+        <div>✓ Serving 8 core sectors, from aerospace to rail</div>
+        <div>✓ Supplying the UK, Netherlands &amp; Turkey — expanding internationally</div>
+        <div>✓ Flexible packaging formats and formulations to match your process</div>
       </div>
     </div>
     <div class="about-image"><img src="assets/industrial-wipes.png" alt="Londoco pre-saturated industrial wipes"></div>
   </div>
 </section>
 
-<!-- ADVANCED MANUFACTURING & TECHNICAL CAPABILITIES (WITH FILTER AID WIDGET) -->
+<!-- ADVANCED MANUFACTURING & TECHNICAL CAPABILITIES -->
 <section id="wipes" class="seo-capabilities full-screen-section">
   <div class="container">
     <div class="section-heading">
@@ -600,7 +621,7 @@ textarea.form-control {
       </div>
     </div>
     
-    <!-- CATEGORY FILTER NAV (ALPHABETICAL) -->
+    <!-- CATEGORY FILTER NAV -->
     <nav class="category-nav">
       <button class="category-btn active" onclick="filterCategory('all', event)">All Wipes</button>
       <button class="category-btn" onclick="filterCategory('acetone', event)">Acetone Wipes</button>
@@ -612,7 +633,7 @@ textarea.form-control {
       <button class="category-btn" onclick="filterCategory('mek', event)">MEK Wipes</button>
     </nav>
 
-    <!-- PRODUCT GRID (ALPHABETICAL ORDER) -->
+    <!-- PRODUCT GRID -->
     <div class="product-grid">
 
       <!-- 1. ACETONE WIPES -->
@@ -786,7 +807,7 @@ textarea.form-control {
   </div>
 </section>
 
-<!-- SECTOR SPECIFIC DETAILS SECTIONS (ALL 8 SECTORS WITH RECOMMENDED PRODUCTS MODULE) -->
+<!-- SECTOR SPECIFIC DETAILS SECTIONS -->
 
 <!-- 1. AEROSPACE -->
 <section id="sector-aerospace" class="sector-block light-theme">
@@ -1216,7 +1237,7 @@ textarea.form-control {
   </div>
 </footer>
 
-<!-- PRODUCT DETAIL MODAL (FULLY UPGRADED WITH REMOVES, CAUTION, & SECTOR BADGES) -->
+<!-- PRODUCT DETAIL MODAL -->
 <div class="modal-overlay" id="productModal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeProductModal()">&times;</button>
@@ -1275,8 +1296,8 @@ textarea.form-control {
           </tbody>
         </table>
 
-        <!-- Navigates directly to #quote and closes modal -->
-        <a href="#quote" class="quote-cta-btn" onclick="closeProductModal()">Request Product Quote &rarr;</a>
+        <!-- AUTO PRE-FILL CTA BUTTON -->
+        <button class="quote-cta-btn" id="modalQuoteBtn" onclick="triggerModalQuote()">Request Product Quote &rarr;</button>
       </div>
     </div>
   </div>
@@ -1338,7 +1359,7 @@ function filterByContaminant(type, e) {
   });
 }
 
-// PRODUCT DATA STORE (UPGRADED WITH REMOVES, AVOID ON, & SECTOR BADGES)
+// PRODUCT DATA STORE
 const productData = {
   acetone: {
     title: "LONDOCO Acetone Wipes",
@@ -1488,6 +1509,8 @@ const productData = {
   }
 };
 
+let currentModalProductTitle = "";
+
 // CATEGORY FILTERING
 function filterCategory(cat, e) {
   const buttons = document.querySelectorAll('.category-btn');
@@ -1512,6 +1535,7 @@ function openProductModal(key) {
   const data = productData[key];
   if(!data) return;
 
+  currentModalProductTitle = data.title;
   document.getElementById('modalCatBreadcrumb').textContent = data.category;
   document.getElementById('modalTitleBreadcrumb').textContent = data.title;
   document.getElementById('modalTitle').textContent = data.title;
@@ -1546,6 +1570,22 @@ function openProductModal(key) {
 
 function closeProductModal() {
   document.getElementById('productModal').classList.remove('open');
+}
+
+// FORM AUTO PRE-FILL FUNCTIONALITY
+function requestQuoteFor(productName) {
+  const specInput = document.getElementById('specifications');
+  if(specInput) {
+    specInput.value = `Enquiry regarding: ${productName} — Please send technical quote, pricing, and availability.`;
+  }
+}
+
+function triggerModalQuote() {
+  if(currentModalProductTitle) {
+    requestQuoteFor(currentModalProductTitle);
+  }
+  closeProductModal();
+  window.location.href = '#quote';
 }
 
 // SHARE ACTION

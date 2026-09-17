@@ -75,7 +75,7 @@ section, [id] {
 .trust-item { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 13.5px; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; color: #e2e8f0; }
 .trust-item span.icon { font-size: 18px; color: #38bdf8; }
 
-/* TOP HERO PRODUCT CARDS - VISUAL BALANCE & MATCHED ASPECT RATIO */
+/* TOP HERO PRODUCT CARDS */
 .products{display:grid;grid-template-columns:repeat(3,1fr);min-height:calc(100vh - 92px);align-items:stretch}
 .product-card-top{padding:48px 32px 32px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#edf1f5;border-right:1px solid var(--line)}
 .product-card-top:last-child{border-right:none}
@@ -86,7 +86,6 @@ section, [id] {
 .product-card-top p{max-width:340px;font-size:16px;margin-bottom:16px;color:#25374b;line-height:1.45;}
 .product-link{font-weight:800;text-transform:uppercase;font-size:14px;color:var(--navy);position:relative;z-index:2;margin-top:auto;display:inline-block}
 
-/* Standardized Image Wrapper Frame for Equal Aspect Ratio */
 .hero-image-wrap { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; width: 100%; height: 220px; margin-top: 20px; background: #ffffff; border: 1px solid var(--line); border-radius: 6px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
 .product-image.center-img{width:100%;height:100%;object-fit:contain;object-position:center;mix-blend-mode:multiply}
 
@@ -101,8 +100,16 @@ section, [id] {
 .industry-visual img{width:100%;height:100%;object-fit:cover;display:block}
 .industry strong{display:block;padding:14px 8px;font:700 13px/1.2 Archivo;color:var(--navy);text-transform:uppercase;margin-top:auto}
 
-.about{background:var(--bg)}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}.about h2{font-size:36px;text-transform:uppercase;margin-bottom:18px}.about p{color:var(--muted);font-size:16.5px;margin-bottom:14px;line-height:1.6}.about-list{display:grid;grid-template-columns:1fr;gap:10px;margin-top:22px}.about-list div{font-weight:700;color:var(--navy);font-size:15px}.about-image{overflow:hidden;border:1px solid var(--line);background:#fff;height:420px}
-.about-image img{width:100%;height:100%;object-fit:cover;object-position:center}
+/* ABOUT US SECTION & SPACING ENHANCEMENTS */
+.about{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:55px;align-items:center}
+.about h2{font-size:36px;text-transform:uppercase;margin-bottom:22px;color:var(--navy)}
+.about p{color:var(--muted);font-size:16.5px;margin-bottom:18px;line-height:1.65}
+.about-list{display:grid;grid-template-columns:1fr;gap:12px;margin-top:28px}
+.about-list div{font-weight:700;color:var(--navy);font-size:15px;line-height:1.4}
+
+.about-image{overflow:hidden;border:1px solid var(--line);background:#fff;border-radius:8px;padding:24px;display:flex;align-items:center;justify-content:center;height:100%;min-height:440px;box-shadow:0 4px 12px rgba(0,0,0,0.03)}
+.about-image img{width:100%;height:100%;max-height:420px;object-fit:contain;object-position:center}
 
 footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:45px}.footer-logo-wrap{display:inline-block;background:#fff;padding:12px 16px;margin-bottom:17px}.footer-logo{width:150px;display:block}footer h4{color:#fff;font-size:14px;text-transform:uppercase;margin-bottom:14px}footer p,footer li,footer a{font-size:14px}footer ul{list-style:none;padding:0;margin:0}footer li{margin-bottom:8px}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:18px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;color:#7f94a8}
 .product-intro{background:var(--bg)}
@@ -405,7 +412,7 @@ textarea.form-control {
   .trust-grid{ grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .nav-links{gap:18px; font-size:14px}
   .industry-grid{grid-template-columns:repeat(3, 1fr)}
-  .product-intro .about-grid,.datacentre-grid{grid-template-columns:1fr}.uses-grid{grid-template-columns:1fr 1fr}
+  .about-grid,.datacentre-grid{grid-template-columns:1fr}.uses-grid{grid-template-columns:1fr 1fr}
   .product-grid { grid-template-columns: repeat(2, 1fr); }
   .detail-grid { grid-template-columns: 1fr; }
 }
@@ -505,7 +512,7 @@ textarea.form-control {
       <div class="trust-item"><span class="icon">🇬🇧</span> UK-Manufactured Wipe Range</div>
       <div class="trust-item"><span class="icon">🛡️</span> Sourced from ISO Certified Facilities</div>
       <div class="trust-item"><span class="icon">📦</span> Full Batch &amp; Lot Traceability</div>
-      <div class="trust-item"><span class="icon">🌍</span> Supplying UK, Netherlands &amp; Turkey</div>
+      <div class="trust-item"><span class="icon">🌍</span> UK &amp; International Distribution</div>
     </div>
   </div>
 </section>
@@ -550,8 +557,8 @@ textarea.form-control {
   </div>
 </section>
 
-<!-- ABOUT US SECTION -->
-<section id="about" class="product-intro full-screen-section">
+<!-- ABOUT US SECTION (UPDATED WITH COMBINED-IMAGE & OPTIMISED SPACING) -->
+<section id="about" class="about full-screen-section">
   <div class="container about-grid">
     <div>
       <h2>Precision Consumables for Demanding Industries</h2>
@@ -564,11 +571,13 @@ textarea.form-control {
         <div>✓ UK-manufactured wipe range with full product traceability</div>
         <div>✓ Precision rotary, milling &amp; dental burs</div>
         <div>✓ Serving 8 core sectors, from aerospace to rail</div>
-        <div>✓ Supplying customers across the UK international markets — expanding further</div>
+        <div>✓ Supplying customers across the UK and international markets — expanding further</div>
         <div>✓ Flexible packaging formats and formulations to match your process</div>
       </div>
     </div>
-    <div class="about-image"><img src="assets/industrial-wipes.png" alt="Londoco pre-saturated industrial wipes"></div>
+    <div class="about-image">
+      <img src="assets/combined-image.png" alt="Londoco pre-saturated wipes range">
+    </div>
   </div>
 </section>
 

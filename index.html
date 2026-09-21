@@ -8,20 +8,20 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
-<meta name="description" content="Londoco Ltd is a UK manufacturer and supplier of pre-saturated wipes, precision rotary burs, and dental &amp; milling burs — serving aerospace, automotive, data centres, dental, engineering, marine, mining and rail sectors across the UK and international markets.">
+<meta name="description" content="Londoco Ltd is a UK-based supplier of precision-engineered solutions including rotary and milling burs, industrial pre-saturated wipes, mining bonding kits and cold vulcanization adhesives, alongside dental burs — serving aerospace, automotive, data centres, engineering, marine, mining and rail sectors across the UK and international markets.">
 <link rel="canonical" href="https://londoco.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Londoco Ltd">
 <meta property="og:title" content="Londoco Ltd | Industrial & Dental Consumables | Precision Tools">
-<meta property="og:description" content="UK supplier of pre-saturated wipes, technical consumables and precision tools for industrial and dental applications.">
+<meta property="og:description" content="UK supplier of precision-engineered burs and milling tools, pre-saturated wipes, mining bonding kits and cold vulcanization adhesives, plus dental burs and consumables.">
 <meta property="og:url" content="https://londoco.com/">
 <meta property="og:image" content="https://londoco.com/assets/landingpage-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Londoco Ltd | Industrial & Dental Consumables | Precision Tools">
-<meta name="twitter:description" content="UK supplier of pre-saturated wipes, technical consumables and precision tools for industrial and dental applications.">
+<meta name="twitter:description" content="UK supplier of precision-engineered burs and milling tools, pre-saturated wipes, mining bonding kits and cold vulcanization adhesives, plus dental burs and consumables.">
 <meta name="twitter:image" content="https://londoco.com/assets/landingpage-image.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Londoco Ltd","url":"https://londoco.com/","logo":"https://londoco.com/assets/londoco-logo.png","description":"UK-based supplier of pre-saturated wipes, technical consumables and precision tools for industrial and dental applications.","email":"info@londoco.com","telephone":"+44-7746-609977","address":{"@type":"PostalAddress","addressCountry":"GB"},"sameAs":[]}
+{"@context":"https://schema.org","@type":"Organization","name":"Londoco Ltd","url":"https://londoco.com/","logo":"https://londoco.com/assets/londoco-logo.png","description":"UK-based supplier of precision-engineered solutions such as burs and milling tools, industrial pre-saturated wipes, mining bonding kits and cold vulcanization adhesives, along with dental burs.","email":"info@londoco.com","telephone":"+44-7746-609977","address":{"@type":"PostalAddress","addressCountry":"GB"},"sameAs":[]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,8 +86,12 @@ section, [id] {
 .product-card-top p{max-width:340px;font-size:16px;margin-bottom:16px;color:#25374b;line-height:1.45;}
 .product-link{font-weight:800;text-transform:uppercase;font-size:14px;color:var(--navy);position:relative;z-index:2;margin-top:auto;display:inline-block}
 
-.hero-image-wrap { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; width: 100%; height: 220px; margin-top: 20px; background: #ffffff; border: 1px solid var(--line); border-radius: 6px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+.hero-image-wrap { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; width: 100%; height: 220px; margin-top: 20px; background: #ffffff; border: 1px solid var(--line); border-radius: 6px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); overflow: hidden; }
 .product-image.center-img{width:100%;height:100%;object-fit:contain;object-position:center;mix-blend-mode:multiply}
+/* Per-image crop/zoom fixes so product fills the white square without the source image's own background/margins showing */
+.product-image.img-wipes{object-fit:cover;object-position:center;transform:scale(1.35);mix-blend-mode:normal}
+.product-image.img-tools{object-fit:cover;object-position:70% center;transform:scale(1.15);mix-blend-mode:normal}
+.product-image.img-dental{object-fit:cover;object-position:70% center;transform:scale(1.15);mix-blend-mode:normal}
 
 .section-heading{text-align:center;margin-bottom:38px}.section-heading h2{font-size:36px;text-transform:uppercase}.section-heading p{max-width:700px;margin:12px auto 0;color:var(--muted);font-size:16.5px}
 
@@ -516,7 +520,7 @@ textarea.form-control {
         <a class="product-link" href="#wipes">View products →</a>
       </div>
       <div class="hero-image-wrap">
-        <img class="product-image center-img" src="assets/industrial-wipes.png" alt="Londoco industrial wipes">
+        <img class="product-image center-img img-wipes" src="assets/industrial-wipes.png" alt="Londoco industrial wipes">
       </div>
     </article>
 
@@ -527,7 +531,7 @@ textarea.form-control {
         <a class="product-link" href="#quote" onclick="requestQuoteFor('Precision Rotary Burs & Industrial Tools')">Enquire about products →</a>
       </div>
       <div class="hero-image-wrap">
-        <img class="product-image center-img" src="assets/hero-industrial-tools.png" alt="Londoco industrial tools">
+        <img class="product-image center-img img-tools" src="assets/hero-industrial-tools.png" alt="Londoco industrial tools">
       </div>
     </article>
 
@@ -538,10 +542,17 @@ textarea.form-control {
         <a class="product-link" href="#quote" onclick="requestQuoteFor('Dental Consumables & Burs')">Enquire about products →</a>
       </div>
       <div class="hero-image-wrap">
-        <img class="product-image center-img" src="assets/hero-dental-tools.png" alt="Londoco dental tools">
+        <img class="product-image center-img img-dental" src="assets/hero-dental-tools.png" alt="Londoco dental tools">
       </div>
     </article>
 
+  </div>
+</section>
+
+<!-- CERTIFICATION TRUST BAR -->
+<section class="trust-bar">
+  <div class="container" style="display:flex;flex-wrap:wrap;gap:14px 32px;justify-content:center;align-items:center;">
+    <div class="trust-item"><span class="icon">✓</span> Manufactured under ISO 9001 · ISO 14001 · ISO 13485 · AS9100 Rev D certified quality systems</div>
   </div>
 </section>
 
@@ -554,6 +565,7 @@ textarea.form-control {
       <p>We supply pre-saturated solvent wipes, precision rotary burs, and milling and dental burs, with a bonding kit range for the mining sector currently in development. Every product is built to the same standard: consistent performance, tight tolerances, and full traceability from batch to delivery.</p>
       <p>Our customers span aerospace, automotive, data centres, dental, engineering &amp; manufacturing, marine &amp; shipbuilding, mining &amp; extraction, and rail — sectors where surface preparation, cleanliness and component precision are not optional. Our core wipe range is manufactured in the UK to high-spec formulations (IPA, acetone, MEK and more), while our burs and dental consumables are engineered for the tolerances demanding technical and clinical work require.</p>
       <p>As we grow beyond our current markets, our focus stays the same: reliable UK-manufactured quality, technical support customers can rely on, and a product range built for environments where failure isn't an option.</p>
+      <p>Every Londoco product is sourced from manufacturing partners holding ISO 9001 (Quality Management), ISO 14001 (Environmental Management), ISO 13485 (Medical Devices — for our dental range), and AS9100 Rev D (Aerospace) certifications. We select our manufacturing partners specifically for these standards, and require full certification evidence and batch traceability as part of our supplier qualification process.</p>
       
       <div class="about-list">
         <div>✓ UK-manufactured wipe range with full product traceability</div>
@@ -561,6 +573,7 @@ textarea.form-control {
         <div>✓ Serving 8 core sectors, from aerospace to rail</div>
         <div>✓ Supplying customers across the UK and international markets — expanding further</div>
         <div>✓ Flexible packaging formats and formulations to match your process</div>
+        <div>✓ Manufactured under ISO 9001, ISO 14001, ISO 13485 &amp; AS9100 Rev D certified partners</div>
       </div>
     </div>
     <div class="about-image">
@@ -816,6 +829,7 @@ textarea.form-control {
       <h3>Aerospace Surface Preparation</h3>
       <p>Aviation maintenance and manufacturing demand strict solvent purity and ultra-low lint performance. Hydraulic fluid removal, aircraft skin sealant removal, and composite surface prep require fast-acting, high-spec wipe formulations.</p>
       <div class="datacentre-note"><strong>Quality Assurance:</strong> Guaranteed zero-lint fabrics reduce the risk of seal failure or particulate contamination in critical hydraulic lines and aerodynamic joints.</div>
+      <div class="datacentre-note"><strong>Certified Supply:</strong> Our aerospace range is sourced from AS9100 Rev D-certified manufacturing partners.</div>
     </div>
     <div class="wipes-image"><img src="assets/aerospace.png" alt="Aerospace Surface Prep"></div>
   </div>
@@ -949,6 +963,7 @@ textarea.form-control {
     <div>
       <h3>Clinical Surface Hygiene</h3>
       <p>Dental practices require fast bio-contamination removal and residue-free sanitisation between patient appointments. Pure Ethyl Alcohol pre-saturated wipes ensure compliant surface hygiene across clinical chairs, trays, and instruments.</p>
+      <div class="datacentre-note"><strong>Certified Supply:</strong> Our dental range is sourced from ISO 13485-certified manufacturing partners.</div>
     </div>
     <div class="wipes-image"><img src="assets/dental.png" alt="Dental Practice Consumables"></div>
   </div>

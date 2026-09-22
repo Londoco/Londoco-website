@@ -55,9 +55,9 @@ section, [id] {
 .slider-container{display:flex;transition:transform 0.6s ease-in-out;width:100%;height:100%}
 .slide{min-width:100%;min-height:calc(100vh - 92px);position:relative;display:flex;align-items:center;background-size:cover;background-position:center}
 .slide::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(6,27,53,0.92) 0%, rgba(6,27,53,0.75) 50%, rgba(6,27,53,0.4) 100%)}
-.slide-content{position:relative;z-index:2;max-width:680px;padding:50px 0}
-.slide h1{font-size:clamp(36px,5vw,58px);text-transform:uppercase;letter-spacing:-.02em;margin-bottom:20px;color:#fff}
-.slide p{font-size:19px;color:#d9e4ef;margin-bottom:32px;line-height:1.5}
+.slide-content{position:relative;z-index:2;max-width:680px;padding:30px 0 70px}
+.slide h1{font-size:clamp(32px,4.4vw,52px);text-transform:uppercase;letter-spacing:-.02em;margin-bottom:16px;color:#fff;line-height:1.1}
+.slide p{font-size:18px;color:#d9e4ef;margin-bottom:26px;line-height:1.5}
 .slide-actions{display:flex;gap:14px;flex-wrap:wrap}
 
 /* Carousel Controls */
@@ -65,7 +65,7 @@ section, [id] {
 .slider-arrow:hover{background:var(--navy)}
 .slider-arrow.prev{left:20px}
 .slider-arrow.next{right:20px}
-.slider-dots{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:10px}
+.slider-dots{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:10px}
 .dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s}
 .dot.active{background:#fff;width:28px;border-radius:6px}
 
@@ -105,15 +105,41 @@ section, [id] {
 .industry strong{display:block;padding:14px 8px;font:700 13px/1.2 Archivo;color:var(--navy);text-transform:uppercase;margin-top:auto}
 
 /* ABOUT US SECTION & SPACING ENHANCEMENTS */
-.about{background:var(--bg)}
-.about-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:55px;align-items:center}
+.contact-section{background:var(--navy2);padding:70px 0;color:#fff}
+.contact-section .section-heading h2{color:#fff}
+.contact-section .section-heading p{color:#c3d0dd}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:10px}
+.contact-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:28px;text-align:center}
+.contact-card .ico{width:44px;height:44px;border-radius:50%;background:rgba(217,56,30,0.15);color:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:19px}
+.contact-card h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px}
+.contact-card a, .contact-card p{color:#d9e4ef;font-size:15.5px;line-height:1.5;text-decoration:none}
+.contact-card a:hover{color:#fff;text-decoration:underline}
+
+.about{background:var(--bg);padding:80px 0}
 .about h2{font-size:36px;text-transform:uppercase;margin-bottom:22px;color:var(--navy)}
 .about p{color:var(--muted);font-size:16.5px;margin-bottom:18px;line-height:1.65}
-.about-list{display:grid;grid-template-columns:1fr;gap:12px;margin-top:28px}
-.about-list div{font-weight:700;color:var(--navy);font-size:15px;line-height:1.4}
+.about-intro{max-width:900px}
 
-.about-image{overflow:hidden;border:1px solid var(--line);background:#fff;border-radius:8px;padding:24px;display:flex;align-items:center;justify-content:center;height:100%;min-height:440px;box-shadow:0 4px 12px rgba(0,0,0,0.03)}
-.about-image img{width:100%;height:100%;max-height:420px;object-fit:contain;object-position:center}
+/* Full-width triptych block */
+.about-triptych{margin:44px 0}
+.about-triptych-frame{width:100%;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,0.04)}
+.about-triptych-frame img{width:100%;height:auto;display:block;object-fit:cover}
+.triptych-captions{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:22px}
+.triptych-captions .kicker{display:block;font-size:12.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.triptych-captions p{font-size:14.5px;color:var(--muted);line-height:1.5;margin:0}
+
+/* Icon-grid checklist (2 columns) */
+.about-list{display:grid;grid-template-columns:1fr 1fr;gap:18px 32px;margin-top:26px}
+.about-item{display:flex;align-items:flex-start;gap:12px}
+.about-item .ico{flex:0 0 28px;width:28px;height:28px;border-radius:50%;background:rgba(217,56,30,0.09);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;margin-top:1px}
+.about-item span{font-weight:700;color:var(--navy);font-size:15px;line-height:1.4}
+
+/* ISO certification badges */
+.iso-badges{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px}
+.iso-badge{border:1px solid var(--line);border-radius:8px;padding:14px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:130px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.03)}
+.iso-badge .ring{width:34px;height:34px;border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);margin-bottom:8px}
+.iso-badge .num{font-size:14px;font-weight:800;color:var(--navy);text-align:center}
+.iso-badge .sub{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;margin-top:2px;text-align:center}
 
 footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:45px}.footer-logo-wrap{display:inline-block;background:#fff;padding:12px 16px;margin-bottom:17px}.footer-logo{width:150px;display:block}footer h4{color:#fff;font-size:14px;text-transform:uppercase;margin-bottom:14px}footer p,footer li,footer a{font-size:14px}footer ul{list-style:none;padding:0;margin:0}footer li{margin-bottom:8px}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:18px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;color:#7f94a8}
 .product-intro{background:var(--bg)}
@@ -416,7 +442,7 @@ textarea.form-control {
   .trust-grid{ grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .nav-links{gap:18px; font-size:14px}
   .industry-grid{grid-template-columns:repeat(3, 1fr)}
-  .about-grid,.datacentre-grid{grid-template-columns:1fr}.uses-grid{grid-template-columns:1fr 1fr}
+  .datacentre-grid{grid-template-columns:1fr}.uses-grid{grid-template-columns:1fr 1fr}.triptych-captions{grid-template-columns:1fr}
   .product-grid { grid-template-columns: repeat(2, 1fr); }
   .detail-grid { grid-template-columns: 1fr; }
 }
@@ -432,7 +458,7 @@ textarea.form-control {
   .slider-arrow{width:38px;height:38px;font-size:16px}
   .trust-grid{ grid-template-columns: 1fr; }
   .industry-grid{grid-template-columns:repeat(2, 1fr)}
-  .about-grid{grid-template-columns:1fr}.about-list{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}
+  .about-list{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.contact-grid{grid-template-columns:1fr}
   .form-grid{grid-template-columns:1fr}
 }
 @media(max-width:600px){
@@ -447,7 +473,7 @@ textarea.form-control {
 </head>
 <body>
 
-<header class="navbar"><div class="container nav-row"><a href="#"><img class="logo" src="assets/londoco-logo.png" alt="Londoco Ltd"></a><button class="nav-toggle" aria-label="Open navigation" onclick="event.stopPropagation(); document.querySelector('.nav-links').classList.toggle('open')">☰</button><nav class="nav-links"><a href="#">HOME</a><a href="#products">PRODUCTS</a><a href="#industries">SECTORS</a><a href="#about">ABOUT US</a><a href="#quote">CONTACT</a><a class="quote" href="#quote">REQUEST A QUOTE ↗</a></nav></div></header>
+<header class="navbar"><div class="container nav-row"><a href="#"><img class="logo" src="assets/londoco-logo.png" alt="Londoco Ltd"></a><button class="nav-toggle" aria-label="Open navigation" onclick="event.stopPropagation(); document.querySelector('.nav-links').classList.toggle('open')">☰</button><nav class="nav-links"><a href="#">HOME</a><a href="#products">PRODUCTS</a><a href="#industries">SECTORS</a><a href="#about">ABOUT US</a><a href="#contact">CONTACT</a><a class="quote" href="#quote">REQUEST A QUOTE ↗</a></nav></div></header>
 
 <main>
 <!-- HERO CAROUSEL / SLIDER SECTION -->
@@ -556,29 +582,59 @@ textarea.form-control {
   </div>
 </section>
 
-<!-- ABOUT US SECTION (UPDATED WITH COMBINED-IMAGE & OPTIMISED SPACING) -->
-<section id="about" class="about full-screen-section">
-  <div class="container about-grid">
-    <div>
+<!-- ABOUT US SECTION -->
+<section id="about" class="about">
+  <div class="container">
+
+    <div class="about-intro">
       <h2>Precision Consumables for Demanding Industries</h2>
       <p>Londoco Ltd is a UK-based supplier of precision-engineered technical consumables, serving industrial, engineering and dental customers across the UK and international markets.</p>
       <p>We supply pre-saturated solvent wipes, precision rotary burs, and milling and dental burs, with a bonding kit range for the mining sector currently in development. Every product is built to the same standard: consistent performance, tight tolerances, and full traceability from batch to delivery.</p>
+    </div>
+
+    <!-- FULL-WIDTH TRIPTYCH: image + real HTML captions (not baked into the image) -->
+    <div class="about-triptych">
+      <div class="about-triptych-frame">
+        <img src="assets/combined-image.png" alt="Londoco product range: wipes, rotary burs and dental burs">
+      </div>
+      <div class="triptych-captions">
+        <div>
+          <span class="kicker">Wipes — UK Production</span>
+          <p>Manufactured in the UK to high-spec formulations — IPA, acetone, MEK and more.</p>
+        </div>
+        <div>
+          <span class="kicker">Precision Rotary &amp; Milling Burs</span>
+          <p>Engineered for the tolerances demanding technical work requires.</p>
+        </div>
+        <div>
+          <span class="kicker">Dental Burs</span>
+          <p>Engineered for the tolerances demanding clinical work requires.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-intro">
       <p>Our customers span aerospace, automotive, data centres, dental, engineering &amp; manufacturing, marine &amp; shipbuilding, mining &amp; extraction, and rail — sectors where surface preparation, cleanliness and component precision are not optional. Our core wipe range is manufactured in the UK to high-spec formulations (IPA, acetone, MEK and more), while our burs and dental consumables are engineered for the tolerances demanding technical and clinical work require.</p>
       <p>As we grow beyond our current markets, our focus stays the same: reliable UK-manufactured quality, technical support customers can rely on, and a product range built for environments where failure isn't an option.</p>
       <p>Every Londoco product is sourced from manufacturing partners holding ISO 9001 (Quality Management), ISO 14001 (Environmental Management), ISO 13485 (Medical Devices — for our dental range), and AS9100 Rev D (Aerospace) certifications. We select our manufacturing partners specifically for these standards, and require full certification evidence and batch traceability as part of our supplier qualification process.</p>
-      
+
       <div class="about-list">
-        <div>✓ UK-manufactured wipe range with full product traceability</div>
-        <div>✓ Precision rotary, milling &amp; dental burs</div>
-        <div>✓ Serving 8 core sectors, from aerospace to rail</div>
-        <div>✓ Supplying customers across the UK and international markets — expanding further</div>
-        <div>✓ Flexible packaging formats and formulations to match your process</div>
-        <div>✓ Manufactured under ISO 9001, ISO 14001, ISO 13485 &amp; AS9100 Rev D certified partners</div>
+        <div class="about-item"><span class="ico">✓</span><span>UK-manufactured wipe range with full product traceability</span></div>
+        <div class="about-item"><span class="ico">✓</span><span>Serving 8 core sectors, from aerospace to rail</span></div>
+        <div class="about-item"><span class="ico">✓</span><span>Precision rotary, milling &amp; dental burs</span></div>
+        <div class="about-item"><span class="ico">✓</span><span>Supplying customers across the UK and internationally</span></div>
+        <div class="about-item"><span class="ico">✓</span><span>Flexible packaging formats to match your process</span></div>
+        <div class="about-item"><span class="ico">✓</span><span>ISO 9001, 14001, 13485 &amp; AS9100 Rev D certified</span></div>
+      </div>
+
+      <div class="iso-badges">
+        <div class="iso-badge"><span class="ring">ISO</span><span class="num">ISO 9001</span><span class="sub">Quality Mgmt</span></div>
+        <div class="iso-badge"><span class="ring">ISO</span><span class="num">ISO 14001</span><span class="sub">Environmental Mgmt</span></div>
+        <div class="iso-badge"><span class="ring">ISO</span><span class="num">ISO 13485</span><span class="sub">Medical Devices</span></div>
+        <div class="iso-badge"><span class="ring">AS</span><span class="num">AS9100 Rev D</span><span class="sub">Aerospace</span></div>
       </div>
     </div>
-    <div class="about-image">
-      <img src="assets/combined-image.png" alt="Londoco pre-saturated wipes range">
-    </div>
+
   </div>
 </section>
 
@@ -846,14 +902,14 @@ textarea.form-control {
       </div>
       <div class="rec-card" onclick="openProductModal('mek')">
         <span class="rec-badge primary">Primary</span>
-        <img src="assets/industrial-wipes.png" alt="MEK Wipes">
+        <img src="assets/mekwipe.png" alt="MEK Wipes">
         <h4>MEK Wipes</h4>
         <p>Heavy sealant &amp; cured adhesive breakdown on metal/composites.</p>
         <span class="rec-btn">View Specifications →</span>
       </div>
       <div class="rec-card" onclick="openProductModal('acetone')">
         <span class="rec-badge primary">Primary</span>
-        <img src="assets/industrial-wipes.png" alt="Acetone Wipes">
+        <img src="assets/Londoco%20Pre%20Saturated%20Wipes%20with%20Acetone.png" alt="Acetone Wipes">
         <h4>Acetone Wipes</h4>
         <p>Uncured composite resin removal and rapid surface prep.</p>
         <span class="rec-btn">View Specifications →</span>
@@ -889,7 +945,7 @@ textarea.form-control {
     <div class="rec-grid">
       <div class="rec-card" onclick="openProductModal('heptane')">
         <span class="rec-badge primary">Primary</span>
-        <img src="assets/industrial-wipes.png" alt="Heptane Wipes">
+        <img src="assets/heptanewipe.png" alt="Heptane Wipes">
         <h4>Heptane Wipes</h4>
         <p>Removes petroleum oil, grease, &amp; flux without damaging rubber/plastics.</p>
         <span class="rec-btn">View Specifications →</span>
@@ -928,7 +984,7 @@ textarea.form-control {
       <p>Manufactured in Britain using advanced split fibre technology fabric, this wipe delivers superior contaminant removal while maintaining a controlled low saturation level to eliminate the risk of liquid ingress or equipment damage.</p>
     </div>
     <div class="datacentre-image">
-      <img src="assets/londocowipesset.png" alt="Londoco Data Centre Wipes product range">
+      <img src="assets/datacentre%20wipe.png" alt="Londoco Data Centre Wipes product range">
     </div>
   </div>
 
@@ -937,7 +993,7 @@ textarea.form-control {
     <div class="rec-grid">
       <div class="rec-card" onclick="openProductModal('datacentre')">
         <span class="rec-badge primary">Primary</span>
-        <img src="assets/londocowipesset.png" alt="Data Centre Wipes">
+        <img src="assets/datacentre%20wipe.png" alt="Data Centre Wipes">
         <h4>Data Centre Wipes</h4>
         <p>Ultra-low VOC split-fibre wipe with anti-static protection.</p>
         <span class="rec-btn">View Specifications →</span>
@@ -973,7 +1029,7 @@ textarea.form-control {
     <div class="rec-grid">
       <div class="rec-card" onclick="openProductModal('ethanol')">
         <span class="rec-badge primary">Primary</span>
-        <img src="assets/industrial-wipes.png" alt="Ethanol Wipes">
+        <img src="assets/ethanolwipe.png" alt="Ethanol Wipes">
         <h4>Ethanol Wipes</h4>
         <p>High-purity alcohol sanitising wipes for clinical surfaces.</p>
         <span class="rec-btn">View Specifications →</span>
@@ -1008,21 +1064,21 @@ textarea.form-control {
     <div class="rec-grid">
       <div class="rec-card" onclick="openProductModal('acetone')">
         <span class="rec-badge primary">Primary</span>
-        <img src="assets/industrial-wipes.png" alt="Acetone Wipes">
+        <img src="assets/Londoco%20Pre%20Saturated%20Wipes%20with%20Acetone.png" alt="Acetone Wipes">
         <h4>Acetone Wipes</h4>
         <p>Dissolves uncured resins, inks, and polyesters.</p>
         <span class="rec-btn">View Specifications →</span>
       </div>
       <div class="rec-card" onclick="openProductModal('mek')">
         <span class="rec-badge primary">Primary</span>
-        <img src="assets/industrial-wipes.png" alt="MEK Wipes">
+        <img src="assets/mekwipe.png" alt="MEK Wipes">
         <h4>MEK Wipes</h4>
         <p>Breaks down cured adhesives &amp; tough industrial coatings.</p>
         <span class="rec-btn">View Specifications →</span>
       </div>
       <div class="rec-card" onclick="openProductModal('heptane')">
         <span class="rec-badge primary">Primary</span>
-        <img src="assets/industrial-wipes.png" alt="Heptane Wipes">
+        <img src="assets/heptanewipe.png" alt="Heptane Wipes">
         <h4>Heptane Wipes</h4>
         <p>Lifts non-polar oils and flux without rubber damage.</p>
         <span class="rec-btn">View Specifications →</span>
@@ -1057,7 +1113,7 @@ textarea.form-control {
     <div class="rec-grid">
       <div class="rec-card" onclick="openProductModal('acetone')">
         <span class="rec-badge primary">Primary</span>
-        <img src="assets/industrial-wipes.png" alt="Acetone Wipes">
+        <img src="assets/Londoco%20Pre%20Saturated%20Wipes%20with%20Acetone.png" alt="Acetone Wipes">
         <h4>Acetone Wipes</h4>
         <p>Gelcoat &amp; fiberglass resin tooling prep.</p>
         <span class="rec-btn">View Specifications →</span>
@@ -1071,14 +1127,14 @@ textarea.form-control {
       </div>
       <div class="rec-card" onclick="openProductModal('mek')">
         <span class="rec-badge primary">Primary</span>
-        <img src="assets/industrial-wipes.png" alt="MEK Wipes">
+        <img src="assets/mekwipe.png" alt="MEK Wipes">
         <h4>MEK Wipes</h4>
         <p>Marine sealant removal and hull repair bonding prep.</p>
         <span class="rec-btn">View Specifications →</span>
       </div>
       <div class="rec-card" onclick="openProductModal('heptane')">
         <span class="rec-badge secondary">Secondary</span>
-        <img src="assets/industrial-wipes.png" alt="Heptane Wipes">
+        <img src="assets/heptanewipe.png" alt="Heptane Wipes">
         <h4>Heptane Wipes</h4>
         <p>Safe petroleum oil cleaning around rubber seals.</p>
         <span class="rec-btn">View Specifications →</span>
@@ -1113,7 +1169,7 @@ textarea.form-control {
       </div>
       <div class="rec-card" onclick="openProductModal('heptane')">
         <span class="rec-badge primary">Primary</span>
-        <img src="assets/industrial-wipes.png" alt="Heptane Wipes">
+        <img src="assets/heptanewipe.png" alt="Heptane Wipes">
         <h4>Heptane Wipes</h4>
         <p>Heavy bearing grease removal without elastomer corrosion.</p>
         <span class="rec-btn">View Specifications →</span>
@@ -1155,7 +1211,7 @@ textarea.form-control {
       </div>
       <div class="rec-card" onclick="openProductModal('ethanol')">
         <span class="rec-badge secondary">Secondary</span>
-        <img src="assets/industrial-wipes.png" alt="Ethanol Wipes">
+        <img src="assets/ethanolwipe.png" alt="Ethanol Wipes">
         <h4>Ethanol Wipes</h4>
         <p>Passenger touchpoint sanitisation and cleanroom prep.</p>
         <span class="rec-btn">View Specifications →</span>
@@ -1163,6 +1219,33 @@ textarea.form-control {
     </div>
   </div>
 </div>
+</section>
+
+<!-- CONTACT US SECTION -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Contact Us</h2>
+      <p>Get in touch directly, or use the quote form below for technical and pricing enquiries.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="ico">✆</div>
+        <h4>Telephone</h4>
+        <a href="tel:+447746609977">+44 7746 609977</a>
+      </div>
+      <div class="contact-card">
+        <div class="ico">✉</div>
+        <h4>Email</h4>
+        <a href="mailto:info@londoco.com">info@londoco.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="ico">⚲</div>
+        <h4>Address</h4>
+        <p>Old Town Hall, 30 Tweedy Road,<br>Bromley, England, BR1 3FE,<br>United Kingdom</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- REQUEST A QUOTE SECTION -->
@@ -1239,7 +1322,7 @@ textarea.form-control {
         <h4>Contact</h4>
         <p>Email: info@londoco.com</p>
         <p>Phone: +44 7746 609977</p>
-        <p>United Kingdom</p>
+        <p>Old Town Hall, 30 Tweedy Road,<br>Bromley, England, BR1 3FE,<br>United Kingdom</p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -1377,7 +1460,7 @@ const productData = {
     title: "LONDOCO Acetone Wipes",
     subtitle: "Fast-Evaporating Technical Resin & Sealant Solvent.",
     category: "Acetone Wipes",
-    image: "assets/industrial-wipes.png",
+    image: "assets/Londoco%20Pre%20Saturated%20Wipes%20with%20Acetone.png",
     description: "Designed to rapidly dissolve tough resins, uncured adhesives, polyesters, and inks from industrial tooling and metallic substrates.",
     removes: "Uncured resin, polyester, ink, tooling residue, fresh adhesives.",
     avoid: "Most plastics, painted/coated surfaces, gelcoat (aggressive polar solvent — can soften or cloud surfaces).",
@@ -1397,7 +1480,7 @@ const productData = {
     title: "LONDOCO Data Centre Wipes",
     subtitle: "Ultra-Low VOC Critical IT Environment Wipes.",
     category: "Data Centre Wipes",
-    image: "assets/londocowipesset.png",
+    image: "assets/datacentre%20wipe.png",
     description: "A high-performance, presaturated, ultra-low VOC cleaning wipe engineered specifically for use in data centre and critical IT environments. Advanced split fibre technology fabric delivers superior particle capture with anti-static and lint-free protection.",
     removes: "Dust, fingerprints, light surface residue, static charge.",
     avoid: "Safe on almost all sensitive IT surfaces (controlled low-moisture release prevents pooling).",
@@ -1417,7 +1500,7 @@ const productData = {
     title: "LONDOCO Ethanol Wipes",
     subtitle: "High-Purity Ethyl Alcohol Sanitising Wipes.",
     category: "Ethanol Wipes",
-    image: "assets/industrial-wipes.png",
+    image: "assets/ethanolwipe.png",
     description: "Pre-saturated with high-purity ethanol for rapid surface disinfection and low-residue hygiene maintenance across laboratory, medical, and clinical surfaces.",
     removes: "Bio-contaminants, light surface film, bacteria, surgical residues.",
     avoid: "Not intended for heavy industrial degreasing or grease extraction.",
@@ -1437,7 +1520,7 @@ const productData = {
     title: "LONDOCO Heptane Wipes",
     subtitle: "Non-Polar Solvent Wipes for Heavy Greases & Oils.",
     category: "Heptane Wipes",
-    image: "assets/industrial-wipes.png",
+    image: "assets/heptanewipe.png",
     description: "Specially saturated with n-Heptane to lift non-polar contaminants, heavy petroleum oils, flux residue, and rubbery adhesives without damaging sensitive plastics or rubbers.",
     removes: "Petroleum oils, heavy grease, flux residue, rubbery adhesives.",
     avoid: "Gentler than Acetone/MEK: Safe on plastics, rubber components, and coated bearings where polar solvents cause damage.",
@@ -1503,7 +1586,7 @@ const productData = {
     title: "LONDOCO MEK Wipes",
     subtitle: "Heavy-Duty Methyl Ethyl Ketone Solvent Wipes.",
     category: "MEK Wipes",
-    image: "assets/industrial-wipes.png",
+    image: "assets/mekwipe.png",
     description: "Formulated with pure MEK for dissolving heavy greases, sealants, adhesives, and paints from metal and composite surfaces in severe industrial environments.",
     removes: "Cured sealants, hardened adhesives, paints, heavy grease.",
     avoid: "Plastics, gelcoat, painted surfaces you wish to preserve (aggressive polar solvent — offers longer dwell time than acetone).",

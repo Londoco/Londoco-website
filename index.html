@@ -134,13 +134,6 @@ section, [id] {
 .about-item .ico{flex:0 0 28px;width:28px;height:28px;border-radius:50%;background:rgba(217,56,30,0.09);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;margin-top:1px}
 .about-item span{font-weight:700;color:var(--navy);font-size:15px;line-height:1.4}
 
-/* ISO certification badges */
-.iso-badges{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px}
-.iso-badge{border:1px solid var(--line);border-radius:8px;padding:14px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:130px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.03)}
-.iso-badge .ring{width:34px;height:34px;border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);margin-bottom:8px}
-.iso-badge .num{font-size:14px;font-weight:800;color:var(--navy);text-align:center}
-.iso-badge .sub{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;margin-top:2px;text-align:center}
-
 footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:45px}.footer-logo-wrap{display:inline-block;background:#fff;padding:12px 16px;margin-bottom:17px}.footer-logo{width:150px;display:block}footer h4{color:#fff;font-size:14px;text-transform:uppercase;margin-bottom:14px}footer p,footer li,footer a{font-size:14px}footer ul{list-style:none;padding:0;margin:0}footer li{margin-bottom:8px}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:18px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;color:#7f94a8}
 .product-intro{background:var(--bg)}
 
@@ -579,62 +572,6 @@ textarea.form-control {
 <section class="trust-bar">
   <div class="container" style="display:flex;flex-wrap:wrap;gap:14px 32px;justify-content:center;align-items:center;">
     <div class="trust-item"><span class="icon">✓</span> Manufactured under ISO 9001 · ISO 14001 · ISO 13485 · AS9100 Rev D certified quality systems</div>
-  </div>
-</section>
-
-<!-- ABOUT US SECTION -->
-<section id="about" class="about">
-  <div class="container">
-
-    <div class="about-intro">
-      <h2>Precision Consumables for Demanding Industries</h2>
-      <p>Londoco Ltd is a UK-based supplier of precision-engineered technical consumables, serving industrial, engineering and dental customers across the UK and international markets.</p>
-      <p>We supply pre-saturated solvent wipes, precision rotary burs, and milling and dental burs, with a bonding kit range for the mining sector currently in development. Every product is built to the same standard: consistent performance, tight tolerances, and full traceability from batch to delivery.</p>
-    </div>
-
-    <!-- FULL-WIDTH TRIPTYCH: image + real HTML captions (not baked into the image) -->
-    <div class="about-triptych">
-      <div class="about-triptych-frame">
-        <img src="assets/combined-image.png" alt="Londoco product range: wipes, rotary burs and dental burs">
-      </div>
-      <div class="triptych-captions">
-        <div>
-          <span class="kicker">Wipes — UK Production</span>
-          <p>Manufactured in the UK to high-spec formulations — IPA, acetone, MEK and more.</p>
-        </div>
-        <div>
-          <span class="kicker">Precision Rotary &amp; Milling Burs</span>
-          <p>Engineered for the tolerances demanding technical work requires.</p>
-        </div>
-        <div>
-          <span class="kicker">Dental Burs</span>
-          <p>Engineered for the tolerances demanding clinical work requires.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="about-intro">
-      <p>Our customers span aerospace, automotive, data centres, dental, engineering &amp; manufacturing, marine &amp; shipbuilding, mining &amp; extraction, and rail — sectors where surface preparation, cleanliness and component precision are not optional. Our core wipe range is manufactured in the UK to high-spec formulations (IPA, acetone, MEK and more), while our burs and dental consumables are engineered for the tolerances demanding technical and clinical work require.</p>
-      <p>As we grow beyond our current markets, our focus stays the same: reliable UK-manufactured quality, technical support customers can rely on, and a product range built for environments where failure isn't an option.</p>
-      <p>Every Londoco product is sourced from manufacturing partners holding ISO 9001 (Quality Management), ISO 14001 (Environmental Management), ISO 13485 (Medical Devices — for our dental range), and AS9100 Rev D (Aerospace) certifications. We select our manufacturing partners specifically for these standards, and require full certification evidence and batch traceability as part of our supplier qualification process.</p>
-
-      <div class="about-list">
-        <div class="about-item"><span class="ico">✓</span><span>UK-manufactured wipe range with full product traceability</span></div>
-        <div class="about-item"><span class="ico">✓</span><span>Serving 8 core sectors, from aerospace to rail</span></div>
-        <div class="about-item"><span class="ico">✓</span><span>Precision rotary, milling &amp; dental burs</span></div>
-        <div class="about-item"><span class="ico">✓</span><span>Supplying customers across the UK and internationally</span></div>
-        <div class="about-item"><span class="ico">✓</span><span>Flexible packaging formats to match your process</span></div>
-        <div class="about-item"><span class="ico">✓</span><span>ISO 9001, 14001, 13485 &amp; AS9100 Rev D certified</span></div>
-      </div>
-
-      <div class="iso-badges">
-        <div class="iso-badge"><span class="ring">ISO</span><span class="num">ISO 9001</span><span class="sub">Quality Mgmt</span></div>
-        <div class="iso-badge"><span class="ring">ISO</span><span class="num">ISO 14001</span><span class="sub">Environmental Mgmt</span></div>
-        <div class="iso-badge"><span class="ring">ISO</span><span class="num">ISO 13485</span><span class="sub">Medical Devices</span></div>
-        <div class="iso-badge"><span class="ring">AS</span><span class="num">AS9100 Rev D</span><span class="sub">Aerospace</span></div>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -1219,6 +1156,55 @@ textarea.form-control {
     </div>
   </div>
 </div>
+</section>
+
+<!-- ABOUT US SECTION -->
+<section id="about" class="about">
+  <div class="container">
+
+    <div class="about-intro">
+      <h2>Precision Consumables for Demanding Industries</h2>
+      <p>Londoco Ltd is a UK-based supplier of precision-engineered technical consumables, serving industrial, engineering and dental customers across the UK and international markets.</p>
+      <p>We supply pre-saturated solvent wipes, precision rotary burs, and milling and dental burs, with a bonding kit range for the mining sector currently in development. Every product is built to the same standard: consistent performance, tight tolerances, and full traceability from batch to delivery.</p>
+    </div>
+
+    <!-- FULL-WIDTH TRIPTYCH: image + real HTML captions (not baked into the image) -->
+    <div class="about-triptych">
+      <div class="about-triptych-frame">
+        <img src="assets/combined-image.png" alt="Londoco product range: wipes, rotary burs and dental burs">
+      </div>
+      <div class="triptych-captions">
+        <div>
+          <span class="kicker">Wipes — UK Production</span>
+          <p>Manufactured in the UK to high-spec formulations — IPA, acetone, MEK and more.</p>
+        </div>
+        <div>
+          <span class="kicker">Precision Rotary &amp; Milling Burs</span>
+          <p>Engineered for the tolerances demanding technical work requires.</p>
+        </div>
+        <div>
+          <span class="kicker">Dental Burs</span>
+          <p>Engineered for the tolerances demanding clinical work requires.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-intro">
+      <p>Our customers span aerospace, automotive, data centres, dental, engineering &amp; manufacturing, marine &amp; shipbuilding, mining &amp; extraction, and rail — sectors where surface preparation, cleanliness and component precision are not optional. Our core wipe range is manufactured in the UK to high-spec formulations (IPA, acetone, MEK and more), while our burs and dental consumables are engineered for the tolerances demanding technical and clinical work require.</p>
+      <p>As we grow beyond our current markets, our focus stays the same: reliable UK-manufactured quality, technical support customers can rely on, and a product range built for environments where failure isn't an option.</p>
+      <p>Every Londoco product is sourced from manufacturing partners holding ISO 9001 (Quality Management), ISO 14001 (Environmental Management), ISO 13485 (Medical Devices — for our dental range), and AS9100 Rev D (Aerospace) certifications. We select our manufacturing partners specifically for these standards, and require full certification evidence and batch traceability as part of our supplier qualification process.</p>
+
+      <div class="about-list">
+        <div class="about-item"><span class="ico">✓</span><span>UK-manufactured wipe range with full product traceability</span></div>
+        <div class="about-item"><span class="ico">✓</span><span>Serving 8 core sectors, from aerospace to rail</span></div>
+        <div class="about-item"><span class="ico">✓</span><span>Precision rotary, milling &amp; dental burs</span></div>
+        <div class="about-item"><span class="ico">✓</span><span>Supplying customers across the UK and internationally</span></div>
+        <div class="about-item"><span class="ico">✓</span><span>Flexible packaging formats to match your process</span></div>
+        <div class="about-item"><span class="ico">✓</span><span>ISO 9001, 14001, 13485 &amp; AS9100 Rev D certified</span></div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- CONTACT US SECTION -->

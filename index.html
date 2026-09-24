@@ -116,23 +116,27 @@ section, [id] {
 .contact-card a:hover{color:#fff;text-decoration:underline}
 
 .about{background:var(--bg);padding:80px 0}
-.about h2{font-size:36px;text-transform:uppercase;margin-bottom:22px;color:var(--navy)}
+.about h2{font-size:36px;text-transform:uppercase;margin-bottom:14px;color:var(--navy)}
+.about h3{font-size:20px;color:var(--navy);margin:34px 0 12px;font-weight:800}
 .about p{color:var(--muted);font-size:16.5px;margin-bottom:18px;line-height:1.65}
 .about-intro{max-width:900px}
+.about-tagline{display:block;font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.about-subhead{font-size:19px;font-weight:700;color:var(--navy);margin-bottom:20px}
 
-/* Full-width triptych block */
-.about-triptych{margin:44px 0}
-.about-triptych-frame{width:100%;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,0.04)}
-.about-triptych-frame img{width:100%;height:auto;display:block;object-fit:cover}
-.triptych-captions{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:22px}
-.triptych-captions .kicker{display:block;font-size:12.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
-.triptych-captions p{font-size:14.5px;color:var(--muted);line-height:1.5;margin:0}
+.about-supply-list{list-style:none;padding:0;margin:0 0 18px}
+.about-supply-list li{position:relative;padding-left:22px;color:var(--muted);font-size:16.5px;line-height:1.65;margin-bottom:12px}
+.about-supply-list li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.about-supply-list li strong{color:var(--navy)}
 
-/* Icon-grid checklist (2 columns) */
+/* Icon-grid checklist (2 columns), with a single-column variant */
 .about-list{display:grid;grid-template-columns:1fr 1fr;gap:18px 32px;margin-top:26px}
+.about-list-single{grid-template-columns:1fr;max-width:560px}
 .about-item{display:flex;align-items:flex-start;gap:12px}
 .about-item .ico{flex:0 0 28px;width:28px;height:28px;border-radius:50%;background:rgba(217,56,30,0.09);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;margin-top:1px}
 .about-item span{font-weight:700;color:var(--navy);font-size:15px;line-height:1.4}
+
+.about-cta{margin-top:6px;text-decoration:none}
+.about-legal{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.6}
 
 footer{background:#06192f;color:#aebed0;padding:50px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:45px}.footer-logo-wrap{display:inline-block;background:#fff;padding:12px 16px;margin-bottom:17px}.footer-logo{width:150px;display:block}footer h4{color:#fff;font-size:14px;text-transform:uppercase;margin-bottom:14px}footer p,footer li,footer a{font-size:14px}footer ul{list-style:none;padding:0;margin:0}footer li{margin-bottom:8px}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:18px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;color:#7f94a8}
 .product-intro{background:var(--bg)}
@@ -435,7 +439,7 @@ textarea.form-control {
   .trust-grid{ grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .nav-links{gap:18px; font-size:14px}
   .industry-grid{grid-template-columns:repeat(3, 1fr)}
-  .datacentre-grid{grid-template-columns:1fr}.uses-grid{grid-template-columns:1fr 1fr}.triptych-captions{grid-template-columns:1fr}
+  .datacentre-grid{grid-template-columns:1fr}.uses-grid{grid-template-columns:1fr 1fr}
   .product-grid { grid-template-columns: repeat(2, 1fr); }
   .detail-grid { grid-template-columns: 1fr; }
 }
@@ -1163,45 +1167,37 @@ textarea.form-control {
   <div class="container">
 
     <div class="about-intro">
-      <h2>Precision Consumables for Demanding Industries</h2>
-      <p>Londoco Ltd is a UK-based supplier of precision-engineered technical consumables, serving industrial, engineering and dental customers across the UK and international markets.</p>
-      <p>We supply pre-saturated solvent wipes, precision rotary burs, and milling and dental burs, with a bonding kit range for the mining sector currently in development. Every product is built to the same standard: consistent performance, tight tolerances, and full traceability from batch to delivery.</p>
-    </div>
-
-    <!-- FULL-WIDTH TRIPTYCH: image + real HTML captions (not baked into the image) -->
-    <div class="about-triptych">
-      <div class="about-triptych-frame">
-        <img src="assets/combined-image.png" alt="Londoco product range: wipes, rotary burs and dental burs">
-      </div>
-      <div class="triptych-captions">
-        <div>
-          <span class="kicker">Wipes — UK Production</span>
-          <p>Manufactured in the UK to high-spec formulations — IPA, acetone, MEK and more.</p>
-        </div>
-        <div>
-          <span class="kicker">Precision Rotary &amp; Milling Burs</span>
-          <p>Engineered for the tolerances demanding technical work requires.</p>
-        </div>
-        <div>
-          <span class="kicker">Dental Burs</span>
-          <p>Engineered for the tolerances demanding clinical work requires.</p>
-        </div>
-      </div>
+      <span class="kicker about-tagline">Specialist Supply, Simplified</span>
+      <h2>About Londoco</h2>
+      <p class="about-subhead">Precision consumables, sourced with care</p>
+      <p>Londoco Ltd is a London-based supplier of industrial and dental consumables, founded in 2024. We source pre-saturated solvent wipes from a UK manufacturer, and precision rotary, milling and dental burs from qualified partners, supplying customers across the UK and internationally. A bonding kit range for the mining sector is in development.</p>
     </div>
 
     <div class="about-intro">
-      <p>Our customers span aerospace, automotive, data centres, dental, engineering &amp; manufacturing, marine &amp; shipbuilding, mining &amp; extraction, and rail — sectors where surface preparation, cleanliness and component precision are not optional. Our core wipe range is manufactured in the UK to high-spec formulations (IPA, acetone, MEK and more), while our burs and dental consumables are engineered for the tolerances demanding technical and clinical work require.</p>
-      <p>As we grow beyond our current markets, our focus stays the same: reliable UK-manufactured quality, technical support customers can rely on, and a product range built for environments where failure isn't an option.</p>
-      <p>Every Londoco product is sourced from manufacturing partners holding ISO 9001 (Quality Management), ISO 14001 (Environmental Management), ISO 13485 (Medical Devices — for our dental range), and AS9100 Rev D (Aerospace) certifications. We select our manufacturing partners specifically for these standards, and require full certification evidence and batch traceability as part of our supplier qualification process.</p>
+      <h3>What we supply</h3>
+      <ul class="about-supply-list">
+        <li><strong>Pre-saturated wipes:</strong> IPA, acetone, MEK, heptane, hydraulic, ethanol and data centre wipes, made in the UK.</li>
+        <li><strong>Rotary and milling burs:</strong> tungsten carbide and diamond tools for engineering and manufacturing.</li>
+        <li><strong>Dental burs and consumables:</strong> for practices and laboratories.</li>
+      </ul>
 
-      <div class="about-list">
-        <div class="about-item"><span class="ico">✓</span><span>UK-manufactured wipe range with full product traceability</span></div>
-        <div class="about-item"><span class="ico">✓</span><span>Serving 8 core sectors, from aerospace to rail</span></div>
-        <div class="about-item"><span class="ico">✓</span><span>Precision rotary, milling &amp; dental burs</span></div>
-        <div class="about-item"><span class="ico">✓</span><span>Supplying customers across the UK and internationally</span></div>
-        <div class="about-item"><span class="ico">✓</span><span>Flexible packaging formats to match your process</span></div>
-        <div class="about-item"><span class="ico">✓</span><span>ISO 9001, 14001, 13485 &amp; AS9100 Rev D certified</span></div>
+      <h3>How we work</h3>
+      <p>We don't just resell. Before we list a product, we check that the manufacturer holds the relevant quality certifications (ISO 9001, ISO 14001, ISO 13485 for dental, AS9100 Rev D for aerospace) and can provide batch traceability. Safety data sheets and technical data sheets are available on request, and we can advise on the right product for your process.</p>
+
+      <h3>Why customers choose us</h3>
+      <div class="about-list about-list-single">
+        <div class="about-item"><span class="ico">✓</span><span>Products sourced from ISO-certified manufacturing partners</span></div>
+        <div class="about-item"><span class="ico">✓</span><span>Batch traceability on request</span></div>
+        <div class="about-item"><span class="ico">✓</span><span>Wipe range made in the UK</span></div>
+        <div class="about-item"><span class="ico">✓</span><span>Flexible pack sizes and order quantities</span></div>
+        <div class="about-item"><span class="ico">✓</span><span>Export-ready: we support international shipping and documentation</span></div>
       </div>
+
+      <h3>Talk to us</h3>
+      <p>Tell us what you need to clean, cut or prepare, and we'll recommend the right product.</p>
+      <a href="#quote" class="btn about-cta">Request a Quote →</a>
+
+      <p class="about-legal">Londoco Ltd · Company No. 15943027 · Registered in England and Wales · Old Town Hall, 30 Tweedy Road, Bromley, England, BR1 3FE, United Kingdom</p>
     </div>
 
   </div>
@@ -1281,6 +1277,7 @@ textarea.form-control {
     <div class="footer-grid">
       <div>
         <div class="footer-logo-wrap"><img class="footer-logo" src="assets/londoco-logo.png" alt="Londoco Ltd"></div>
+        <p style="color:#fff;font-weight:700;letter-spacing:.03em;text-transform:uppercase;font-size:12.5px;margin-bottom:10px">Specialist Supply, Simplified</p>
         <p>UK supplier of pre-saturated wipes, precision engineering burs and technical consumables.</p>
       </div>
       <div>
@@ -1316,9 +1313,7 @@ textarea.form-control {
       <div>High Performance Technical Consumables</div>
     </div>
   </div>
-</footer>
-
-<!-- PRODUCT DETAIL MODAL -->
+</footer><!-- PRODUCT DETAIL MODAL -->
 <div class="modal-overlay" id="productModal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeProductModal()">&times;</button>

@@ -367,6 +367,17 @@ textarea.form-control {
 .sector-tag-btn:hover { background: var(--navy); color: #fff; }
 
 .spec-table { width: 100%; border-collapse: collapse; margin-bottom: 25px; font-size: 13.5px; }
+.profile-table{width:100%;border-collapse:collapse;margin:18px 0 8px;font-size:14px}
+.profile-table th{background:#f1f5f9;padding:12px 10px;text-align:left;font-family:Archivo,sans-serif;color:var(--navy);border:1px solid var(--line);font-size:12.5px;text-transform:uppercase;letter-spacing:.03em}
+.profile-table td{padding:12px 10px;border:1px solid var(--line);color:var(--ink);vertical-align:middle}
+.profile-table td.profile-icon{width:60px;text-align:center}
+.profile-table td.profile-icon svg{width:28px;height:28px}
+.profile-table td.cat-no{font-weight:700;color:var(--navy)}
+.tools-set-box{display:flex;align-items:center;gap:16px;background:#f6f8fa;border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:20px 0}
+.tools-set-box strong{color:var(--navy);font-size:15px}
+.tools-grit-box{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin-bottom:18px}
+.tools-grit-box h4{font-size:14px;color:var(--navy);margin-bottom:8px;text-transform:uppercase;letter-spacing:.03em}
+.tools-remarks{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:10px;line-height:1.6}
 .spec-table th { background: #f1f5f9; padding: 10px; text-align: left; font-family: Archivo, sans-serif; color: var(--navy); border: 1px solid var(--line); }
 .spec-table td { padding: 10px; border: 1px solid var(--line); color: var(--ink); }
 

@@ -27,6 +27,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<style>
+.tools-info-panel{background:#fff;border:1px solid var(--line);border-radius:10px;margin:22px 0 34px;overflow:hidden}
+.tools-info-panel summary{cursor:pointer;list-style:none;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;font-family:Archivo,sans-serif;font-weight:700;color:var(--navy);font-size:16px;background:#f6f8fa}
+.tools-info-panel summary::-webkit-details-marker{display:none}
+.tools-info-panel summary .chevron{transition:transform 0.2s;color:var(--accent);font-size:14px}
+.tools-info-panel[open] summary .chevron{transform:rotate(180deg)}
+.tools-info-panel .tip-body{padding:26px 26px 30px}
+.tools-info-panel .tip-body h4{font-size:17px;color:var(--navy);margin:26px 0 8px}
+.tools-info-panel .tip-body h4:first-child{margin-top:0}
+.tools-info-panel .tip-body p{color:var(--muted);font-size:15px;line-height:1.65;margin-bottom:14px}
+.tools-info-panel .tip-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin-top:8px}
+.tools-info-panel .tip-grid ul{list-style:none;padding:0;margin:0 0 18px}
+.tools-info-panel .tip-grid li{position:relative;padding-left:20px;color:var(--muted);font-size:14.5px;line-height:1.8}
+.tools-info-panel .tip-grid li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+</style>
 </head>
 <body>
 
@@ -371,6 +386,53 @@
       <button class="category-btn" onclick="filterCategory('composite', event)">Composite Tools</button>
     </nav>
 
+    <!-- GENERAL INFORMATION: DIAMOND & CBN TOOLING -->
+    <details class="tools-info-panel">
+      <summary>General Information: Diamond &amp; CBN Tooling <span class="chevron">▼</span></summary>
+      <div class="tip-body">
+        <p>Diamond is pure carbon in a cubic structure &mdash; the hardest of all known materials. Diamond tools benefit many industrial applications, including grinding, turning, sawing, lapping and wear resistance, enabling faster operation, extended tool life, and accurate tolerances of shape and size. Diamond used in industry is either <strong>natural</strong> (extracted from the ground, crushed and shaped to suit a particular requirement) or <strong>synthetic</strong> (man-made for a specific application). Diamond is graded according to its size, shape and friability.</p>
+
+        <h4>Diamond Applications &mdash; Water Based Soluble</h4>
+        <p>Diamond is used for cutting or grinding hard, brittle and abrasive materials, but it is not suitable for grinding high carbon steel &mdash; iron has an affinity for carbon (which is what diamond is) at high temperature. Diamond tools are used for grinding hard or very abrasive materials, such as:</p>
+        <div class="tip-grid">
+          <ul>
+            <li>Tungsten Carbide</li>
+            <li>Fiberglass</li>
+            <li>Stone and Marble</li>
+            <li>Ferrite</li>
+            <li>Composite Materials</li>
+          </ul>
+          <ul>
+            <li>Non-Ferrous Metals</li>
+            <li>Industrial Ceramics</li>
+            <li>Rubber</li>
+            <li>Reinforced Plastics</li>
+            <li>Glass</li>
+          </ul>
+        </div>
+
+        <h4>CBN Applications &mdash; Oil Based Soluble</h4>
+        <p>Cubic Boron Nitride (CBN) is man-made &mdash; a chemical bond of boron and nitrogen with a cubic lattice structure, produced under high temperature and pressure. Available in different grades and sizes, CBN is particularly designed for grinding hardened steels, and is second only to diamond in hardness. CBN is used for grinding high carbon steels (over 0.7%), such as:</p>
+        <div class="tip-grid">
+          <ul>
+            <li>High-Speed Steel</li>
+            <li>Stainless Steel</li>
+            <li>Tool Steel</li>
+            <li>Ball Bearing Steel</li>
+          </ul>
+          <ul>
+            <li>Die Steel</li>
+            <li>Nickel Super Alloys</li>
+            <li>Cobalt or Nickel-Based Hard High-Temperature Materials</li>
+          </ul>
+        </div>
+
+        <h4>Electro Plated Diamond Tools</h4>
+        <p>Electro plating bonds Diamond/CBN particles to a steel blank using nickel as the bonding material. Electro plated tools cannot be dressed &mdash; the layer of nickel and Diamond/CBN follows exactly the given shape of the blank, which makes electro plated tools the best choice for profile grinding. They can also be re-plated: after the first use, the tool can be stripped and re-plated, giving an efficient and economic re-platable process.</p>
+      </div>
+    </details>
+
+
     <!-- PRODUCT GRID -->
     <div class="product-grid">
 
@@ -594,7 +656,7 @@
   <div class="container">
     <div class="section-heading">
       <h2>Dental Consumables &amp; Burs Catalogue</h2>
-      <p>Precision diamond burs, clinical surface hygiene wipes, and dental practice tools.</p>
+      <p>Precision diamond burs and specialist clinical burs for dental practices and laboratories, alongside our <a href="/wipes/ethanol/" style="color:var(--accent);font-weight:700">high-purity ethanol wipes</a> for clinical surface hygiene.</p>
     </div>
 
     <!-- PRODUCT GRID CONTAINING BOTH CARDS -->
@@ -609,7 +671,7 @@
           <img src="assets/dental-diamond-burs.png" alt="Londoco Dental Diamond Burs">
         </div>
         <div class="card-actions">
-          <a class="action-btn" href="/sectors/dental/#diamond-burs">
+          <a class="action-btn" href="/dental/diamond-burs/">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
             Information
           </a>
@@ -630,7 +692,7 @@
           <img src="assets/special-premium-line.png" alt="Londoco Special Premium Line Dental Burs">
         </div>
         <div class="card-actions">
-          <a class="action-btn" href="/sectors/dental/#premium-line">
+          <a class="action-btn" href="/dental/premium-line/">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
             Information
           </a>
@@ -645,10 +707,6 @@
     </div><!-- END OF DENTAL GRID -->
   </div><!-- END OF DENTAL CONTAINER -->
 </section><!-- END OF DENTAL SECTION -->
-      
-    </div>
-  </div>
-</section>
 <section id="industries" class="industries full-screen-section">
   <div class="container">
     <div class="section-heading">

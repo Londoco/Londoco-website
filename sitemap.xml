@@ -27,6 +27,10 @@
   <url><loc>https://londoco.com/tools/diamond-polishers/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://londoco.com/tools/pm-grinding-pins/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://londoco.com/tools/composite-grinding-tools/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-</urlset>
-<url><loc>https://londoco.com/tools/sw-sawing-wheels/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://londoco.com/tools/sw-sawing-wheels/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://londoco.com/tools/diamond-discs/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://londoco.com/dental/diamond-burs/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://londoco.com/dental/premium-line/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+</urlset>

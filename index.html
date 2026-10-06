@@ -45,6 +45,10 @@
 .trs-brand-strip img{height:46px;width:auto}
 .trs-brand-strip span{font-weight:600}
 .img-trs{object-fit:contain}
+/* Products overview: 4 cards laid out 2 x 2 */
+#products .products{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}
+#products .products>.product-card-top{width:auto!important;max-width:none!important;flex:none!important}
+@media(max-width:700px){#products .products{grid-template-columns:1fr!important}}
 /* TRS slide: keep text readable on the left, leave the product panel on the right undimmed */
 .slide-trs::before,.slide-trs::after{background:linear-gradient(90deg,rgba(9,22,44,.78) 0%,rgba(9,22,44,.55) 45%,rgba(9,22,44,0) 62%)!important}
 .slide-trs .slide-content{max-width:56%}
@@ -163,7 +167,7 @@
         <a class="product-link" href="#trs">View products →</a>
       </div>
       <div class="hero-image-wrap">
-        <img class="product-image center-img img-trs" src="assets/hero-trs-adhesives.jpg" alt="Masso TRS cold vulcanising adhesives">
+        <img class="product-image center-img img-trs" src="assets/trs-products-card.jpg" alt="Masso TRS cold vulcanising adhesives">
       </div>
     </article>
 

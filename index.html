@@ -994,7 +994,7 @@
       <a href="/sectors/dental/" class="industry"><div class="industry-visual"><img src="assets/dental.png" alt="Dental"></div><strong>Dental</strong></a>
       <a href="/sectors/engineering/" class="industry"><div class="industry-visual"><img src="assets/engineeringmanufacturing.png" alt="Engineering and manufacturing"></div><strong>Engineering &amp; Manufacturing</strong></a>
       <a href="/sectors/marine/" class="industry"><div class="industry-visual"><img src="assets/marineshipbuilding.png" alt="Marine and shipbuilding"></div><strong>Marine &amp; Shipbuilding</strong></a>
-      <a href="/sectors/mining/" class="industry"><div class="industry-visual"><img src="assets/mining-sector.png" alt="Mining & Extraction"></div><strong>Mining &amp; Extraction</strong><span style="display:block;margin-top:4px;font-size:12.5px;font-weight:600;color:var(--accent)">Wipes + Conveyor Belt Adhesives</span></a>
+      <a href="/sectors/mining/" class="industry"><div class="industry-visual"><img src="assets/mining-sector.png" alt="Mining & Extraction"></div><strong>Mining &amp; Extraction</strong></a>
       <a href="/sectors/rail/" class="industry"><div class="industry-visual"><img src="assets/rail-sector.png" alt="Rail"></div><strong>Rail</strong></a>
     </div>
   </div>
@@ -1307,7 +1307,7 @@
   </div>
 
   <div class="recommended-products-block">
-    <h3>Recommended Conveyor Belt Adhesives for Mining, Quarrying &amp; Aggregates</h3>
+    <h3>Recommended Cold Vulcanising Adhesives for Mining, Quarrying &amp; Aggregates</h3>
     <div class="rec-grid">
       <a class="rec-card" href="#trs" onclick="openProductModal('trs2002'); return false;">
         <span class="rec-badge primary">Primary</span>
@@ -1324,7 +1324,7 @@
         <span class="rec-btn">View Specifications →</span>
       </a>
       <a class="rec-card" href="#trs" onclick="openProductModal('trs6006'); return false;">
-        <span class="rec-badge secondary">Secondary</span>
+        <span class="rec-badge primary">Primary</span>
         <img src="assets/trs/trs-6006-repair-system.png" alt="TRS 6006 Repair System">
         <h4>TRS 6006 Repair System</h4>
         <p>Rapid-cure repair system for quick belt turnaround.</p>
@@ -1335,6 +1335,34 @@
         <img src="assets/trs/trs-3000-tl.jpg" alt="TRS 3000 TL">
         <h4>TRS 3000 TL</h4>
         <p>Lagging of large pulleys and drums with long open time.</p>
+        <span class="rec-btn">View Specifications →</span>
+      </a>
+      <a class="rec-card" href="#trs" onclick="openProductModal('trs4004white'); return false;">
+        <span class="rec-badge secondary">Secondary</span>
+        <img src="assets/trs/trs-4004-white.jpg" alt="TRS 4004 WHITE">
+        <h4>TRS 4004 WHITE</h4>
+        <p>Carbon-black-free white adhesive for white and food-contact belts.</p>
+        <span class="rec-btn">View Specifications →</span>
+      </a>
+      <a class="rec-card" href="#trs" onclick="openProductModal('trs5005'); return false;">
+        <span class="rec-badge secondary">Secondary</span>
+        <img src="assets/trs/trs-5005.jpg" alt="TRS 5005">
+        <h4>TRS 5005</h4>
+        <p>One-component adhesive, no hardener required.</p>
+        <span class="rec-btn">View Specifications →</span>
+      </a>
+      <a class="rec-card" href="#trs" onclick="openProductModal('trsplasto'); return false;">
+        <span class="rec-badge secondary">Secondary</span>
+        <img src="assets/trs/trs-plasto.jpg" alt="TRS PLASTO">
+        <h4>TRS PLASTO</h4>
+        <p>PU adhesive for PVC/PU plastic conveyor belts.</p>
+        <span class="rec-btn">View Specifications →</span>
+      </a>
+      <a class="rec-card" href="#trs" onclick="openProductModal('trsmetalprimer'); return false;">
+        <span class="rec-badge secondary">Secondary</span>
+        <img src="assets/trs/trs-metal-primer.jpg" alt="TRS METAL PRIMER">
+        <h4>TRS METAL PRIMER</h4>
+        <p>Rubber-to-metal primer for drums and pulleys.</p>
         <span class="rec-btn">View Specifications →</span>
       </a>
     </div>
@@ -2550,6 +2578,12 @@ function showToast() {
   toast.style.display = 'block';
   setTimeout(() => { toast.style.display = 'none'; }, 3000);
 }
+
+// OPEN A PRODUCT POP-UP FROM A LINK, e.g. londoco.com/#product-trs2002 (used by sector pages)
+(function(){
+  const m = window.location.hash.match(/^#product-(.+)$/);
+  if (m && productData[m[1]]) { openProductModal(m[1]); }
+})();
 
 // FORM SUBMISSION HANDLER
 function handleFormSubmit(event) {

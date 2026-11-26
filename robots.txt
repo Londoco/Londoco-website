@@ -1,3 +1,6 @@
+# Londoco Ltd - robots.txt
+# Everything is crawlable, including AI search crawlers
+# (GPTBot, ClaudeBot, anthropic-ai, PerplexityBot, cohere-ai, Google-Extended, CCBot).
 User-agent: *
 Allow: /
 

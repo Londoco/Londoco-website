@@ -1,39 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://londoco.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://londoco.com/sectors/aerospace/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/sectors/automotive/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/sectors/datacentres/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/sectors/dental/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/sectors/engineering/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/sectors/marine/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/sectors/mining/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/sectors/rail/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/wipes/acetone/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/wipes/datacentre/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/wipes/ethanol/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/wipes/heptane/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/wipes/hydraulic/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/wipes/ipa/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/wipes/mek/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/tools/es-nf-extra-slim/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/tools/nf-diamond-needle-files/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/tools/mi-escapement-files/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/tools/dfs-files/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/tools/diamond-strip/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/tools/diamond-polishers/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/tools/pm-grinding-pins/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/tools/composite-grinding-tools/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/tools/sw-sawing-wheels/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/tools/diamond-discs/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/dental/diamond-burs/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/dental/premium-line/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://londoco.com/products/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://londoco.com/wipes/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://londoco.com/tools/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://londoco.com/trs/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://londoco.com/dental/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://londoco.com/sectors/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://londoco.com/about/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://londoco.com/contact/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://londoco.com/</loc><lastmod>2026-11-26</lastmod><priority>1.0</priority></url>
+
+  <!-- Hubs that already exist -->
+  <url><loc>https://londoco.com/products/</loc><lastmod>2026-11-26</lastmod></url>
+  <url><loc>https://londoco.com/wipes/</loc><lastmod>2026-11-26</lastmod></url>
+  <url><loc>https://londoco.com/tools/</loc><lastmod>2026-11-26</lastmod></url>
+  <url><loc>https://londoco.com/trs/</loc><lastmod>2026-11-26</lastmod></url>
+  <url><loc>https://londoco.com/dental/</loc><lastmod>2026-11-26</lastmod></url>
+  <url><loc>https://londoco.com/sectors/</loc><lastmod>2026-11-26</lastmod></url>
+  <url><loc>https://londoco.com/about/</loc><lastmod>2026-11-26</lastmod></url>
+  <url><loc>https://londoco.com/contact/</loc><lastmod>2026-11-26</lastmod></url>
+
+  <!-- Inner pages (confirm each exists in your repo before deploying) -->
+  <url><loc>https://londoco.com/wipes/acetone/</loc></url>
+  <url><loc>https://londoco.com/wipes/datacentre/</loc></url>
+  <url><loc>https://londoco.com/wipes/ethanol/</loc></url>
+  <url><loc>https://londoco.com/wipes/heptane/</loc></url>
+  <url><loc>https://londoco.com/wipes/hydraulic/</loc></url>
+  <url><loc>https://londoco.com/wipes/ipa/</loc></url>
+  <url><loc>https://londoco.com/wipes/mek/</loc></url>
+  <url><loc>https://londoco.com/tools/es-nf-extra-slim/</loc></url>
+  <url><loc>https://londoco.com/tools/nf-diamond-needle-files/</loc></url>
+  <url><loc>https://londoco.com/tools/mi-escapement-files/</loc></url>
+  <url><loc>https://londoco.com/tools/dfs-files/</loc></url>
+  <url><loc>https://londoco.com/tools/diamond-strip/</loc></url>
+  <url><loc>https://londoco.com/tools/diamond-polishers/</loc></url>
+  <url><loc>https://londoco.com/tools/pm-grinding-pins/</loc></url>
+  <url><loc>https://londoco.com/tools/composite-grinding-tools/</loc></url>
+  <url><loc>https://londoco.com/tools/sw-sawing-wheels/</loc></url>
+  <url><loc>https://londoco.com/tools/diamond-discs/</loc></url>
+  <url><loc>https://londoco.com/dental/diamond-burs/</loc></url>
+  <url><loc>https://londoco.com/dental/premium-line/</loc></url>
+  <url><loc>https://londoco.com/sectors/aerospace/</loc></url>
+  <url><loc>https://londoco.com/sectors/automotive/</loc></url>
+  <url><loc>https://londoco.com/sectors/datacentres/</loc></url>
+  <url><loc>https://londoco.com/sectors/dental/</loc></url>
+  <url><loc>https://londoco.com/sectors/engineering/</loc></url>
+  <url><loc>https://londoco.com/sectors/marine/</loc></url>
+  <url><loc>https://londoco.com/sectors/mining/</loc></url>
+  <url><loc>https://londoco.com/sectors/rail/</loc></url>
+
+  <!-- NEW TRS product pages: uncomment each only once it is live -->
+  <!--
+  <url><loc>https://londoco.com/trs/trs-2002-new/</loc></url>
+  <url><loc>https://londoco.com/trs/trs-4004/</loc></url>
+  <url><loc>https://londoco.com/trs/trs-4004-white/</loc></url>
+  <url><loc>https://londoco.com/trs/trs-5005/</loc></url>
+  <url><loc>https://londoco.com/trs/trs-3000-tl/</loc></url>
+  <url><loc>https://londoco.com/trs/trs-6006-repair-system/</loc></url>
+  <url><loc>https://londoco.com/trs/trs-plasto/</loc></url>
+  <url><loc>https://londoco.com/trs/trs-metal-primer/</loc></url>
+  <url><loc>https://londoco.com/guides/acetone-vs-mek-vs-ipa-wipes/</loc></url>
+  <url><loc>https://londoco.com/guides/how-to-repair-a-conveyor-belt-cold-vulcanising/</loc></url>
+  -->
 </urlset>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,8 +29,9 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Source+Sans+3:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Source+Sans+3:wght@400;500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="/assets/site.css?v=20261126">
 <style>
 .breadcrumb-bar{padding:22px 0 0}
 .breadcrumb-bar{padding:22px 0 0}
@@ -47,7 +48,7 @@
 </head>
 <body>
 
-<header class="navbar"><div class="container nav-row"><a href="/"><img class="logo" src="/assets/londoco-logo.png" alt="Londoco Ltd"></a><button class="nav-toggle" aria-label="Open navigation" onclick="event.stopPropagation(); document.querySelector('.nav-links').classList.toggle('open')">☰</button><nav class="nav-links"><a href="/">HOME</a><a href="/#products">PRODUCTS</a><a href="/#industries">SECTORS</a><a href="/#about">ABOUT US</a><a href="/#contact">CONTACT</a><a class="quote" href="/#quote">REQUEST A QUOTE ↗</a></nav></div></header>
+<header class="navbar"><div class="container nav-row"><a href="/"><img class="logo" src="/assets/londoco-logo.png" alt="Londoco Ltd" width="520" height="130"></a><button class="nav-toggle" aria-label="Open navigation" onclick="event.stopPropagation(); document.querySelector('.nav-links').classList.toggle('open')">☰</button><nav class="nav-links"><a href="/">HOME</a><a href="/#products">PRODUCTS</a><a href="/#industries">SECTORS</a><a href="/#about">ABOUT US</a><a href="/#contact">CONTACT</a><a class="quote" href="/#quote">REQUEST A QUOTE ↗</a></nav></div></header>
 
 <main>
 
@@ -124,12 +125,12 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-logo-wrap"><img class="footer-logo" src="/assets/londoco-logo.png" alt="Londoco Ltd"></div>
-        <p style="color:#fff;font-weight:700;letter-spacing:.03em;text-transform:uppercase;font-size:12.5px;margin-bottom:10px">Specialist Supply, Simplified</p>
+        <div class="footer-logo-wrap"><img class="footer-logo" src="/assets/londoco-logo.png" alt="Londoco Ltd" width="520" height="130" loading="lazy"></div>
+        <p class="footer-tagline">Specialist Supply, Simplified</p>
         <p>UK supplier of pre-saturated wipes, precision engineering burs and technical consumables.</p>
       </div>
       <div>
-        <h4>Products</h4>
+        <p class="footer-heading">Products</p>
         <ul>
           <li><a href="/#wipes">Industrial Wipes</a></li>
           <li><a href="/#products">Rotary Burs &amp; Tools</a></li>
@@ -137,7 +138,7 @@
         </ul>
       </div>
       <div>
-        <h4>Sectors Served</h4>
+        <p class="footer-heading">Sectors Served</p>
         <ul>
           <li><a href="/sectors/aerospace/">Aerospace</a></li>
           <li><a href="/sectors/automotive/">Automotive</a></li>
@@ -150,9 +151,9 @@
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
-        <p>Email: info@londoco.com</p>
-        <p>Phone: +44 7746 609977</p>
+        <p class="footer-heading">Contact</p>
+        <p>Email: <a href="mailto:info@londoco.com">info@londoco.com</a></p>
+        <p>Phone: <a href="tel:+447746609977">+44 7746 609977</a></p>
         <p>Old Town Hall, 30 Tweedy Road,<br>Bromley, England, BR1 3FE,<br>United Kingdom</p>
       </div>
     </div>

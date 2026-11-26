@@ -503,3 +503,8 @@ footer .footer-tagline{color:#fff;font-weight:700;letter-spacing:.03em;text-tran
 .slide-trs::before,.slide-trs::after{background:linear-gradient(90deg,rgba(9,22,44,.78) 0%,rgba(9,22,44,.55) 45%,rgba(9,22,44,0) 62%)!important}
 .slide-trs .slide-content{max-width:56%}
 @media(max-width:900px){.slide-trs .slide-content{max-width:100%}.slide-trs::before,.slide-trs::after{background:rgba(9,22,44,.65)!important}}
+/* PASTE AT THE VERY BOTTOM OF assets/site.css (after the block you added before).
+   The About page now has a proper H1 and H2 sub-headings; this keeps them looking as before. */
+.about h1{font-size:36px;text-transform:uppercase;margin-bottom:14px;color:var(--navy)}
+.about h2.about-subhead{font-size:20px;color:var(--navy);margin:34px 0 12px;font-weight:800;text-transform:none}
+@media(max-width:480px){.about h1{font-size:28px}}
